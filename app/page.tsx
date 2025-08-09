@@ -1,11 +1,41 @@
+'use client'
+
 import { Button } from "@/components/ui/button"
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Check, ArrowRight, Twitter, Linkedin, Github, Mail, Trophy, Copyright, Wrench } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import { AspectRatio } from "@/components/ui/aspect-ratio"
+import { useState } from "react"
 
 export default function LandingPage() {
+  const [isSubmitted, setIsSubmitted] = useState(false)
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    
+    const formData = new FormData(e.currentTarget)
+    
+    try {
+      const response = await fetch('https://formspree.io/f/mrblrqqb', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+      
+      if (response.ok) {
+        setIsSubmitted(true)
+      } else {
+        console.error('Error submitting form')
+      }
+    } catch (error) {
+      console.error('Error:', error)
+    }
+  }
+
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
@@ -143,37 +173,46 @@ export default function LandingPage() {
               {/* Mobile: Title, Subtitle, Image (Vertical) */}
               <div className="lg:hidden space-y-6">
                 <div className="space-y-4 text-center">
-                  <h3 className="text-2xl sm:text-3xl font-bold tracking-tight">Trofeo *Marca*</h3>
+                  <h3 className="text-2xl sm:text-3xl font-bold tracking-tight">Trofeo Betano</h3>
                   <p className="text-base sm:text-lg text-slate-600">
-                    Diseñamos y creamos reconocimientos únicos que fusionan excelencia, innovación y estética.
+                    Diseño, ajuste y fabricación de trofeos para el Torneo Clausura Betano 2025.
                   </p>
                 </div>
-                <div className="relative">
-                  <Image
-                    src="/placeholder.svg?height=400&width=500"
-                    alt="Trofeo Marca"
-                    width={500}
-                    height={400}
-                    className="rounded-lg shadow-xl w-full"
-                  />
+                <div className="w-[calc(100%-120px)] mx-auto">
+                  <AspectRatio ratio={4 / 3}>
+                    <div className="relative w-full h-full rounded-lg shadow-xl overflow-hidden">
+                      <Image
+                        src="/Dimaria-betano-nodo-recorte.jpg"
+                        alt="Trofeo Betano"
+                        fill
+                        className="object-cover object-center"
+                        sizes="(max-width: 640px) 100vw, 500px"
+                        priority
+                      />
+                    </div>
+                  </AspectRatio>
                 </div>
               </div>
 
               {/* Desktop: Image Left, Text Right */}
-              <div className="relative hidden lg:block">
-                <Image
-                  src="/placeholder.svg?height=500&width=600"
-                  alt="Trofeo Marca"
-                  width={600}
-                  height={500}
-                  className="rounded-lg shadow-xl"
-                />
+              <div className="hidden lg:block w-[calc(100%-120px)] mx-auto">
+                <AspectRatio ratio={5 / 4}>
+                  <div className="relative w-full h-full rounded-lg shadow-xl overflow-hidden">
+                    <Image
+                      src="/Dimaria-betano-nodo-recorte.jpg"
+                      alt="Trofeo Betano"
+                      fill
+                      className="object-cover object-center"
+                      sizes="(min-width: 1024px) 600px, 100vw"
+                    />
+                  </div>
+                </AspectRatio>
               </div>
               <div className="space-y-6 hidden lg:block">
                 <div className="space-y-4">
-                  <h3 className="text-3xl font-bold tracking-tight">Trofeo *Marca*</h3>
+                  <h3 className="text-3xl font-bold tracking-tight">Trofeo Betano</h3>
                   <p className="text-lg text-slate-600">
-                    Diseñamos y creamos reconocimientos únicos que fusionan excelencia, innovación y estética.
+                   Diseño, ajuste y fabricación de trofeos para el Torneo Clausura Betano 2025.
                   </p>
                 </div>
               </div>
@@ -189,7 +228,7 @@ export default function LandingPage() {
                     Cada trofeo refleja tu identidad: adaptamos el diseño a los valores y la esencia de tu marca.
                   </p>
                 </div>
-                <div className="relative">
+                <div className="relative w-[calc(100%-120px)] mx-auto">
                   <Image
                     src="/placeholder.svg?height=400&width=500"
                     alt="Medalla Marca"
@@ -209,7 +248,7 @@ export default function LandingPage() {
                   </p>
                 </div>
               </div>
-              <div className="relative lg:order-2 hidden lg:block">
+              <div className="relative lg:order-2 hidden lg:block w-[calc(100%-120px)] mx-auto">
                 <Image
                   src="/placeholder.svg?height=500&width=600"
                   alt="Medalla Marca"
@@ -231,7 +270,7 @@ export default function LandingPage() {
                     diferencia.
                   </p>
                 </div>
-                <div className="relative">
+                <div className="relative w-[calc(100%-120px)] mx-auto">
                   <Image
                     src="/placeholder.svg?height=400&width=500"
                     alt="Trofeo Nodo"
@@ -243,7 +282,7 @@ export default function LandingPage() {
               </div>
 
               {/* Desktop: Image Left, Text Right */}
-              <div className="relative hidden lg:block">
+              <div className="relative hidden lg:block w-[calc(100%-120px)] mx-auto">
                 <Image
                   src="/placeholder.svg?height=500&width=600"
                   alt="Trofeo Nodo"
@@ -275,44 +314,79 @@ export default function LandingPage() {
             </h2>
             <p className="text-xl text-slate-600">Envianos tu idea y conversamos las posibilidades de tu marca</p>
             <div className="max-w-md mx-auto">
-              <form className="space-y-4">
-                <div>
-                  <label htmlFor="nombre" className="block text-sm font-medium text-slate-700 mb-1"></label>
-                  <input
-                    type="text"
-                    id="nombre"
-                    name="nombre"
-                    className="w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-slate-900 focus:border-slate-900"
-                    placeholder="Tu nombre completo"
-                  />
+              {!isSubmitted ? (
+                <form 
+                  onSubmit={handleSubmit}
+                  className="space-y-4"
+                >
+                  <div>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      required
+                      className="w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-slate-900 focus:border-slate-900"
+                      placeholder="Tu nombre completo"
+                    />
+                  </div>
+                  <div>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      className="w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-slate-900 focus:border-slate-900"
+                      placeholder="tu@email.com"
+                    />
+                  </div>
+                  <div>
+                    <input
+                      type="text"
+                      id="company"
+                      name="company"
+                      className="w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-slate-900 focus:border-slate-900"
+                      placeholder="Nombre de tu empresa"
+                    />
+                  </div>
+                  <div>
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows={4}
+                      required
+                      className="w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-slate-900 focus:border-slate-900"
+                      placeholder="Contanos sobre tu proyecto..."
+                    />
+                  </div>
+                  <Button 
+                    type="submit" 
+                    size="lg" 
+                    className="w-full bg-slate-900 hover:bg-slate-800"
+                  >
+                    Solicitá tu diseño
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </form>
+              ) : (
+                <div className="text-center space-y-6 py-8">
+                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto">
+                    <Check className="w-8 h-8 text-green-600" />
+                  </div>
+                  <div className="space-y-2">
+                    <h3 className="text-2xl font-bold text-slate-900">¡Gracias por contactarnos!</h3>
+                    <p className="text-slate-600">
+                      Hemos recibido tu solicitud. Nos pondremos en contacto contigo en las próximas 24 horas.
+                    </p>
+                  </div>
+                  <Button 
+                    onClick={() => setIsSubmitted(false)}
+                    variant="outline"
+                    className="mt-4"
+                  >
+                    Enviar otra solicitud
+                  </Button>
                 </div>
-                <div>
-                  <label htmlFor="empresa" className="block text-sm font-medium text-slate-700 mb-1"></label>
-                  <input
-                    type="text"
-                    id="empresa"
-                    name="empresa"
-                    className="w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-slate-900 focus:border-slate-900"
-                    placeholder="Nombre de tu empresa"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="solicitud" className="block text-sm font-medium text-slate-700 mb-1"></label>
-                  <textarea
-                    id="solicitud"
-                    name="solicitud"
-                    rows={4}
-                    className="w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-slate-900 focus:border-slate-900"
-                    placeholder="Contanos sobre tu proyecto..."
-                  />
-                </div>
-              </form>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-slate-900 hover:bg-slate-800">
-                Solicitá tu diseño
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
+              )}
             </div>
             <div className="flex items-center justify-center space-x-8 text-sm text-slate-600">
               <div className="flex items-center space-x-2">
