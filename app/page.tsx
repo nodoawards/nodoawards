@@ -37,267 +37,223 @@ export default function LandingPage() {
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen" style={{ backgroundColor: '#f1f1f1' }}>
       {/* Header */}
-      <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
+      <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 font-syne">
         <div className="container flex h-16 items-center justify-between px-4 md:px-6">
           <div className="flex items-center space-x-2">
             <Image src="/images/nodo-logo.png" alt="NODO AWARDS" width={140} height={32} className="h-8 w-auto" />
           </div>
 
           <nav className="hidden md:flex items-center space-x-8">
-            <Link href="#features" className="text-sm font-medium hover:text-slate-900 transition-colors">
+            <Link href="#features" className="text-sm font-medium hover:text-slate-900 transition-colors font-syne">
               Servicios
             </Link>
-            <Link href="#products" className="text-sm font-medium hover:text-slate-900 transition-colors">
+            <Link href="#products" className="text-sm font-medium hover:text-slate-900 transition-colors font-syne">
               Productos
             </Link>
-            <Link href="#contact" className="text-sm font-medium hover:text-slate-900 transition-colors">
+            <Link href="#about" className="text-sm font-medium hover:text-slate-900 transition-colors font-syne">
+              Nosotros
+            </Link>
+            <Link href="#contact" className="text-sm font-medium hover:text-slate-900 transition-colors font-syne">
               Contacto
             </Link>
           </nav>
 
           <div className="flex items-center space-x-4">
-            <Button className="bg-slate-900 hover:bg-slate-800">Solicitá tu diseño</Button>
+            <Button 
+              className="font-syne" 
+              style={{ backgroundColor: '#413725', color: '#FFFFFF' }}
+              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#2d2519'}
+              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#413725'}
+            >
+              Contactanos
+            </Button>
           </div>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 bg-slate-900 overflow-hidden">
-        {/* Background Image */}
+      <section className="relative py-20 md:py-32 bg-white overflow-hidden" style={{ borderBottomLeftRadius: '24px', borderBottomRightRadius: '24px' }}>
+        {/* Background Image - Behind everything */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/placeholder.svg?height=800&width=1200"
-            alt="StreamLine Dashboard Background"
+            src="/heroimage-prueba.jpg"
+            alt="Hero Background"
             fill
-            className="object-cover opacity-20"
+            className="object-cover"
           />
-          <div className="absolute inset-0 bg-slate-900/60"></div>
         </div>
 
         <div className="container px-4 md:px-6 relative z-10">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
-            <div className="space-y-4">
-              <Badge variant="secondary" className="w-fit mx-auto bg-white/10 text-white border-white/20">
-                ⭐ Excelencia y calidad
-              </Badge>
-              <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl text-white">
-                El futuro de los
-                <span className="text-slate-300"> Trofeos</span>
+          <div className="max-w-4xl text-left space-y-8">
+            <div className="space-y-6">
+              <h1 className="text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl lg:text-[84px] font-syne">
+                <span style={{ color: '#413725' }}>El futuro de</span>
+                <br />
+                <span style={{ color: '#413725' }}>la </span>
+                <span className="hero-gradient">premiación</span>
               </h1>
-              <p className="text-xl text-slate-200 max-w-[600px] mx-auto">
-                Creamos trofeos que combinan diseño, calidad y propósito.
+              <p className="text-xl max-w-[600px] font-syne" style={{ color: '#8B8D98' }}>
+                Diseño y fabricación de objetos comunicacionales
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-white text-slate-900 hover:bg-slate-100">
-                Solicitá tu diseño SIN CARGO
-                <ArrowRight className="ml-2 h-4 w-4" />
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button 
+                size="lg" 
+                className="font-syne"
+                style={{ backgroundColor: '#413725', color: '#FFFFFF' }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#2d2519'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#413725'}
+              >
+                Solicitar propuesta
               </Button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section id="features" className="py-20 bg-slate-50">
+      {/* About Section */}
+      <section id="about" className="py-20">
         <div className="container px-4 md:px-6">
-          <div className="text-center space-y-4 mb-16">
-            <Badge variant="secondary" className="w-fit mx-auto">
-              Servicios
-            </Badge>
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-              Todo lo que necesita tu evento
-            </h2>
-            <p className="text-xl text-slate-600 max-w-[800px] mx-auto">
-              Estamos presentes desde el concepto hasta la producción de tu idea
-            </p>
-          </div>
-
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            <Card className="border-0 shadow-sm">
-              <CardHeader>
-                <div className="h-12 w-12 rounded-lg bg-slate-900 flex items-center justify-center mb-4">
-                  <Trophy className="h-6 w-6 text-white" />
+          <div className="max-w-6xl mx-auto">
+            <div className="bg-[#FAFAFA] rounded-2xl overflow-hidden">
+              <div className="grid gap-0 lg:grid-cols-2 items-center">
+                {/* Left Section - Text Content */}
+                <div className="p-8 lg:p-12">
+                  <div className="space-y-6">
+                    <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl font-syne" style={{ color: '#413725' }}>
+                      Nosotros
+                    </h2>
+                    <p className="text-lg text-slate-600 font-syne leading-relaxed">
+                      En NodoAwards© comprendemos el desafío de crear ceremonias de premiación que sean memorables, auténticas y de calidad. Por eso nos especializamos en el diseño y la fabricación de trofeos, premios, medallas y regalos corporativos que transforman cada reconocimiento en una experiencia única.
+                    </p>
+                  </div>
                 </div>
-                <CardTitle>Trofeos y premios</CardTitle>
-                <CardDescription>
-                  Diseñamos y creamos reconocimientos únicos que fusionan excelencia, innovación y estética.
-                </CardDescription>
-              </CardHeader>
-            </Card>
 
-            <Card className="border-0 shadow-sm">
-              <CardHeader>
-                <div className="h-12 w-12 rounded-lg bg-slate-900 flex items-center justify-center mb-4">
-                  <Copyright className="h-6 w-6 text-white" />
+                {/* Right Section - Image */}
+                <div className="relative h-64 lg:h-[350px] overflow-hidden" style={{ borderTopLeftRadius: '16px', borderBottomLeftRadius: '16px' }}>
+                  <Image
+                    src="/img-tarjeta-nos.jpg"
+                    alt="NodoAwards Team"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
                 </div>
-                <CardTitle>Branding</CardTitle>
-                <CardDescription>
-                  Cada trofeo refleja tu identidad: adaptamos el diseño a los valores y la esencia de tu marca.
-                </CardDescription>
-              </CardHeader>
-            </Card>
-
-            <Card className="border-0 shadow-sm">
-              <CardHeader>
-                <div className="h-12 w-12 rounded-lg bg-slate-900 flex items-center justify-center mb-4">
-                  <Wrench className="h-6 w-6 text-white" />
-                </div>
-                <CardTitle>Producción</CardTitle>
-                <CardDescription>
-                  Combinamos tecnología y artesanía para lograr acabados impecables y detalles que marcan la diferencia.
-                </CardDescription>
-              </CardHeader>
-            </Card>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Products Section */}
-      <section id="products" className="py-20 bg-slate-50">
+      <section id="products" className="py-20">
         <div className="container px-4 md:px-6">
-          <div className="text-center space-y-4 mb-16">
-            <Badge variant="secondary" className="w-fit mx-auto">
-              Productos
-            </Badge>
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">Proyectos destacados</h2>
-            <p className="text-xl text-slate-600 max-w-[800px] mx-auto">Descubrí nuestro portfolio de proyectos.</p>
+          {/* Section Title */}
+          <div className="mb-16">
+            <h2 className="text-4xl font-bold tracking-tight font-syne text-left" style={{ fontSize: '36px' }}>
+              <span style={{ color: '#413725' }}>Cómo </span>
+              <span className="hero-gradient">elevamos el</span>
+              <br />
+              <span className="hero-gradient">estándar</span>
+              <span style={{ color: '#413725' }}> de la premiación</span>
+            </h2>
           </div>
 
-          <div className="space-y-16 lg:space-y-20">
-            {/* Product 1 - Image Left, Text Right on Desktop */}
-            <div className="grid gap-8 lg:grid-cols-2 lg:gap-16 items-center">
-              {/* Mobile: Title, Subtitle, Image (Vertical) */}
-              <div className="lg:hidden space-y-6">
-                <div className="space-y-4 text-center">
-                  <h3 className="text-2xl sm:text-3xl font-bold tracking-tight">Trofeo Betano</h3>
-                  <p className="text-base sm:text-lg text-slate-600">
-                    Diseño, ajuste y fabricación de trofeos para el Torneo Clausura Betano 2025.
-                  </p>
-                </div>
-                <div className="w-[calc(100%-120px)] mx-auto">
-                  <AspectRatio ratio={4 / 3}>
-                    <div className="relative w-full h-full rounded-lg shadow-xl overflow-hidden">
-                      <Image
-                        src="/Dimaria-betano-nodo-recorte.jpg"
-                        alt="Trofeo Betano"
-                        fill
-                        className="object-cover object-center"
-                        sizes="(max-width: 640px) 100vw, 500px"
-                        priority
-                      />
+          {/* Product Cards */}
+          <div className="space-y-8">
+            {/* Card 1 - CRACK BETANO */}
+            <div className="bg-white rounded-2xl shadow-sm overflow-hidden">
+              <div className="grid gap-0 lg:grid-cols-2 items-center">
+                {/* Left Section - Text Content */}
+                <div className="p-8 lg:p-12">
+                  <div className="space-y-6">
+                    <div className="space-y-2">
+                      <h3 className="text-4xl font-bold font-syne hero-gradient">"CRACK" BETANO</h3>
+                      <p className="text-lg font-syne" style={{ color: '#413725' }}>TROFEO</p>
                     </div>
-                  </AspectRatio>
-                </div>
-              </div>
-
-              {/* Desktop: Image Left, Text Right */}
-              <div className="hidden lg:block w-[calc(100%-120px)] mx-auto">
-                <AspectRatio ratio={5 / 4}>
-                  <div className="relative w-full h-full rounded-lg shadow-xl overflow-hidden">
-                    <Image
-                      src="/Dimaria-betano-nodo-recorte.jpg"
-                      alt="Trofeo Betano"
-                      fill
-                      className="object-cover object-center"
-                      sizes="(min-width: 1024px) 600px, 100vw"
-                    />
+                    <p className="text-base text-slate-600 font-syne leading-relaxed">
+                      Creamos un trofeo exclusivo para Betano, una de las empresas líderes en entretenimiento deportivo. El Trofeo "Crack Betano" fue destinado a distinguir al mejor jugador de cada fecha del Torneo Clausura Betano 2025 de la Primera División de Argentina. Este fue diseñado, ajustado y fabricado íntegramente por nuestro equipo.
+                    </p>
+                    <div className="pt-4">
+                      <p className="text-lg font-bold font-syne" style={{ color: '#413725' }}>Betano</p>
+                    </div>
                   </div>
-                </AspectRatio>
-              </div>
-              <div className="space-y-6 hidden lg:block">
-                <div className="space-y-4">
-                  <h3 className="text-3xl font-bold tracking-tight">Trofeo Betano</h3>
-                  <p className="text-lg text-slate-600">
-                   Diseño, ajuste y fabricación de trofeos para el Torneo Clausura Betano 2025.
-                  </p>
                 </div>
-              </div>
-            </div>
 
-            {/* Product 2 - Text Left, Image Right on Desktop */}
-            <div className="grid gap-8 lg:grid-cols-2 lg:gap-16 items-center">
-              {/* Mobile: Title, Subtitle, Image (Vertical) */}
-              <div className="lg:hidden space-y-6">
-                <div className="space-y-4 text-center">
-                  <h3 className="text-2xl sm:text-3xl font-bold tracking-tight">Medalla *marca*</h3>
-                  <p className="text-base sm:text-lg text-slate-600">
-                    Cada trofeo refleja tu identidad: adaptamos el diseño a los valores y la esencia de tu marca.
-                  </p>
-                </div>
-                <div className="relative w-[calc(100%-120px)] mx-auto">
+                {/* Right Section - Image */}
+                <div className="relative h-96 lg:h-[500px] overflow-hidden" style={{ borderTopLeftRadius: '16px', borderBottomLeftRadius: '16px' }}>
                   <Image
-                    src="/placeholder.svg?height=400&width=500"
-                    alt="Medalla Marca"
-                    width={500}
-                    height={400}
-                    className="rounded-lg shadow-xl w-full"
+                    src="/Dimaria-betano-nodo-recorte.jpg"
+                    alt="Trofeo Crack Betano"
+                    fill
+                    className="object-cover"
+                    priority
                   />
                 </div>
               </div>
+            </div>
 
-              {/* Desktop: Text Left, Image Right */}
-              <div className="space-y-6 lg:order-1 hidden lg:block">
-                <div className="space-y-4">
-                  <h3 className="text-3xl font-bold tracking-tight">Medalla *marca*</h3>
-                  <p className="text-lg text-slate-600">
-                    Cada trofeo refleja tu identidad: adaptamos el diseño a los valores y la esencia de tu marca.
-                  </p>
+            {/* Card 2 - CUEVA */}
+            <div className="bg-white rounded-2xl shadow-sm overflow-hidden">
+              <div className="grid gap-0 lg:grid-cols-2 items-center">
+                {/* Left Section - Image */}
+                <div className="relative h-96 lg:h-[500px] overflow-hidden" style={{ borderTopRightRadius: '16px', borderBottomRightRadius: '16px' }}>
+                  <Image
+                    src="/placeholder.svg?height=400&width=600"
+                    alt="Medalla Cueva"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
-              </div>
-              <div className="relative lg:order-2 hidden lg:block w-[calc(100%-120px)] mx-auto">
-                <Image
-                  src="/placeholder.svg?height=500&width=600"
-                  alt="Medalla Marca"
-                  width={600}
-                  height={500}
-                  className="rounded-lg shadow-xl"
-                />
+
+                {/* Right Section - Text Content */}
+                <div className="p-8 lg:p-12">
+                  <div className="space-y-6">
+                    <div className="space-y-2">
+                      <h3 className="text-4xl font-bold font-syne hero-gradient">CUEVA</h3>
+                      <p className="text-lg font-syne" style={{ color: '#413725' }}>MEDALLA</p>
+                    </div>
+                    <p className="text-base text-slate-600 font-syne leading-relaxed">
+                      Colaboramos con Cueva para diseñar una medalla especial que exprese su espíritu y estilo. Una pieza única con acabados premium, destinada a reconocer el excelente trabajo en equipo.
+                    </p>
+                    <div className="pt-4">
+                      <p className="text-lg font-bold font-syne" style={{ color: '#413725' }}>Cueva</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
-            {/* Product 3 - Image Left, Text Right on Desktop */}
-            <div className="grid gap-8 lg:grid-cols-2 lg:gap-16 items-center">
-              {/* Mobile: Title, Subtitle, Image (Vertical) */}
-              <div className="lg:hidden space-y-6">
-                <div className="space-y-4 text-center">
-                  <h3 className="text-2xl sm:text-3xl font-bold tracking-tight">Trofeo Nodo</h3>
-                  <p className="text-base sm:text-lg text-slate-600">
-                    Combinamos tecnología y artesanía para lograr acabados impecables y detalles que marcan la
-                    diferencia.
-                  </p>
+            {/* Card 3 - NODO */}
+            <div className="bg-white rounded-2xl shadow-sm overflow-hidden">
+              <div className="grid gap-0 lg:grid-cols-2 items-center">
+                {/* Left Section - Text Content */}
+                <div className="p-8 lg:p-12">
+                  <div className="space-y-6">
+                    <div className="space-y-2">
+                      <h3 className="text-4xl font-bold font-syne hero-gradient">NODO</h3>
+                      <p className="text-lg font-syne" style={{ color: '#413725' }}>TROFEO</p>
+                    </div>
+                    <p className="text-base text-slate-600 font-syne leading-relaxed">
+                      Desarrollamos nuestro propio trofeo, reflejando nuestros valores de innovación, diseño y calidad. Una pieza conceptual que demuestra el nivel de detalle y excelencia que ofrecemos a nuestros clientes.
+                    </p>
+                    <div className="pt-4">
+                      <p className="text-lg font-bold font-syne" style={{ color: '#413725' }}>NODO AWARDS</p>
+                    </div>
+                  </div>
                 </div>
-                <div className="relative w-[calc(100%-120px)] mx-auto">
+
+                {/* Right Section - Image */}
+                <div className="relative h-96 lg:h-[500px] overflow-hidden" style={{ borderTopLeftRadius: '16px', borderBottomLeftRadius: '16px' }}>
                   <Image
-                    src="/placeholder.svg?height=400&width=500"
+                    src="/placeholder.svg?height=400&width=600"
                     alt="Trofeo Nodo"
-                    width={500}
-                    height={400}
-                    className="rounded-lg shadow-xl w-full"
+                    fill
+                    className="object-cover"
                   />
-                </div>
-              </div>
-
-              {/* Desktop: Image Left, Text Right */}
-              <div className="relative hidden lg:block w-[calc(100%-120px)] mx-auto">
-                <Image
-                  src="/placeholder.svg?height=500&width=600"
-                  alt="Trofeo Nodo"
-                  width={600}
-                  height={500}
-                  className="rounded-lg shadow-xl"
-                />
-              </div>
-              <div className="space-y-6 hidden lg:block">
-                <div className="space-y-4">
-                  <h3 className="text-3xl font-bold tracking-tight">Trofeo Nodo</h3>
-                  <p className="text-lg text-slate-600">
-                    Combinamos tecnología y artesanía para lograr acabados impecables y detalles que marcan la
-                    diferencia.
-                  </p>
                 </div>
               </div>
             </div>

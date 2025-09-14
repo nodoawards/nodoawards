@@ -30,7 +30,11 @@
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     /* Brand font CSS variable used by Tailwind font-sans */
-    --font-brand: 'Kanit';
+    --font-brand: 'Syne';
+    /* Hero gradient colors */
+    --hero-gradient-start: #F4E683;
+    --hero-gradient-middle: #856220;
+    --hero-gradient-end: #DBCA58;
   }
 
   .dark {
@@ -81,11 +85,29 @@
 @font-face { font-family: 'Kanit'; src: url('/fonts/Kanit/Kanit-Black.ttf') format('truetype'); font-weight: 900; font-style: normal; font-display: swap; }
 @font-face { font-family: 'Kanit'; src: url('/fonts/Kanit/Kanit-BlackItalic.ttf') format('truetype'); font-weight: 900; font-style: italic; font-display: swap; }
 
+/* Syne font face - Variable font */
+@font-face { 
+  font-family: 'Syne'; 
+  src: url('/fonts/Syne/Syne-VariableFont_wght.ttf') format('truetype-variations'); 
+  font-weight: 100 900; 
+  font-style: normal; 
+  font-display: swap; 
+}
+
 @layer base {
   * {
     @apply border-border;
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .hero-gradient {
+    background: linear-gradient(90deg, var(--hero-gradient-start) 0%, var(--hero-gradient-middle) 54%, var(--hero-gradient-end) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 }

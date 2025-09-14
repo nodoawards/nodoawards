@@ -24,6 +24,7 @@ const config: Config = {
         // Use CSS variable provided by next/font(local) when available
         // Falls back to Tailwind's default sans stack otherwise
         sans: ["var(--font-brand)", ...defaultTheme.fontFamily.sans],
+        syne: ["Syne", ...defaultTheme.fontFamily.sans],
       },
       colors: {
         border: "hsl(var(--border))",
