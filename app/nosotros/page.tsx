@@ -1,15 +1,12 @@
 'use client'
 
 import { Button } from "@/components/ui/button"
-import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
 import { Check, ArrowRight, Twitter, Linkedin, Github, Mail, Trophy, Copyright, Wrench } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import { AspectRatio } from "@/components/ui/aspect-ratio"
 import { useState } from "react"
 
-export default function LandingPage() {
+export default function NosotrosPage() {
   const [isSubmitted, setIsSubmitted] = useState(false)
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -35,14 +32,15 @@ export default function LandingPage() {
       console.error('Error:', error)
     }
   }
-
   return (
     <div className="min-h-screen" style={{ backgroundColor: '#f1f1f1' }}>
       {/* Header */}
       <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 font-syne">
         <div className="container flex h-16 items-center justify-between px-4 md:px-6">
           <div className="flex items-center space-x-2">
-            <Image src="/images/nodo-logo.png" alt="NODO AWARDS" width={140} height={32} className="h-8 w-auto" />
+            <Link href="/">
+              <Image src="/images/nodo-logo.png" alt="NODO AWARDS" width={140} height={32} className="h-8 w-auto" />
+            </Link>
           </div>
 
           <nav className="hidden md:flex items-center space-x-8">
@@ -55,7 +53,7 @@ export default function LandingPage() {
             <Link href="/nosotros" className="text-sm font-medium hover:text-slate-900 transition-colors font-syne">
               Nosotros
             </Link>
-            <Link href="#contact" className="text-sm font-medium hover:text-slate-900 transition-colors font-syne">
+            <Link href="/#contact" className="text-sm font-medium hover:text-slate-900 transition-colors font-syne">
               Contacto
             </Link>
           </nav>
@@ -75,7 +73,7 @@ export default function LandingPage() {
 
       {/* Hero Section */}
       <section className="relative py-20 md:py-32 bg-white overflow-hidden" style={{ borderBottomLeftRadius: '24px', borderBottomRightRadius: '24px' }}>
-        {/* Background Image - Behind everything */}
+        
         <div className="absolute inset-0 z-0">
           <Image
             src="/heroimage-prueba.jpg"
@@ -89,13 +87,12 @@ export default function LandingPage() {
           <div className="max-w-4xl text-left space-y-8">
             <div className="space-y-6">
               <h1 className="text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl lg:text-[84px] font-syne">
-                <span style={{ color: '#413725' }}>El futuro de</span>
+                <span style={{ color: '#413725' }}>Sobre</span>
                 <br />
-                <span style={{ color: '#413725' }}>la </span>
-                <span className="hero-gradient">premiación</span>
+                <span className="hero-gradient">Nosotros</span>
               </h1>
               <p className="text-xl max-w-[600px] font-syne" style={{ color: '#8B8D98' }}>
-                Diseño y fabricación de objetos comunicacionales
+                Conoce nuestra historia y valores
               </p>
             </div>
 
@@ -114,274 +111,21 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="about" className="py-20">
+      {/* Main Content - Placeholder for now */}
+      <main className="py-20">
         <div className="container px-4 md:px-6">
           <div className="max-w-6xl mx-auto">
-            <div className="bg-[#FAFAFA] rounded-2xl overflow-hidden">
-              <div className="grid gap-0 lg:grid-cols-2 items-center">
-                {/* Left Section - Text Content */}
-                <div className="p-8 lg:p-12">
-                  <div className="space-y-6">
-                    <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl font-syne" style={{ color: '#413725' }}>
-                      Nosotros
-                    </h2>
-                    <p className="text-lg text-slate-600 font-syne leading-relaxed">
-                      En NodoAwards© comprendemos el desafío de crear ceremonias de premiación que sean memorables, auténticas y de calidad. Por eso nos especializamos en el diseño y la fabricación de trofeos, premios, medallas y regalos corporativos que transforman cada reconocimiento en una experiencia única.
-                    </p>
-                  </div>
-                </div>
-
-                {/* Right Section - Image */}
-                <div className="relative h-64 lg:h-[350px] overflow-hidden" style={{ borderTopLeftRadius: '16px', borderBottomLeftRadius: '16px' }}>
-                  <Image
-                    src="/img-tarjeta-nos.jpg"
-                    alt="NodoAwards Team"
-                    fill
-                    className="object-cover"
-                    priority
-                  />
-                </div>
-              </div>
+            <div className="text-center space-y-8">
+              <h2 className="text-4xl font-bold font-syne" style={{ color: '#413725' }}>
+                Nuestra Historia
+              </h2>
+              <p className="text-lg text-slate-600 font-syne max-w-2xl mx-auto">
+                Aquí se desarrollará el contenido específico de la página de nosotros.
+              </p>
             </div>
           </div>
         </div>
-      </section>
-
-      {/* Products Section */}
-      <section id="products" className="py-10">
-        <div className="container px-4 md:px-6">
-          {/* Section Title */}
-          <div className="mb-16 text-center">
-            <p className="text-sm font-syne mb-4" style={{ fontSize: '15px', color: '#686868' }}>
-              Nuestros proyectos
-            </p>
-            <h2 className="text-4xl font-bold tracking-tight font-syne" style={{ fontSize: '36px' }}>
-              <span style={{ color: '#413725' }}>Cómo </span>
-              <span className="hero-gradient">elevamos</span>
-              <span style={{ color: '#413725' }}> el </span>
-              <span className="hero-gradient">estándar</span>
-              <span style={{ color: '#413725' }}> de la premiación</span>
-            </h2>
-          </div>
-
-          {/* Product Cards */}
-          <div className="space-y-8">
-            {/* Card 1 - CRACK BETANO */}
-            <div className="bg-white rounded-2xl shadow-sm overflow-hidden">
-              <div className="grid gap-0 lg:grid-cols-2 items-stretch">
-                {/* Left Section - Text Content */}
-                <div className="p-8 lg:p-12 flex flex-col justify-center">
-                  <div className="space-y-8">
-                    {/* Título y subtítulo arriba */}
-                    <div className="space-y-2">
-                      <h3 className="text-4xl font-bold font-syne hero-gradient">"CRACK" BETANO</h3>
-                      <p className="text-lg font-syne" style={{ color: '#686868' }}>TROFEO</p>
-                    </div>
-                    
-                    {/* Texto explicativo y logo del cliente abajo */}
-                    <div className="space-y-4 pt-32">
-                      <p className="text-base text-slate-600 font-syne leading-relaxed">
-                        Creamos un trofeo exclusivo para Betano, una de las empresas líderes en entretenimiento deportivo. El Trofeo "Crack Betano" fue destinado a distinguir al mejor jugador de cada fecha del Torneo Clausura Betano 2025 de la Primera División de Argentina. Este fue diseñado, ajustado y fabricado íntegramente por nuestro equipo.
-                      </p>
-                      <div className="pt-4">
-                        <Image
-                          src="/logo-betano.png"
-                          alt="Betano Logo"
-                          width={120}
-                          height={40}
-                          className="h-8 w-auto"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Right Section - Image */}
-                <div className="relative min-h-[400px] lg:min-h-[500px] overflow-hidden" style={{ borderTopLeftRadius: '16px', borderBottomLeftRadius: '16px' }}>
-                  <Image
-                    src="/Dimaria-betano-nodo-recorte.jpg"
-                    alt="Trofeo Crack Betano"
-                    fill
-                    className="object-cover"
-                    priority
-                  />
-                </div>
-              </div>
-            </div>
-
-            {/* Card 2 - CUEVA */}
-            <div className="bg-white rounded-2xl shadow-sm overflow-hidden">
-              <div className="grid gap-0 lg:grid-cols-2 items-center">
-                {/* Left Section - Image */}
-                <div className="relative h-96 lg:h-[500px] overflow-hidden" style={{ borderTopRightRadius: '16px', borderBottomRightRadius: '16px' }}>
-                  <Image
-                    src="/placeholder.svg?height=400&width=600"
-                    alt="Medalla Cueva"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-
-                {/* Right Section - Text Content */}
-                <div className="p-8 lg:p-12">
-                  <div className="space-y-8">
-                    {/* Título y subtítulo arriba */}
-                    <div className="space-y-2 -mt-4">
-                      <h3 className="text-4xl font-bold font-syne hero-gradient">CUEVA</h3>
-                      <p className="text-lg font-syne" style={{ color: '#686868' }}>MEDALLA</p>
-                    </div>
-                    
-                    {/* Texto explicativo y logo del cliente abajo */}
-                    <div className="space-y-4 pt-32">
-                      <p className="text-base text-slate-600 font-syne leading-relaxed">
-                        Colaboramos con Cueva para diseñar una medalla especial que exprese su espíritu y estilo. Una pieza única con acabados premium, destinada a reconocer el excelente trabajo en equipo.
-                      </p>
-                      <div className="pt-4 mt-12">
-                        <Image
-                          src="/logo-cueva.png"
-                          alt="Cueva Logo"
-                          width={145}
-                          height={48}
-                          className="h-10 w-auto"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Card 3 - NODO */}
-            <div className="bg-white rounded-2xl shadow-sm overflow-hidden">
-              <div className="grid gap-0 lg:grid-cols-2 items-center">
-                {/* Left Section - Text Content */}
-                <div className="p-8 lg:p-12">
-                  <div className="space-y-8">
-                    {/* Título y subtítulo arriba */}
-                    <div className="space-y-2 -mt-4">
-                      <h3 className="text-4xl font-bold font-syne hero-gradient">NODO</h3>
-                      <p className="text-lg font-syne" style={{ color: '#686868' }}>TROFEO</p>
-                    </div>
-                    
-                    {/* Texto explicativo y logo del cliente abajo */}
-                    <div className="space-y-4 pt-32">
-                      <p className="text-base text-slate-600 font-syne leading-relaxed">
-                        Desarrollamos nuestro propio trofeo, reflejando nuestros valores de innovación, diseño y calidad. Una pieza conceptual que demuestra el nivel de detalle y excelencia que ofrecemos a nuestros clientes.
-                      </p>
-                      <div className="pt-4 mt-12">
-                        <Image
-                          src="/logo-nodo.png"
-                          alt="NODO AWARDS Logo"
-                          width={145}
-                          height={48}
-                          className="h-10 w-auto"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Right Section - Image */}
-                <div className="relative h-96 lg:h-[500px] overflow-hidden" style={{ borderTopLeftRadius: '16px', borderBottomLeftRadius: '16px' }}>
-                  <Image
-                    src="/Nodo-trofeo.jpg"
-                    alt="Trofeo Nodo"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose NodoAwards Section */}
-      <section className="py-20 relative overflow-hidden">
-        <div className="container px-4 md:px-6">
-          {/* Section Title */}
-          <div className="mb-16 text-center">
-            <h2 className="text-4xl font-bold tracking-tight font-syne" style={{ fontSize: '36px' }}>
-              <span style={{ color: '#413725' }}>Por qué </span>
-              <span className="hero-gradient">elegir</span>
-              <span style={{ color: '#413725' }}> NodoAwards</span>
-            </h2>
-          </div>
-
-          {/* Feature Cards */}
-          <div className="grid gap-8 md:grid-cols-3 relative z-10">
-            {/* Card 1 - End-to-end */}
-            <div className="relative">
-              {/* Background blur shapes */}
-              <div className="absolute inset-0 -z-10">
-                <div className="absolute top-4 left-4 w-20 h-20 bg-gradient-to-br from-yellow-200 to-amber-300 rounded-full blur-xl opacity-60"></div>
-                <div className="absolute bottom-4 right-4 w-16 h-16 bg-gradient-to-br from-amber-200 to-yellow-400 rounded-full blur-lg opacity-50"></div>
-              </div>
-              
-              {/* Card */}
-              <div className="border-2 rounded-2xl p-8 text-center relative backdrop-blur-[25px]" style={{ 
-                backgroundColor: 'rgba(228, 228, 228, 0.33)',
-                borderColor: '#856220',
-                borderRadius: '16px'
-              }}>
-                <h3 className="text-2xl font-bold font-syne mb-4" style={{ color: '#413725' }}>
-                  End-to-end
-                </h3>
-                <p className="text-base font-syne leading-relaxed" style={{ color: '#413725' }}>
-                  Desarrollamos un trofeo propio que refleja nuestros valores de inno
-                </p>
-              </div>
-            </div>
-
-            {/* Card 2 - Versatilidad */}
-            <div className="relative">
-              {/* Background blur shapes */}
-              <div className="absolute inset-0 -z-10">
-                <div className="absolute top-6 right-6 w-18 h-18 bg-gradient-to-br from-amber-300 to-yellow-200 rounded-full blur-xl opacity-60"></div>
-                <div className="absolute bottom-6 left-6 w-14 h-14 bg-gradient-to-br from-yellow-300 to-amber-400 rounded-full blur-lg opacity-50"></div>
-              </div>
-              
-              {/* Card */}
-              <div className="border-2 rounded-2xl p-8 text-center relative backdrop-blur-[25px]" style={{ 
-                backgroundColor: 'rgba(228, 228, 228, 0.33)',
-                borderColor: '#856220',
-                borderRadius: '16px'
-              }}>
-                <h3 className="text-2xl font-bold font-syne mb-4" style={{ color: '#413725' }}>
-                  Versatilidad
-                </h3>
-                <p className="text-base font-syne leading-relaxed" style={{ color: '#413725' }}>
-                  Desarrollamos un trofeo propio que refleja nuestros valores de inno
-                </p>
-              </div>
-            </div>
-
-            {/* Card 3 - Calidad */}
-            <div className="relative">
-              {/* Background blur shapes */}
-              <div className="absolute inset-0 -z-10">
-                <div className="absolute top-4 left-6 w-16 h-16 bg-gradient-to-br from-yellow-400 to-amber-200 rounded-full blur-xl opacity-60"></div>
-                <div className="absolute bottom-4 right-4 w-20 h-20 bg-gradient-to-br from-amber-300 to-yellow-300 rounded-full blur-lg opacity-50"></div>
-              </div>
-              
-              {/* Card */}
-              <div className="border-2 rounded-2xl p-8 text-center relative backdrop-blur-[25px]" style={{ 
-                backgroundColor: 'rgba(228, 228, 228, 0.33)',
-                borderColor: '#856220',
-                borderRadius: '16px'
-              }}>
-                <h3 className="text-2xl font-bold font-syne mb-4" style={{ color: '#413725' }}>
-                  Calidad
-                </h3>
-                <p className="text-base font-syne leading-relaxed" style={{ color: '#413725' }}>
-                  Desarrollamos un trofeo propio que refleja nuestros valores de inno
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      </main>
 
       {/* Contact Section */}
       <section className="py-20" style={{ backgroundColor: '#F5F5F0' }}>
@@ -519,7 +263,7 @@ export default function LandingPage() {
       </section>
 
       {/* Footer */}
-      <footer id="contact" className="py-16" style={{ backgroundColor: '#D9B87F' }}>
+      <footer className="py-16" style={{ backgroundColor: '#D9B87F' }}>
         <div className="container px-4 md:px-6">
           <div className="grid gap-8 md:grid-cols-2 items-start">
             <div className="space-y-4">
@@ -569,7 +313,7 @@ export default function LandingPage() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="#contact" className="hover:text-slate-800 transition-colors">
+                  <Link href="/#contact" className="hover:text-slate-800 transition-colors">
                     Contacto
                   </Link>
                 </li>
