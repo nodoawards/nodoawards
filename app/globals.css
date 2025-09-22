@@ -32,9 +32,9 @@
     /* Brand font CSS variable used by Tailwind font-sans */
     --font-brand: 'Syne';
     /* Hero gradient colors */
-    --hero-gradient-start: #F4E683;
+    --hero-gradient-start: #D3B900;
     --hero-gradient-middle: #856220;
-    --hero-gradient-end: #DBCA58;
+    --hero-gradient-end: #A19123;
   }
 
   .dark {
