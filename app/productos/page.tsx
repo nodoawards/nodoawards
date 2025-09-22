@@ -35,7 +35,7 @@ export default function ProductosPage() {
   return (
     <div className="min-h-screen" style={{ backgroundColor: '#f1f1f1' }}>
       {/* Header */}
-      <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 font-syne">
+      <header className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-11/12 max-w-6xl border border-white/20 bg-white/10 backdrop-blur-md rounded-2xl shadow-lg font-syne">
         <div className="container flex h-16 items-center justify-between px-4 md:px-6">
           <div className="flex items-center space-x-2">
             <Link href="/">
@@ -72,7 +72,7 @@ export default function ProductosPage() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 bg-white overflow-hidden" style={{ borderBottomLeftRadius: '24px', borderBottomRightRadius: '24px' }}>
+      <section className="relative py-20 md:py-32 bg-white overflow-hidden" style={{ borderBottomLeftRadius: '24px', borderBottomRightRadius: '24px', minHeight: '90vh' }}>
         
         <div className="absolute inset-0 z-0">
           <Image
@@ -83,8 +83,8 @@ export default function ProductosPage() {
           />
         </div>
 
-        <div className="container px-4 md:px-6 relative z-10">
-          <div className="max-w-4xl text-left space-y-8">
+        <div className="container px-4 md:px-6 relative z-10 flex items-start justify-start min-h-full">
+          <div className="max-w-4xl text-left space-y-8 mt-[110px]">
             <div className="space-y-6">
               <h1 className="text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl lg:text-[84px] font-syne">
                 <span style={{ color: '#413725' }}>Nuestros</span>
