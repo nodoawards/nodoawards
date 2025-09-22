@@ -128,7 +128,7 @@ export default function ServiciosPage() {
       </main>
 
       {/* Contact Section */}
-      <section className="py-20" style={{ backgroundColor: '#F5F5F0' }}>
+      <section className="py-20" style={{ backgroundColor: '#f1f1f1' }}>
         <div className="container px-4 md:px-6">
           <div className="grid gap-0 lg:grid-cols-2 items-center min-h-[600px]">
             {/* Left Section - Contact Form */}

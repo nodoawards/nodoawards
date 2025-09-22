@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     siteName: 'NODO AWARDS',
     images: [
       {
-        url: '/favicon.nodo.jpg',
+        url: '/favicon.nodo.png',
         width: 1200,
         height: 630,
         alt: 'NODO AWARDS - El futuro de la premiación',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "NODO AWARDS - El futuro de la premiación",
     description: "Diseñamos y fabricamos trofeos, premios, medallas y regalos corporativos personalizados.",
-    images: ['/favicon.nodo.jpg'],
+    images: ['/favicon.nodo.png'],
   },
   robots: {
     index: true,
@@ -64,11 +64,11 @@ export default function RootLayout({
   return (
     <html lang="es">
       <head>
-        <link rel="icon" href="/favicon.nodo.jpg" type="image/jpeg" />
-        <link rel="icon" href="/favicon.nodo.jpg" sizes="32x32" type="image/jpeg" />
-        <link rel="icon" href="/favicon.nodo.jpg" sizes="16x16" type="image/jpeg" />
-        <link rel="apple-touch-icon" href="/favicon.nodo.jpg" />
-        <link rel="shortcut icon" href="/favicon.nodo.jpg" />
+        <link rel="icon" href="/favicon.nodo.png" type="image/png" />
+        <link rel="icon" href="/favicon.nodo.png" sizes="32x32" type="image/png" />
+        <link rel="icon" href="/favicon.nodo.png" sizes="16x16" type="image/png" />
+        <link rel="apple-touch-icon" href="/favicon.nodo.png" />
+        <link rel="shortcut icon" href="/favicon.nodo.png" />
       </head>
       <body className="font-syne antialiased">{children}</body>
     </html>
