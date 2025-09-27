@@ -78,28 +78,26 @@ export default function LandingPage() {
         {/* Background Image - Behind everything */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/heroimage-prueba.jpg"
+            src="/abstract-golden-image-nodo.png"
             alt="Hero Background"
             fill
             className="object-cover"
+            style={{ objectPosition: 'center 10%' }}
           />
         </div>
 
-        <div className="container px-4 md:px-6 relative z-10 flex items-start justify-start min-h-full">
-          <div className="max-w-4xl text-left space-y-8 mt-[110px]">
+        <div className="container px-4 md:px-6 relative z-10 flex items-center justify-center min-h-full" style={{ transform: 'translateY(25%)' }}>
+          <div className="max-w-4xl text-center space-y-8">
             <div className="space-y-6">
-              <h1 className="text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl lg:text-[84px] font-syne">
-                <span style={{ color: '#413725' }}>El futuro de</span>
-                <br />
-                <span style={{ color: '#413725' }}>la </span>
-                <span className="hero-gradient">premiación</span>
+              <h1 className="text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl lg:text-[84px] font-syne" style={{ color: '#4C3B31' }}>
+                El futuro de la premiación
               </h1>
-              <p className="text-xl max-w-[600px] font-syne" style={{ color: '#8B8D98' }}>
-                Diseño y fabricación de objetos comunicacionales
+              <p className="text-xl max-w-[600px] mx-auto font-syne" style={{ color: '#5F4534' }}>
+                Creamos trofeos, medallas y premios
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 size="lg" 
                 className="font-syne"
@@ -107,7 +105,17 @@ export default function LandingPage() {
                 onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#2d2519'}
                 onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#413725'}
               >
-                Solicitar propuesta
+                Solicitar propuesta →
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline"
+                className="font-syne"
+                style={{ backgroundColor: 'rgba(255, 255, 255, 0.9)', color: '#413725', borderColor: '#413725' }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 1)'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.9)'}
+              >
+                Agenda una reunión
               </Button>
             </div>
           </div>
