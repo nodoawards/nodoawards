@@ -86,37 +86,169 @@ export default function LandingPage() {
           />
         </div>
 
-        <div className="container px-4 md:px-6 relative z-10 flex items-center justify-center min-h-full" style={{ transform: 'translateY(25%)' }}>
+        <div className="container px-4 md:px-6 relative z-10 flex items-center justify-center min-h-full">
           <div className="max-w-4xl text-center space-y-8">
+            {/* Right side element */}
+            <div className="absolute right-8 top-10 hidden lg:block">
+              <div className="flex items-center gap-3">
+                <Image
+                  src="/vector-forms.svg"
+                  alt="Creatividad e innovación"
+                  width={20}
+                  height={20}
+                  className="h-5 w-5"
+                />
+                <span className="text-sm font-medium font-syne" style={{ color: '#B38049' }}>
+                  Creatividad e innovación
+                </span>
+              </div>
+            </div>
+            {/* Overlay Badge */}
+            <div className="flex justify-center mb-6">
+              <div 
+                className="inline-flex items-center gap-3 px-6 py-3 rounded-full font-syne"
+                style={{ 
+                  backgroundColor: 'rgba(232, 214, 193, 0.15)',
+                  border: '1px solid rgba(232, 214, 193, 0.3)'
+                }}
+              >
+                <Image
+                  src="/vector-badge.svg"
+                  alt="Badge"
+                  width={20}
+                  height={20}
+                  className="h-5 w-5"
+                />
+                <span className="text-sm font-medium" style={{ color: '#573613' }}>
+                  Trofeos, medallas y premios
+                </span>
+              </div>
+            </div>
+            
             <div className="space-y-6">
               <h1 className="text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl lg:text-[84px] font-syne" style={{ color: '#4C3B31' }}>
                 El futuro de la premiación
               </h1>
               <p className="text-xl max-w-[600px] mx-auto font-syne" style={{ color: '#5F4534' }}>
-                Creamos trofeos, medallas y premios
+                Convertimos el reconocimiento en estrategia e innovación.
               </p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col items-center gap-3">
+                <Button 
+                  size="lg" 
+                  className="font-syne"
+                  style={{ backgroundColor: '#413725', color: '#C5B294' }}
+                  onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#2d2519'}
+                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#413725'}
+                >
+                  <span className="flex items-center gap-2">
+                    Solicitar propuesta
+                    <Image
+                      src="/vector-flecha.svg"
+                      alt="Flecha"
+                      width={16}
+                      height={16}
+                      className="h-4 w-4"
+                    />
+                  </span>
+                </Button>
+                <div className="flex items-center gap-2">
+                  <Image
+                    src="/vector-gratis.svg"
+                    alt="Gratis"
+                    width={16}
+                    height={16}
+                    className="h-4 w-4"
+                  />
+                  <p className="text-sm font-syne" style={{ color: '#5F4534' }}>
+                    Es totalmente gratis, sin cargo.
+                  </p>
+                </div>
+              </div>
               <Button 
                 size="lg" 
                 className="font-syne"
-                style={{ backgroundColor: '#413725', color: '#FFFFFF' }}
-                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#2d2519'}
-                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#413725'}
+                style={{ backgroundColor: '#8E6D48', color: '#C5B294', border: 'none' }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#7a5d3d'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#8E6D48'}
               >
-                Solicitar propuesta →
+                <span className="flex items-center gap-2">
+                  <Image
+                    src="/vector-user.svg"
+                    alt="Usuario"
+                    width={25}
+                    height={25}
+                    className="h-6 w-6 opacity-50"
+                  />
+                  Agendar una reunión
+                </span>
               </Button>
-              <Button 
-                size="lg" 
-                variant="outline"
-                className="font-syne"
-                style={{ backgroundColor: 'rgba(255, 255, 255, 0.9)', color: '#413725', borderColor: '#413725' }}
-                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 1)'}
-                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.9)'}
-              >
-                Agenda una reunión
-              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Clients Logo Section */}
+      <section className="py-16" style={{ backgroundColor: '#FFFFFF' }}>
+        <div className="container px-4 md:px-6">
+          <div className="max-w-6xl mx-auto">
+            {/* Optional Title */}
+            <div className="text-center mb-12">
+              <p className="text-sm font-syne uppercase tracking-wider" style={{ color: '#686868' }}>
+                Confían en nosotros
+              </p>
+            </div>
+            
+            {/* Logos Grid */}
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-items-center">
+              {/* Client Logos */}
+              <div className="grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100">
+                <Image
+                  src="/Logos clientes web-01.jpg"
+                  alt="Betano"
+                  width={240}
+                  height={120}
+                  className="h-24 w-auto object-contain"
+                />
+              </div>
+              <div className="grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100">
+                <Image
+                  src="/Logos clientes web-02.jpg"
+                  alt="PICADOTV"
+                  width={240}
+                  height={120}
+                  className="h-24 w-auto object-contain"
+                />
+              </div>
+              <div className="grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100">
+                <Image
+                  src="/Logos clientes web-03.jpg"
+                  alt="AFA"
+                  width={240}
+                  height={120}
+                  className="h-24 w-auto object-contain"
+                />
+              </div>
+              <div className="grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100">
+                <Image
+                  src="/Logos clientes web-04.jpg"
+                  alt="Cueva"
+                  width={240}
+                  height={120}
+                  className="h-24 w-auto object-contain"
+                />
+              </div>
+              <div className="grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100">
+                <Image
+                  src="/Logos clientes web-05.jpg"
+                  alt="MITO ESTUDIO"
+                  width={240}
+                  height={120}
+                  className="h-24 w-auto object-contain"
+                />
+              </div>
             </div>
           </div>
         </div>
