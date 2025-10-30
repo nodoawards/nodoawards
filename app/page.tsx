@@ -7,10 +7,15 @@ import { Check, ArrowRight, Twitter, Linkedin, Github, Mail, Trophy, Copyright, 
 import Image from "next/image"
 import Link from "next/link"
 import { AspectRatio } from "@/components/ui/aspect-ratio"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 export default function LandingPage() {
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isClient, setIsClient] = useState(false)
+
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -328,87 +333,120 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* Testimonial Section */}
+      <section className="py-20" style={{ backgroundColor: '#FAFAFA' }}>
+        <div className="container px-4 md:px-6">
+          <div className="max-w-4xl mx-auto flex justify-center">
+            <div className="relative flex items-start">
+              {/* Vertical Bar */}
+              <div className="rounded-full mr-12" style={{ backgroundColor: '#F1F1F1', height: '280px', width: '15px', marginLeft: '-10px' }}></div>
+              
+              {/* Testimonial Content */}
+              <div className="flex-1 relative">
+                {/* Profile Section */}
+                <div className="flex items-center mb-6">
+                  <div className="rounded-full overflow-hidden mr-4" style={{ width: '45px', height: '45px' }}>
+                    <Image
+                      src="/wizi-img.png"
+                      alt="Martin Wizenberg"
+                      width={45}
+                      height={45}
+                      className="w-full h-full object-cover grayscale"
+                    />
+                  </div>
+                  <div>
+                    <h3 className="text-base font-semibold font-syne" style={{ color: '#374151' }}>
+                      Martin Wizenberg
+                    </h3>
+                    <p className="text-xs font-syne" style={{ color: '#6B7280' }}>
+                      Content Manager en Betano
+                    </p>
+                  </div>
+                </div>
+
+                {/* Quote */}
+                <div className="relative" style={{ marginLeft: '30px' }}>
+                  <Image
+                    src="/comilla-vector.svg"
+                    alt="Comilla"
+                    width={24}
+                    height={22}
+                    className="absolute -left-6"
+                    style={{ top: '10px' }}
+                  />
+                  <blockquote className="text-lg font-syne font-medium leading-relaxed pl-6" style={{ color: '#413725' }}>
+                    La colaboración con Nodo nos permitió crear un<br />
+                    trofeo exclusivo que representa nuestra esencia.<br />
+                    Supieron captar nuestra visión y transformarla en<br />
+                    una pieza que transmite la energía y el espíritu<br />
+                    competitivo de nuestra marca, haciendo de cada<br />
+                    premiación un momento especial.
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Why Choose NodoAwards Section */}
-      <section className="py-20 relative overflow-hidden" style={{ backgroundColor: '#FAFAFA' }}>
+      <section className="py-20" style={{ backgroundColor: '#FAFAFA' }}>
         <div className="container px-4 md:px-6">
           {/* Section Title */}
           <div className="mb-16 text-center">
-            <h2 className="text-4xl font-bold tracking-tight font-syne" style={{ fontSize: '36px' }}>
-              <span style={{ color: '#413725' }}>Por qué </span>
-              <span className="hero-gradient">elegir</span>
-              <span style={{ color: '#413725' }}> NodoAwards</span>
+            <h2 className="text-4xl font-medium tracking-tight font-syne" style={{ color: '#413725', fontSize: '36px' }}>
+              Por qué elegir NodoAwards
             </h2>
           </div>
 
-          {/* Feature Cards */}
-          <div className="grid gap-8 md:grid-cols-3 relative z-10">
-            {/* Card 1 - End-to-end */}
-            <div className="relative">
-              {/* Background blur shapes */}
-              <div className="absolute inset-0 -z-10">
-                <div className="absolute top-4 left-4 w-20 h-20 bg-gradient-to-br from-yellow-200 to-amber-300 rounded-full blur-xl opacity-60"></div>
-                <div className="absolute bottom-4 right-4 w-16 h-16 bg-gradient-to-br from-amber-200 to-yellow-400 rounded-full blur-lg opacity-50"></div>
-              </div>
-              
-              {/* Card */}
-              <div className="border-2 rounded-2xl p-8 text-center relative backdrop-blur-[25px]" style={{ 
-                backgroundColor: 'rgba(228, 228, 228, 0.33)',
-                borderColor: '#856220',
-                borderRadius: '16px'
-              }}>
-                <h3 className="text-2xl font-bold font-syne mb-4" style={{ color: '#413725' }}>
-                  End-to-end
-                </h3>
-                <p className="text-base font-syne leading-relaxed" style={{ color: '#413725' }}>
-                  Desarrollamos un trofeo propio que refleja nuestros valores de inno
-                </p>
-              </div>
-            </div>
+          {/* Main Content Box */}
+          <div className="max-w-6xl mx-auto">
+            <div className="relative border rounded-2xl px-3 py-6 md:px-4 md:py-8" style={{ 
+              backgroundColor: '#F8F6F3',
+              borderColor: '#D4AF37',
+              borderRadius: '16px'
+            }}>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {/* Column 1 - End-to-end */}
+                <div className="text-center">
+                  <h3 className="text-2xl font-semibold font-syne mb-4" style={{ color: '#413725' }}>
+                    End-to-end
+                  </h3>
+                  <p className="text-base font-normal font-syne leading-relaxed" style={{ color: '#776B56' }}>
+                    Cada etapa, pensada y<br />
+                    ejecutada por nuestro<br />
+                    equipo.
+                  </p>
+                </div>
 
-            {/* Card 2 - Versatilidad */}
-            <div className="relative">
-              {/* Background blur shapes */}
-              <div className="absolute inset-0 -z-10">
-                <div className="absolute top-6 right-6 w-18 h-18 bg-gradient-to-br from-amber-300 to-yellow-200 rounded-full blur-xl opacity-60"></div>
-                <div className="absolute bottom-6 left-6 w-14 h-14 bg-gradient-to-br from-yellow-300 to-amber-400 rounded-full blur-lg opacity-50"></div>
-              </div>
-              
-              {/* Card */}
-              <div className="border-2 rounded-2xl p-8 text-center relative backdrop-blur-[25px]" style={{ 
-                backgroundColor: 'rgba(228, 228, 228, 0.33)',
-                borderColor: '#856220',
-                borderRadius: '16px'
-              }}>
-                <h3 className="text-2xl font-bold font-syne mb-4" style={{ color: '#413725' }}>
-                  Versatilidad
-                </h3>
-                <p className="text-base font-syne leading-relaxed" style={{ color: '#413725' }}>
-                  Desarrollamos un trofeo propio que refleja nuestros valores de inno
-                </p>
-              </div>
-            </div>
+                {/* Column 2 - Versatilidad */}
+                <div className="text-center">
+                  <h3 className="text-2xl font-semibold font-syne mb-4" style={{ color: '#413725' }}>
+                    Versatilidad
+                  </h3>
+                  <p className="text-base font-normal font-syne leading-relaxed" style={{ color: '#776B56' }}>
+                    Damos forma al<br />
+                    reconocimiento, sea cual<br />
+                    sea su expresión.
+                  </p>
+                </div>
 
-            {/* Card 3 - Calidad */}
-            <div className="relative">
-              {/* Background blur shapes */}
-              <div className="absolute inset-0 -z-10">
-                <div className="absolute top-4 left-6 w-16 h-16 bg-gradient-to-br from-yellow-400 to-amber-200 rounded-full blur-xl opacity-60"></div>
-                <div className="absolute bottom-4 right-4 w-20 h-20 bg-gradient-to-br from-amber-300 to-yellow-300 rounded-full blur-lg opacity-50"></div>
+                {/* Column 3 - Calidad */}
+                <div className="text-center">
+                  <h3 className="text-2xl font-semibold font-syne mb-4" style={{ color: '#413725' }}>
+                    Calidad
+                  </h3>
+                  <p className="text-base font-normal font-syne leading-relaxed" style={{ color: '#776B56' }}>
+                    En la idea, en la forma<br />
+                    y en el resultado final,<br />
+                    se refleja quiénes somos.
+                  </p>
+                </div>
               </div>
-              
-              {/* Card */}
-              <div className="border-2 rounded-2xl p-8 text-center relative backdrop-blur-[25px]" style={{ 
-                backgroundColor: 'rgba(228, 228, 228, 0.33)',
-                borderColor: '#856220',
-                borderRadius: '16px'
-              }}>
-                <h3 className="text-2xl font-bold font-syne mb-4" style={{ color: '#413725' }}>
-                  Calidad
-                </h3>
-                <p className="text-base font-syne leading-relaxed" style={{ color: '#413725' }}>
-                  Desarrollamos un trofeo propio que refleja nuestros valores de inno
-                </p>
-              </div>
+
+              {/* Vertical Dividers */}
+              <div className="hidden md:block absolute left-1/3 top-6 bottom-6 w-0.5" style={{ backgroundColor: '#D4AF37', opacity: 0.25 }}></div>
+              <div className="hidden md:block absolute left-2/3 top-6 bottom-6 w-0.5" style={{ backgroundColor: '#D4AF37', opacity: 0.25 }}></div>
             </div>
           </div>
         </div>
@@ -425,7 +463,81 @@ export default function LandingPage() {
                   Contanos sobre tu idea
                 </h2>
                 
-                {!isSubmitted ? (
+{!isClient ? (
+                  <div className="space-y-6">
+                    <div>
+                      <label className="block text-sm font-medium font-syne mb-2" style={{ color: '#413725' }}>
+                        Nombre
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        required
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg font-syne focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500"
+                        placeholder="Ej: Juan Perez"
+                      />
+                    </div>
+                    
+                    <div>
+                      <label className="block text-sm font-medium font-syne mb-2" style={{ color: '#413725' }}>
+                        Email
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg font-syne focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500"
+                        placeholder="hola@tuempresa.com"
+                      />
+                    </div>
+                    
+                    <div>
+                      <label className="block text-sm font-medium font-syne mb-2" style={{ color: '#413725' }}>
+                        Tu empresa
+                      </label>
+                      <input
+                        type="text"
+                        id="company"
+                        name="company"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg font-syne focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500"
+                        placeholder="Ej: Mercado Libre"
+                      />
+                    </div>
+                    
+                    <div>
+                      <label className="block text-sm font-medium font-syne mb-2" style={{ color: '#413725' }}>
+                        Mensaje
+                      </label>
+                      <textarea
+                        id="message"
+                        name="message"
+                        rows={4}
+                        required
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg font-syne focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500"
+                        placeholder="Contanos sobre tu idea..."
+                      />
+                    </div>
+                    
+                    <div className="flex items-center space-x-4">
+                      <Button 
+                        type="submit" 
+                        size="lg" 
+                        className="font-syne"
+                        style={{ backgroundColor: '#413725', color: '#FFFFFF' }}
+                      >
+                        Solicitar propuesta
+                      </Button>
+                      <div className="flex items-center space-x-2">
+                        <Check className="h-4 w-4" style={{ color: '#856220' }} />
+                        <span className="text-sm font-syne" style={{ color: '#856220' }}>
+                          Primera propuesta sin cargo
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                ) : !isSubmitted ? (
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div>
                       <label className="block text-sm font-medium font-syne mb-2" style={{ color: '#413725' }}>
