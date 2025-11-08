@@ -72,43 +72,19 @@ export default function ServiciosPage() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 bg-white overflow-hidden" style={{ borderBottomLeftRadius: '24px', borderBottomRightRadius: '24px', minHeight: '90vh' }}>
+      <section className="relative py-12 md:py-24 bg-white overflow-hidden" style={{ borderBottomLeftRadius: '24px', borderBottomRightRadius: '24px', minHeight: '70vh' }}>
         
         <div className="absolute inset-0 z-0">
           <Image
-            src="/heroimage-prueba.jpg"
+            src="/render-nodo-frente.jpg"
             alt="Hero Background"
             fill
             className="object-cover"
+            style={{ objectPosition: 'center -70px' }}
           />
         </div>
 
-        <div className="container px-4 md:px-6 relative z-10 flex items-start justify-start min-h-full">
-          <div className="max-w-4xl text-left space-y-8 mt-[110px]">
-            <div className="space-y-6">
-              <h1 className="text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl lg:text-[84px] font-syne">
-                <span style={{ color: '#413725' }}>Nuestros</span>
-                <br />
-                <span className="hero-gradient">Servicios</span>
-              </h1>
-              <p className="text-xl max-w-[600px] font-syne" style={{ color: '#8B8D98' }}>
-                Soluciones integrales para premiación y reconocimiento
-              </p>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                size="lg" 
-                className="font-syne"
-                style={{ backgroundColor: '#413725', color: '#FFFFFF' }}
-                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#2d2519'}
-                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#413725'}
-              >
-                Solicitar propuesta
-              </Button>
-            </div>
-          </div>
-        </div>
+        <div className="absolute inset-0 z-10" />
       </section>
 
       {/* Main Content - Placeholder for now */}

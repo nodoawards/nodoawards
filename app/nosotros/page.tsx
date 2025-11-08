@@ -1,7 +1,7 @@
 'use client'
 
 import { Button } from "@/components/ui/button"
-import { Check, ArrowRight, Twitter, Linkedin, Github, Mail, Trophy, Copyright, Wrench } from "lucide-react"
+import { Check, ArrowRight, Twitter, Linkedin, Github, Mail, Trophy, Copyright, Wrench, Lightbulb, Eye } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
@@ -72,56 +72,126 @@ export default function NosotrosPage() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 bg-white overflow-hidden" style={{ borderBottomLeftRadius: '24px', borderBottomRightRadius: '24px', minHeight: '90vh' }}>
+      <section className="relative py-12 md:py-24 bg-white overflow-hidden" style={{ borderBottomLeftRadius: '24px', borderBottomRightRadius: '24px', minHeight: '70vh' }}>
         
         <div className="absolute inset-0 z-0">
           <Image
-            src="/heroimage-prueba.jpg"
+            src="/img-tarjeta-nos.jpg"
             alt="Hero Background"
             fill
             className="object-cover"
           />
         </div>
 
-        <div className="container px-4 md:px-6 relative z-10 flex items-start justify-start min-h-full">
-          <div className="max-w-4xl text-left space-y-8 mt-[110px]">
-            <div className="space-y-6">
-              <h1 className="text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl lg:text-[84px] font-syne">
-                <span style={{ color: '#413725' }}>Sobre</span>
-                <br />
-                <span className="hero-gradient">Nosotros</span>
-              </h1>
-              <p className="text-xl max-w-[600px] font-syne" style={{ color: '#8B8D98' }}>
-                Conoce nuestra historia y valores
-              </p>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                size="lg" 
-                className="font-syne"
-                style={{ backgroundColor: '#413725', color: '#FFFFFF' }}
-                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#2d2519'}
-                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#413725'}
-              >
-                Solicitar propuesta
-              </Button>
-            </div>
-          </div>
-        </div>
+        <div className="absolute inset-0 z-10" />
       </section>
 
-      {/* Main Content - Placeholder for now */}
-      <main className="py-20">
+      {/* About Content */}
+      <main className="py-20" style={{ backgroundColor: '#FAFAFA' }}>
         <div className="container px-4 md:px-6">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center space-y-8">
-              <h2 className="text-4xl font-bold font-syne" style={{ color: '#413725' }}>
-                Nuestra Historia
-              </h2>
-              <p className="text-lg text-slate-600 font-syne max-w-2xl mx-auto">
-                Aquí se desarrollará el contenido específico de la página de nosotros.
+          <div className="max-w-5xl mx-auto space-y-16">
+            {/* Purpose */}
+            <div className="text-center space-y-3">
+              <p className="text-sm font-syne mb-4" style={{ fontSize: '15px', color: '#686868' }}>
+                Nuestro propósito
               </p>
+              <h2 className="text-3xl md:text-4xl font-bold font-syne">
+                <span style={{ color: '#413725' }}>Elevar el </span>
+                <span className="hero-gradient">estándar</span>
+                <span style={{ color: '#413725' }}> de la premiación.</span>
+              </h2>
+            </div>
+
+            {/* Mission & Vision */}
+            <div className="grid gap-6 md:grid-cols-2">
+              <div
+                className="relative p-8 md:p-10 flex flex-col justify-center"
+                style={{
+                  backgroundImage: "url('/tarjeta%20nosotros.svg')",
+                  backgroundRepeat: 'no-repeat',
+                  backgroundSize: '100% 100%',
+                  minHeight: '260px',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between'
+                }}
+              >
+                <div className="absolute -top-7 left-8 md:left-10">
+                  <div className="h-12 w-12 rounded-full flex items-center justify-center" style={{ backgroundColor: '#F6EFE6', border: '1px solid #E2D6C5' }}>
+                    <Image src="/medal-svg.svg" alt="Misión" width={22} height={22} />
+                  </div>
+                </div>
+                <div className="flex flex-col flex-1 justify-between">
+                  <div className="flex justify-end pr-4 pt-4">
+                    <h3 className="text-3xl font-bold font-syne" style={{ color: '#413725' }}>
+                      Misión
+                    </h3>
+                  </div>
+                  <p className="text-base text-slate-600 font-syne leading-relaxed pr-12 pb-8">
+                    Diseñar y fabricar objetos comunicacionales de alta calidad percibida que transformen las ceremonias de premiación en experiencias memorables.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                className="relative p-8 md:p-10 flex flex-col justify-center"
+                style={{
+                  backgroundImage: "url('/tarjeta%20nosotros.svg')",
+                  backgroundRepeat: 'no-repeat',
+                  backgroundSize: '100% 100%',
+                  minHeight: '260px',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between'
+                }}
+              >
+                <div className="absolute -top-7 left-8 md:left-10">
+                  <div className="h-12 w-12 rounded-full flex items-center justify-center" style={{ backgroundColor: '#F6EFE6', border: '1px solid #E2D6C5' }}>
+                    <Image src="/ojo-svg.svg" alt="Visión" width={22} height={22} />
+                  </div>
+                </div>
+                <div className="flex flex-col flex-1 justify-between">
+                  <div className="flex justify-end pr-4 pt-4">
+                    <h3 className="text-3xl font-bold font-syne" style={{ color: '#413725' }}>
+                      Visión
+                    </h3>
+                  </div>
+                  <p className="text-base text-slate-600 font-syne leading-relaxed pr-12 pb-8">
+                    Ser la agencia referente en la creación de objetos comunicacionales de Argentina.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Values */}
+            <div className="flex flex-wrap justify-center gap-3 md:gap-4">
+              {['Excelencia', 'Innovación', 'Sensibilidad', 'Nacional', 'Sustentabilidad'].map((value) => (
+                <span
+                  key={value}
+                  className="px-6 py-2 rounded-full border text-sm md:text-base font-syne"
+                  style={{ borderColor: '#C59A63', color: '#5F4534', backgroundColor: '#FBF7F0' }}
+                >
+                  {value}
+                </span>
+              ))}
+            </div>
+
+            {/* Narrative */}
+            <div className="text-center space-y-4">
+              <p className="text-sm font-syne mb-4" style={{ fontSize: '15px', color: '#686868' }}>
+                Nosotros
+              </p>
+              <h3
+                className="text-3xl md:text-4xl font-bold font-syne leading-relaxed"
+                style={{ color: '#413725', fontSize: '36px' }}
+              >
+                <span style={{ color: '#413725' }}>Unimos </span>
+                <span className="hero-gradient">estrategia y diseño sensible</span>
+                <br />
+                <span style={{ color: '#413725' }}>para transformar ideas en objetos que</span>
+                <br />
+                <span style={{ color: '#413725' }}>comunican, inspiran y dejan huella.</span>
+              </h3>
             </div>
           </div>
         </div>

@@ -7,7 +7,40 @@ import Link from "next/link"
 import { useState } from "react"
 
 export default function ProductosPage() {
+  const betanoSliderImages = [
+    {
+      src: "/Dimaria-betano-nodo-recorte.jpg",
+      alt: "Trofeo Crack Betano - Distinción al jugador del partido"
+    },
+    {
+      src: "/BETANO - FECHA 7 - CERUTTI.jpg",
+      alt: "Crack Betano - Fecha 7 Cerutti"
+    },
+    {
+      src: "/BETANO-FECHA-5-DILAN-GODOY.png",
+      alt: "Crack Betano - Fecha 5 Dilan Godoy"
+    },
+    {
+      src: "/FECHA 13 - EST VS GIM.jpg",
+      alt: "Crack Betano - Fecha 13 Estudiantes vs Gimnasia"
+    },
+    {
+      src: "/FOTO CRACK BETANO FECHA 4.png",
+      alt: "Crack Betano - Fecha 4",
+      objectPosition: "center calc(50% + 100px)"
+    }
+  ]
+
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [betanoSlideIndex, setBetanoSlideIndex] = useState(0)
+
+  const handleBetanoNext = () => {
+    setBetanoSlideIndex((prev) => (prev + 1) % betanoSliderImages.length)
+  }
+
+  const handleBetanoPrev = () => {
+    setBetanoSlideIndex((prev) => (prev - 1 + betanoSliderImages.length) % betanoSliderImages.length)
+  }
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -72,43 +105,18 @@ export default function ProductosPage() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 bg-white overflow-hidden" style={{ borderBottomLeftRadius: '24px', borderBottomRightRadius: '24px', minHeight: '90vh' }}>
+      <section className="relative py-12 md:py-24 bg-white overflow-hidden" style={{ borderBottomLeftRadius: '24px', borderBottomRightRadius: '24px', minHeight: '70vh' }}>
         
         <div className="absolute inset-0 z-0">
           <Image
-            src="/trofeo.betano.portada.jpg"
+            src="/render-detalle-betano.jpg"
             alt="Hero Background"
             fill
             className="object-cover"
           />
         </div>
 
-        <div className="container px-4 md:px-6 relative z-10 flex items-start justify-start min-h-full">
-          <div className="max-w-4xl text-left space-y-8 mt-[110px]">
-            <div className="space-y-6">
-              <h1 className="text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl lg:text-[84px] font-syne">
-                <span style={{ color: '#413725' }}>Nuestros</span>
-                <br />
-                <span className="hero-gradient">Productos</span>
-              </h1>
-              <p className="text-xl max-w-[600px] font-syne" style={{ color: '#8B8D98' }}>
-                Trofeos, medallas y premios de excelencia
-              </p>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                size="lg" 
-                className="font-syne"
-                style={{ backgroundColor: '#413725', color: '#FFFFFF' }}
-                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#2d2519'}
-                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#413725'}
-              >
-                Solicitar propuesta
-              </Button>
-            </div>
-          </div>
-        </div>
+        <div className="absolute inset-0 z-10" />
       </section>
 
       {/* Main Content */}
@@ -164,12 +172,42 @@ export default function ProductosPage() {
                   {/* Right Section - Image */}
                   <div className="relative min-h-[400px] lg:min-h-[500px] overflow-hidden" style={{ borderTopLeftRadius: '16px', borderBottomLeftRadius: '16px' }}>
                     <Image
-                      src="/Dimaria-betano-nodo-recorte.jpg"
-                      alt="Trofeo Crack Betano"
+                      key={betanoSliderImages[betanoSlideIndex].src}
+                      src={betanoSliderImages[betanoSlideIndex].src}
+                      alt={betanoSliderImages[betanoSlideIndex].alt}
                       fill
-                      className="object-cover"
+                      className="object-cover transition-opacity duration-500"
+                      style={{ objectPosition: betanoSliderImages[betanoSlideIndex].objectPosition ?? 'center' }}
                       priority
                     />
+
+                    <button
+                      type="button"
+                      onClick={handleBetanoPrev}
+                      aria-label="Imagen anterior"
+                      className="absolute inset-y-0 left-0 w-1/2 cursor-pointer"
+                      style={{ background: 'transparent', border: 'none' }}
+                    />
+                    <button
+                      type="button"
+                      onClick={handleBetanoNext}
+                      aria-label="Imagen siguiente"
+                      className="absolute inset-y-0 right-0 w-1/2 cursor-pointer"
+                      style={{ background: 'transparent', border: 'none' }}
+                    />
+
+                    <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-2 px-4 py-2 rounded-full bg-black/30 backdrop-blur-sm">
+                      <div className="flex items-center gap-2">
+                        {betanoSliderImages.map((_, index) => (
+                          <span
+                            key={index}
+                            className={`h-2 w-6 rounded-full transition ${
+                              index === betanoSlideIndex ? 'bg-white' : 'bg-white/40'
+                            }`}
+                          />
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -180,7 +218,7 @@ export default function ProductosPage() {
                   {/* Left Section - Image */}
                   <div className="relative h-96 lg:h-[500px] overflow-hidden" style={{ borderTopRightRadius: '16px', borderBottomRightRadius: '16px' }}>
                     <Image
-                      src="/placeholder.svg?height=400&width=600"
+                      src="/render-medalla-cueva.jpg"
                       alt="Medalla Cueva"
                       fill
                       className="object-cover"
@@ -255,6 +293,46 @@ export default function ProductosPage() {
                       className="object-cover"
                     />
                   </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Additional Cards */}
+            <div className="grid gap-8 md:grid-cols-[minmax(0,1fr)_minmax(0,0.7fr)] mt-8 lg:mt-12">
+              <div className="bg-white rounded-2xl shadow-sm p-8 lg:p-12 flex flex-col">
+                <div className="space-y-6">
+                  <h3 className="text-4xl font-bold font-syne" style={{ color: '#413725' }}>
+                    Productos Estándar
+                  </h3>
+                  <p className="text-lg font-syne uppercase" style={{ color: '#686868' }}>
+                    Premios y reconocimientos
+                  </p>
+                  <p className="text-base text-slate-600 font-syne leading-relaxed">
+                    Estamos en proceso de lanzamiento de nuevos productos personalizables a las necesidades de tu evento.
+                  </p>
+                </div>
+              </div>
+              <div className="bg-white rounded-2xl shadow-sm p-8 lg:p-10 flex flex-col justify-between">
+                <div className="space-y-4">
+                  <h3 className="text-4xl font-bold font-syne" style={{ color: '#413725' }}>
+                    Y más...
+                  </h3>
+                  <p className="text-lg font-syne uppercase" style={{ color: '#686868' }}>
+                    Nos adaptamos
+                  </p>
+                  <p className="text-base text-slate-600 font-syne leading-relaxed">
+                    Si tenés una idea que querés concretar, ¡no dudes en consultarnos!
+                  </p>
+                </div>
+                <div className="pt-6">
+                  <Button
+                    style={{ backgroundColor: '#413725', color: '#FFFFFF' }}
+                    className="font-syne px-6"
+                    onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#2d2519'}
+                    onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#413725'}
+                  >
+                    Contactanos
+                  </Button>
                 </div>
               </div>
             </div>

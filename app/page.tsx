@@ -453,7 +453,7 @@ export default function LandingPage() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20" style={{ backgroundColor: '#FAFAFA' }}>
+      <section id="contact" className="py-20" style={{ backgroundColor: '#FAFAFA' }}>
         <div className="container px-4 md:px-6">
           <div className="grid gap-0 lg:grid-cols-2 items-center min-h-[600px]">
             {/* Left Section - Contact Form */}
@@ -662,7 +662,7 @@ export default function LandingPage() {
       </section>
 
       {/* Footer */}
-      <footer id="contact" className="py-16" style={{ backgroundColor: '#D9B87F' }}>
+      <footer className="py-16" style={{ backgroundColor: '#D9B87F' }}>
         <div className="container px-4 md:px-6">
           <div className="grid gap-8 md:grid-cols-2 items-start">
             <div className="space-y-4">
