@@ -32,8 +32,32 @@ export default function ServiciosPage() {
       console.error('Error:', error)
     }
   }
+
+  const servicios = [
+    {
+      title: "Diseño",
+      description: "Diseñamos trofeos, premios, menciones, medallas y regalos corporativos personalizados. Trabajamos en colaboración con nuestros clientes para crear diseños únicos que superen sus expectativas y comuniquen su mensaje de manera efectiva.",
+      image: "/servicio-01.PNG"
+    },
+    {
+      title: "Fabricación",
+      description: "Producimos piezas de alta calidad combinando tecnología y artesanía. Cada objeto es único y está cuidadosamente elaborado, prestando atención a cada detalle desde la selección de materiales hasta los acabados finales.",
+      image: "/servicio-02.PNG"
+    },
+    {
+      title: "Entrega",
+      description: "Ofrecemos un servicio completo que incluye opciones de empaque premium, cajas de alta calidad y presentaciones que realzan el valor del objeto y hacen de la entrega un momento inolvidable.",
+      image: "/servicio-03.PNG"
+    },
+    {
+      title: "Fotografía en evento",
+      description: "Brindamos cobertura fotográfica profesional para las experiencias de premiación. Capturamos la emoción y el valor simbólico de cada momento para generar recuerdos y material de comunicación de alto impacto.",
+      image: "/servicio-04.PNG"
+    }
+  ]
+
   return (
-    <div className="min-h-screen" style={{ backgroundColor: '#f1f1f1' }}>
+    <div className="min-h-screen" style={{ backgroundColor: '#FAFAFA' }}>
       {/* Header */}
       <header className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-11/12 max-w-6xl border border-white/20 bg-white/10 backdrop-blur-md rounded-2xl shadow-lg font-syne">
         <div className="container flex h-16 items-center justify-between px-4 md:px-6">
@@ -73,7 +97,6 @@ export default function ServiciosPage() {
 
       {/* Hero Section */}
       <section className="relative py-12 md:py-24 bg-white overflow-hidden" style={{ borderBottomLeftRadius: '24px', borderBottomRightRadius: '24px', minHeight: '70vh' }}>
-        
         <div className="absolute inset-0 z-0">
           <Image
             src="/render-nodo-frente.jpg"
@@ -83,21 +106,104 @@ export default function ServiciosPage() {
             style={{ objectPosition: 'center -70px' }}
           />
         </div>
-
         <div className="absolute inset-0 z-10" />
       </section>
 
-      {/* Main Content - Placeholder for now */}
-      <main className="py-20">
+      {/* Services Content */}
+      <main className="py-20" style={{ backgroundColor: '#FAFAFA' }}>
         <div className="container px-4 md:px-6">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center space-y-8">
-              <h2 className="text-4xl font-bold font-syne" style={{ color: '#413725' }}>
-                Contenido de Servicios
-              </h2>
-              <p className="text-lg text-slate-600 font-syne max-w-2xl mx-auto">
-                Aquí se desarrollará el contenido específico de la página de servicios.
+          <div className="max-w-5xl mx-auto">
+            {/* Title */}
+            <div className="text-center space-y-3 mb-16">
+              <p className="text-sm font-syne mb-4" style={{ fontSize: '15px', color: '#686868' }}>
+                Nuestro servicio
               </p>
+              <h2 className="text-3xl md:text-4xl font-bold font-syne">
+                <span style={{ color: '#413725' }}>Cubrimos </span>
+                <span className="hero-gradient">cada paso</span>
+                <span style={{ color: '#413725' }}> del proceso.</span>
+              </h2>
+            </div>
+
+            {/* Services Sections */}
+            <div className="grid gap-16 lg:grid-cols-2 items-start">
+              {/* Left Column */}
+              <div className="flex flex-col space-y-8">
+                {/* Diseño */}
+                <div className="flex flex-col items-center text-center space-y-6" style={{ maxWidth: '420px', margin: '0 auto' }}>
+                  <h3 className="text-2xl md:text-3xl font-bold font-syne" style={{ color: '#413725' }}>
+                    {servicios[0].title}
+                  </h3>
+                  <p className="text-sm md:text-base text-slate-600 font-syne leading-relaxed">
+                    {servicios[0].description}
+                  </p>
+                  <div className="relative w-full overflow-hidden" style={{ aspectRatio: '4/3' }}>
+                    <Image
+                      src={servicios[0].image}
+                      alt={servicios[0].title}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                </div>
+                
+                {/* Entrega */}
+                <div className="flex flex-col items-center text-center space-y-6 lg:pt-[169px] lg:-mt-[300px]" style={{ maxWidth: '420px', margin: '0 auto' }}>
+                  <h3 className="text-2xl md:text-3xl font-bold font-syne" style={{ color: '#413725' }}>
+                    {servicios[2].title}
+                  </h3>
+                  <p className="text-sm md:text-base text-slate-600 font-syne leading-relaxed">
+                    {servicios[2].description}
+                  </p>
+                  <div className="relative w-full overflow-hidden" style={{ aspectRatio: '4/3' }}>
+                    <Image
+                      src={servicios[2].image}
+                      alt={servicios[2].title}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Column */}
+              <div className="flex flex-col space-y-8">
+                {/* Fabricación */}
+                <div className="flex flex-col items-center text-center space-y-6 lg:pt-[338px]" style={{ maxWidth: '420px', margin: '0 auto' }}>
+                  <h3 className="text-2xl md:text-3xl font-bold font-syne" style={{ color: '#413725' }}>
+                    {servicios[1].title}
+                  </h3>
+                  <p className="text-sm md:text-base text-slate-600 font-syne leading-relaxed">
+                    {servicios[1].description}
+                  </p>
+                  <div className="relative w-full overflow-hidden" style={{ aspectRatio: '4/3' }}>
+                    <Image
+                      src={servicios[1].image}
+                      alt={servicios[1].title}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                </div>
+                
+                {/* Fotografía en evento */}
+                <div className="flex flex-col items-center text-center space-y-6 lg:pt-[169px] lg:pb-72" style={{ maxWidth: '420px', margin: '0 auto' }}>
+                  <h3 className="text-2xl md:text-3xl font-bold font-syne" style={{ color: '#413725' }}>
+                    {servicios[3].title}
+                  </h3>
+                  <p className="text-sm md:text-base text-slate-600 font-syne leading-relaxed">
+                    {servicios[3].description}
+                  </p>
+                  <div className="relative w-full overflow-hidden" style={{ aspectRatio: '4/3' }}>
+                    <Image
+                      src={servicios[3].image}
+                      alt={servicios[3].title}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

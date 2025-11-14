@@ -89,7 +89,7 @@ export default function NosotrosPage() {
       {/* About Content */}
       <main className="py-20" style={{ backgroundColor: '#FAFAFA' }}>
         <div className="container px-4 md:px-6">
-          <div className="max-w-5xl mx-auto space-y-16">
+          <div className="max-w-5xl mx-auto space-y-28">
             {/* Purpose */}
             <div className="text-center space-y-3">
               <p className="text-sm font-syne mb-4" style={{ fontSize: '15px', color: '#686868' }}>
@@ -113,10 +113,11 @@ export default function NosotrosPage() {
                   minHeight: '260px',
                   display: 'flex',
                   flexDirection: 'column',
-                  justifyContent: 'space-between'
+                  justifyContent: 'space-between',
+                  overflow: 'visible'
                 }}
               >
-                <div className="absolute -top-7 left-8 md:left-10">
+                <div className="absolute" style={{ top: '35px', left: '20px', zIndex: 10 }}>
                   <div className="h-12 w-12 rounded-full flex items-center justify-center" style={{ backgroundColor: '#F6EFE6', border: '1px solid #E2D6C5' }}>
                     <Image src="/medal-svg.svg" alt="Misión" width={22} height={22} />
                   </div>
@@ -142,10 +143,11 @@ export default function NosotrosPage() {
                   minHeight: '260px',
                   display: 'flex',
                   flexDirection: 'column',
-                  justifyContent: 'space-between'
+                  justifyContent: 'space-between',
+                  overflow: 'visible'
                 }}
               >
-                <div className="absolute -top-7 left-8 md:left-10">
+                <div className="absolute" style={{ top: '35px', left: '20px', zIndex: 10 }}>
                   <div className="h-12 w-12 rounded-full flex items-center justify-center" style={{ backgroundColor: '#F6EFE6', border: '1px solid #E2D6C5' }}>
                     <Image src="/ojo-svg.svg" alt="Visión" width={22} height={22} />
                   </div>
