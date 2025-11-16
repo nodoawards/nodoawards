@@ -36,28 +36,44 @@ export default function ServiciosPage() {
   const servicios = [
     {
       title: "Diseño",
-      description: "Diseñamos trofeos, premios, menciones, medallas y regalos corporativos personalizados. Trabajamos en colaboración con nuestros clientes para crear diseños únicos que superen sus expectativas y comuniquen su mensaje de manera efectiva.",
+      description: (
+        <>
+          Diseñamos trofeos, premios, menciones, medallas y regalos corporativos a medida. Trabajamos codo a codo con cada cliente, desarrollando propuestas que superan expectativas y transmiten la identidad de quienes premian.
+        </>
+      ),
       image: "/servicio-01.PNG"
     },
     {
       title: "Fabricación",
-      description: "Producimos piezas de alta calidad combinando tecnología y artesanía. Cada objeto es único y está cuidadosamente elaborado, prestando atención a cada detalle desde la selección de materiales hasta los acabados finales.",
+      description: (
+        <>
+          Contamos con procesos de <span className="font-semibold">producción de alta calidad,</span> donde combinamos tecnología y artesanía para lograr piezas únicas. Cada detalle se cuida al máximo, desde los materiales hasta las terminaciones, asegurando un resultado impecable.
+        </>
+      ),
       image: "/servicio-02.PNG"
     },
     {
       title: "Entrega",
-      description: "Ofrecemos un servicio completo que incluye opciones de empaque premium, cajas de alta calidad y presentaciones que realzan el valor del objeto y hacen de la entrega un momento inolvidable.",
+      description: (
+        <>
+          Ofrecemos un servicio completo que incluye <span className="font-semibold">opciones de packaging premium.</span> Cajas y presentaciones de alta calidad que realzan el valor del objeto y convierten la entrega en un momento inolvidable.
+        </>
+      ),
       image: "/servicio-03.PNG"
     },
     {
       title: "Fotografía en evento",
-      description: "Brindamos cobertura fotográfica profesional para las experiencias de premiación. Capturamos la emoción y el valor simbólico de cada momento para generar recuerdos y material de comunicación de alto impacto.",
+      description: (
+        <>
+          Acompañamos la experiencia de premiación con <span className="font-semibold">cobertura fotográfica profesional,</span> capturando la emoción y el valor simbólico de cada entrega para generar recuerdos y material de comunicación de gran impacto.
+        </>
+      ),
       image: "/servicio-04.PNG"
     }
   ]
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: '#FAFAFA' }}>
+    <div className="min-h-screen" style={{ backgroundColor: '#f1f1f1' }}>
       {/* Header */}
       <header className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-11/12 max-w-6xl border border-white/20 bg-white/10 backdrop-blur-md rounded-2xl shadow-lg font-syne">
         <div className="container flex h-16 items-center justify-between px-4 md:px-6">
@@ -110,11 +126,25 @@ export default function ServiciosPage() {
       </section>
 
       {/* Services Content */}
-      <main className="py-20" style={{ backgroundColor: '#FAFAFA' }}>
+      <main className="py-20" style={{ backgroundColor: '#f1f1f1' }}>
         <div className="container px-4 md:px-6">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-5xl mx-auto relative">
+            {/* Background Line SVG */}
+            <div
+              className="pointer-events-none absolute left-1/2 -translate-x-1/2 z-0"
+              style={{
+                top: 500,
+                width: '1087px',
+                height: '1725px',
+                backgroundImage: "url('/linea-servicio.svg')",
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: 'contain',
+                backgroundPosition: 'top center',
+                opacity: 0.7
+              }}
+            />
             {/* Title */}
-            <div className="text-center space-y-3 mb-16">
+            <div className="text-center space-y-3 mb-16 relative z-10">
               <p className="text-sm font-syne mb-4" style={{ fontSize: '15px', color: '#686868' }}>
                 Nuestro servicio
               </p>
@@ -126,18 +156,27 @@ export default function ServiciosPage() {
             </div>
 
             {/* Services Sections */}
-            <div className="grid gap-16 lg:grid-cols-2 items-start">
+            <div className="grid gap-16 lg:grid-cols-2 items-start relative z-10">
               {/* Left Column */}
               <div className="flex flex-col space-y-8">
                 {/* Diseño */}
                 <div className="flex flex-col items-center text-center space-y-6" style={{ maxWidth: '420px', margin: '0 auto' }}>
-                  <h3 className="text-2xl md:text-3xl font-bold font-syne" style={{ color: '#413725' }}>
+                  <h3 className="text-3xl md:text-4xl font-bold font-syne" style={{ color: '#413725' }}>
                     {servicios[0].title}
                   </h3>
-                  <p className="text-sm md:text-base text-slate-600 font-syne leading-relaxed">
+                  <p
+                    className="text-sm md:text-base font-syne leading-relaxed mx-auto max-w-[330px] md:max-w-[370px]"
+                    style={{
+                      color: '#413725',
+                      display: '-webkit-box',
+                      WebkitLineClamp: 5,
+                      WebkitBoxOrient: 'vertical' as any,
+                      overflow: 'hidden'
+                    }}
+                  >
                     {servicios[0].description}
                   </p>
-                  <div className="relative w-full overflow-hidden" style={{ aspectRatio: '4/3' }}>
+                  <div className="relative w-full overflow-hidden h-[320px] md:h-[360px]">
                     <Image
                       src={servicios[0].image}
                       alt={servicios[0].title}
@@ -146,16 +185,28 @@ export default function ServiciosPage() {
                     />
                   </div>
                 </div>
-                
+
+                {/* Spacer controlable para bajar "Entrega" */}
+                <div className="h-[150px]" />
+
                 {/* Entrega */}
-                <div className="flex flex-col items-center text-center space-y-6 lg:pt-[169px] lg:-mt-[300px]" style={{ maxWidth: '420px', margin: '0 auto' }}>
-                  <h3 className="text-2xl md:text-3xl font-bold font-syne" style={{ color: '#413725' }}>
+                <div className="flex flex-col items-center text-center space-y-6 lg:pt-[169px]" style={{ maxWidth: '420px', margin: '0 auto' }}>
+                  <h3 className="text-3xl md:text-4xl font-bold font-syne" style={{ color: '#413725' }}>
                     {servicios[2].title}
                   </h3>
-                  <p className="text-sm md:text-base text-slate-600 font-syne leading-relaxed">
+                  <p
+                    className="text-sm md:text-base font-syne leading-relaxed mx-auto max-w-[330px] md:max-w-[370px]"
+                    style={{
+                      color: '#413725',
+                      display: '-webkit-box',
+                      WebkitLineClamp: 5,
+                      WebkitBoxOrient: 'vertical' as any,
+                      overflow: 'hidden'
+                    }}
+                  >
                     {servicios[2].description}
                   </p>
-                  <div className="relative w-full overflow-hidden" style={{ aspectRatio: '4/3' }}>
+                  <div className="relative w-full overflow-hidden h-[320px] md:h-[360px]">
                     <Image
                       src={servicios[2].image}
                       alt={servicios[2].title}
@@ -169,14 +220,23 @@ export default function ServiciosPage() {
               {/* Right Column */}
               <div className="flex flex-col space-y-8">
                 {/* Fabricación */}
-                <div className="flex flex-col items-center text-center space-y-6 lg:pt-[338px]" style={{ maxWidth: '420px', margin: '0 auto' }}>
-                  <h3 className="text-2xl md:text-3xl font-bold font-syne" style={{ color: '#413725' }}>
+                <div className="flex flex-col items-center text-center space-y-6 lg:pt-[338px]" style={{ maxWidth: '420px', margin: '0 auto', marginTop: '170px' }}>
+                  <h3 className="text-3xl md:text-4xl font-bold font-syne" style={{ color: '#413725' }}>
                     {servicios[1].title}
                   </h3>
-                  <p className="text-sm md:text-base text-slate-600 font-syne leading-relaxed">
+                  <p
+                    className="text-sm md:text-base font-syne leading-relaxed mx-auto max-w-[330px] md:max-w-[370px]"
+                    style={{
+                      color: '#413725',
+                      display: '-webkit-box',
+                      WebkitLineClamp: 5,
+                      WebkitBoxOrient: 'vertical' as any,
+                      overflow: 'hidden'
+                    }}
+                  >
                     {servicios[1].description}
                   </p>
-                  <div className="relative w-full overflow-hidden" style={{ aspectRatio: '4/3' }}>
+                  <div className="relative w-full overflow-hidden h-[320px] md:h-[360px]">
                     <Image
                       src={servicios[1].image}
                       alt={servicios[1].title}
@@ -187,14 +247,25 @@ export default function ServiciosPage() {
                 </div>
                 
                 {/* Fotografía en evento */}
-                <div className="flex flex-col items-center text-center space-y-6 lg:pt-[169px] lg:pb-72" style={{ maxWidth: '420px', margin: '0 auto' }}>
-                  <h3 className="text-2xl md:text-3xl font-bold font-syne" style={{ color: '#413725' }}>
-                    {servicios[3].title}
+                <div className="flex flex-col items-center text-center space-y-6 lg:pt-[169px] lg:pb-72" style={{ maxWidth: '420px', margin: '0 auto', marginTop: '50px' }}>
+                  <h3 className="text-3xl md:text-4xl font-bold font-syne" style={{ color: '#413725' }}>
+                    Fotografia
+                    <br />
+                    en evento
                   </h3>
-                  <p className="text-sm md:text-base text-slate-600 font-syne leading-relaxed">
+                  <p
+                    className="text-sm md:text-base font-syne leading-relaxed mx-auto max-w-[330px] md:max-w-[370px]"
+                    style={{
+                      color: '#413725',
+                      display: '-webkit-box',
+                      WebkitLineClamp: 5,
+                      WebkitBoxOrient: 'vertical' as any,
+                      overflow: 'hidden'
+                    }}
+                  >
                     {servicios[3].description}
                   </p>
-                  <div className="relative w-full overflow-hidden" style={{ aspectRatio: '4/3' }}>
+                  <div className="relative w-full overflow-hidden h-[320px] md:h-[360px]">
                     <Image
                       src={servicios[3].image}
                       alt={servicios[3].title}

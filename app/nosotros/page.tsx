@@ -87,7 +87,7 @@ export default function NosotrosPage() {
       </section>
 
       {/* About Content */}
-      <main className="py-20" style={{ backgroundColor: '#FAFAFA' }}>
+      <main className="pt-20 pb-40" style={{ backgroundColor: '#FAFAFA' }}>
         <div className="container px-4 md:px-6">
           <div className="max-w-5xl mx-auto space-y-28">
             {/* Purpose */}
@@ -166,11 +166,11 @@ export default function NosotrosPage() {
             </div>
 
             {/* Values */}
-            <div className="flex flex-wrap justify-center gap-3 md:gap-4">
+            <div className="flex flex-wrap justify-center gap-3 md:gap-4 -mt-14">
               {['Excelencia', 'Innovación', 'Sensibilidad', 'Nacional', 'Sustentabilidad'].map((value) => (
                 <span
                   key={value}
-                  className="px-6 py-2 rounded-full border text-sm md:text-base font-syne"
+                  className="px-6 py-2 rounded-full border text-sm md:text-base font-syne font-semibold"
                   style={{ borderColor: '#C59A63', color: '#5F4534', backgroundColor: '#FBF7F0' }}
                 >
                   {value}
