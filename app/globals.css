@@ -30,11 +30,11 @@
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     /* Brand font CSS variable used by Tailwind font-sans */
-    --font-brand: 'Syne';
+    --font-brand: 'Geist';
     /* Hero gradient colors */
-    --hero-gradient-start: #D3B900;
-    --hero-gradient-middle: #856220;
-    --hero-gradient-end: #A19123;
+    --hero-gradient-start: #7652FA;
+    --hero-gradient-middle: #7652FA;
+    --hero-gradient-end: #7652FA;
   }
 
   .dark {
@@ -94,12 +94,34 @@
   font-display: swap; 
 }
 
+/* Stack Sans Notch font face - Variable font */
+@font-face { 
+  font-family: 'Stack Sans Notch'; 
+  src: url('/fonts/StackSansNotch/StackSansNotch-VariableFont_wght.ttf') format('truetype-variations'); 
+  font-weight: 100 900; 
+  font-style: normal; 
+  font-display: swap; 
+}
+
+/* Geist font face - Variable font */
+@font-face { 
+  font-family: 'Geist'; 
+  src: url('/fonts/Geist/Geist-VariableFont_wght.ttf') format('truetype-variations'); 
+  font-weight: 100 900; 
+  font-style: normal; 
+  font-display: swap; 
+}
+
 @layer base {
   * {
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-geist;
+  }
+  /* All headings use Stack Sans Notch with Medium weight */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-stack-sans-notch font-medium;
   }
 }
 

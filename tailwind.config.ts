@@ -23,8 +23,10 @@ const config: Config = {
       fontFamily: {
         // Use CSS variable provided by next/font(local) when available
         // Falls back to Tailwind's default sans stack otherwise
-        sans: ["var(--font-brand)", ...defaultTheme.fontFamily.sans],
+        sans: ["var(--font-brand)", "Geist", ...defaultTheme.fontFamily.sans],
         syne: ["Syne", ...defaultTheme.fontFamily.sans],
+        "stack-sans-notch": ["Stack Sans Notch", ...defaultTheme.fontFamily.sans],
+        geist: ["Geist", ...defaultTheme.fontFamily.sans],
       },
       colors: {
         border: "hsl(var(--border))",

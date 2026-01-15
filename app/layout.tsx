@@ -3,12 +3,12 @@ import type { Metadata } from "next"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "NODO AWARDS - El futuro de la premiación | Trofeos y Premios Personalizados",
-  description: "Diseñamos y fabricamos trofeos, premios, medallas y regalos corporativos personalizados. Servicio integral desde el diseño hasta la entrega. El futuro de la premiación.",
-  keywords: "trofeos, premios, medallas, reconocimiento, corporativo, personalizado, diseño, fabricación, entrega, fotografía, eventos",
-  authors: [{ name: "NODO AWARDS" }],
-  creator: "NODO AWARDS",
-  publisher: "NODO AWARDS",
+  title: "Noddo - El valor de ser visto | Reconocimientos físicos y digitales",
+  description: "Diseñamos y creamos reconocimientos físicos y digitales que celebran a las personas, fortalezcan la cultura de las organizaciones y devuelvan sentido al acto de reconocer.",
+  keywords: "reconocimientos, premios, trofeos, medallas, reconocimiento empresarial, cultura organizacional, reconocimientos digitales, reconocimientos físicos, modelado 3D, trofeos futbol, equipo, medalla de futbol, medalla de deporte, trofeo particular, diseño, personalizado",
+  authors: [{ name: "Noddo" }],
+  creator: "Noddo",
+  publisher: "Noddo",
   formatDetection: {
     email: false,
     address: false,
@@ -19,16 +19,16 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: "NODO AWARDS - El futuro de la premiación",
-    description: "Diseñamos y fabricamos trofeos, premios, medallas y regalos corporativos personalizados. Servicio integral desde el diseño hasta la entrega.",
+    title: "Noddo - El valor de ser visto",
+    description: "Diseñamos y creamos reconocimientos físicos y digitales que celebran a las personas, fortalezcan la cultura de las organizaciones y devuelvan sentido al acto de reconocer.",
     url: 'https://nodoawards.com',
-    siteName: 'NODO AWARDS',
+    siteName: 'Noddo',
     images: [
       {
-        url: '/favicon.nodo.png',
+        url: '/favicon - noddo.svg',
         width: 1200,
         height: 630,
-        alt: 'NODO AWARDS - El futuro de la premiación',
+        alt: 'Noddo - El valor de ser visto',
       },
     ],
     locale: 'es_AR',
@@ -36,9 +36,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "NODO AWARDS - El futuro de la premiación",
-    description: "Diseñamos y fabricamos trofeos, premios, medallas y regalos corporativos personalizados.",
-    images: ['/favicon.nodo.png'],
+    title: "Noddo - El valor de ser visto",
+    description: "Diseñamos y creamos reconocimientos físicos y digitales que celebran a las personas, fortalezcan la cultura de las organizaciones y devuelvan sentido al acto de reconocer.",
+    images: ['/favicon - noddo.svg'],
   },
   robots: {
     index: true,
@@ -64,13 +64,12 @@ export default function RootLayout({
   return (
     <html lang="es">
       <head>
-        <link rel="icon" href="/favicon.nodo.png" type="image/png" />
-        <link rel="icon" href="/favicon.nodo.png" sizes="32x32" type="image/png" />
-        <link rel="icon" href="/favicon.nodo.png" sizes="16x16" type="image/png" />
-        <link rel="apple-touch-icon" href="/favicon.nodo.png" />
-        <link rel="shortcut icon" href="/favicon.nodo.png" />
+        <link rel="icon" href="/favicon - noddo.svg" type="image/svg+xml" />
+        <link rel="icon" href="/favicon - noddo.svg" sizes="any" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/favicon - noddo.svg" />
+        <link rel="shortcut icon" href="/favicon - noddo.svg" />
       </head>
-      <body className="font-syne antialiased">{children}</body>
+      <body className="font-geist antialiased">{children}</body>
     </html>
   )
 }
