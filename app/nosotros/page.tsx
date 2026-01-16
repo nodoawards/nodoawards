@@ -5,6 +5,7 @@ import { Check, ArrowRight, Twitter, Linkedin, Github, Mail, Trophy, Copyright, 
 import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
+import { ScrollReveal } from "@/components/scroll-reveal"
 
 export default function NosotrosPage() {
   const [isSubmitted, setIsSubmitted] = useState(false)
@@ -15,7 +16,7 @@ export default function NosotrosPage() {
     const formData = new FormData(e.currentTarget)
     
     try {
-      const response = await fetch('https://formspree.io/f/mrblrqqb', {
+      const response = await fetch('https://formspree.io/f/mjggggkn', {
         method: 'POST',
         body: formData,
         headers: {
@@ -83,14 +84,16 @@ export default function NosotrosPage() {
           </nav>
 
           <div className="flex items-center space-x-4">
-            <Button 
-              className="font-geist" 
-              style={{ backgroundColor: '#7652FA', color: '#E7E3FE' }}
-              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#5d3fd9'}
-              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#7652FA'}
-            >
-              Contactanos
-            </Button>
+            <Link href="https://wa.me/5491122704706" target="_blank" rel="noopener noreferrer">
+              <Button 
+                className="font-geist" 
+                style={{ backgroundColor: '#7652FA', color: '#E7E3FE' }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#5d3fd9'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#7652FA'}
+              >
+                Contactanos
+              </Button>
+            </Link>
           </div>
         </div>
       </header>
@@ -115,7 +118,8 @@ export default function NosotrosPage() {
         <div className="container px-4 md:px-6">
           <div className="max-w-5xl mx-auto space-y-28">
             {/* Purpose */}
-            <div className="text-center space-y-3">
+            <ScrollReveal>
+              <div className="text-center space-y-3">
               <p className="text-sm font-geist mb-4" style={{ fontSize: '15px', color: '#686868' }}>
                 Nuestro propósito
               </p>
@@ -125,10 +129,12 @@ export default function NosotrosPage() {
                 <span style={{ color: '#04001B' }}> a través del </span>
                 <span style={{ color: '#7652FA' }}>reconocimiento</span>
               </h2>
-            </div>
+              </div>
+            </ScrollReveal>
 
             {/* Mission & Vision */}
-            <div className="grid gap-6 md:grid-cols-2">
+            <ScrollReveal>
+              <div className="grid gap-6 md:grid-cols-2">
               <div
                 className="relative p-8 md:p-10 flex flex-col justify-center"
                 style={{
@@ -188,10 +194,12 @@ export default function NosotrosPage() {
                   </p>
                 </div>
               </div>
-            </div>
+              </div>
+            </ScrollReveal>
 
             {/* Values */}
-            <div className="flex flex-wrap justify-center gap-3 md:gap-4 -mt-14">
+            <ScrollReveal>
+              <div className="flex flex-wrap justify-center gap-3 md:gap-4 -mt-14">
               {['Humanidad', 'Detalle', 'Excelencia', 'Innovación', 'Sustentabilidad'].map((value) => (
                 <span
                   key={value}
@@ -201,10 +209,12 @@ export default function NosotrosPage() {
                   {value}
                 </span>
               ))}
-            </div>
+              </div>
+            </ScrollReveal>
 
             {/* Narrative */}
-            <div className="text-center space-y-4">
+            <ScrollReveal>
+              <div className="text-center space-y-4">
               <p className="text-sm font-geist mb-4" style={{ fontSize: '15px', color: '#686868' }}>
                 Nosotros
               </p>
@@ -212,13 +222,15 @@ export default function NosotrosPage() {
                 <span style={{ color: '#04001B' }}>La gente solo nota cuando ganás. Noddo ve </span>
                 <span style={{ color: '#7652FA' }}>todo el proceso</span>
               </h2>
-            </div>
+              </div>
+            </ScrollReveal>
           </div>
         </div>
       </main>
 
       {/* Contact Section */}
       <section className="py-20 relative" style={{ backgroundColor: '#FAFAFA' }}>
+        <ScrollReveal>
         {/* Logo positioned at right edge */}
         <div className="absolute right-0 top-0 h-full flex items-center" style={{ zIndex: 1, transform: 'scale(0.7)', transformOrigin: 'right center' }}>
           <Image
@@ -346,6 +358,7 @@ export default function NosotrosPage() {
             </div>
           </div>
         </div>
+        </ScrollReveal>
       </section>
 
       {/* Footer */}
@@ -378,6 +391,9 @@ export default function NosotrosPage() {
                   </svg>
                 </Link>
               </div>
+              <p className="mt-4" style={{ color: '#E7E3FE' }}>
+                holanoddo@gmail.com
+              </p>
             </div>
 
             <div className="space-y-4">

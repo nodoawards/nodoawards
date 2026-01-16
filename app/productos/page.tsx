@@ -5,6 +5,7 @@ import { Check, ArrowRight, Twitter, Linkedin, Github, Mail, Trophy, Copyright, 
 import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
+import { ScrollReveal } from "@/components/scroll-reveal"
 
 export default function ProductosPage() {
   const betanoSliderImages = [
@@ -48,7 +49,7 @@ export default function ProductosPage() {
     const formData = new FormData(e.currentTarget)
     
     try {
-      const response = await fetch('https://formspree.io/f/mrblrqqb', {
+      const response = await fetch('https://formspree.io/f/mjggggkn', {
         method: 'POST',
         body: formData,
         headers: {
@@ -116,14 +117,16 @@ export default function ProductosPage() {
           </nav>
 
           <div className="flex items-center space-x-4">
-            <Button 
-              className="font-geist" 
-              style={{ backgroundColor: '#7652FA', color: '#E7E3FE' }}
-              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#5d3fd9'}
-              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#7652FA'}
-            >
-              Contactanos
-            </Button>
+            <Link href="https://wa.me/5491122704706" target="_blank" rel="noopener noreferrer">
+              <Button 
+                className="font-geist" 
+                style={{ backgroundColor: '#7652FA', color: '#E7E3FE' }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#5d3fd9'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#7652FA'}
+              >
+                Contactanos
+              </Button>
+            </Link>
           </div>
         </div>
       </header>
@@ -148,7 +151,8 @@ export default function ProductosPage() {
         <div className="container px-4 md:px-6">
           <div className="max-w-6xl mx-auto">
             {/* Section Title */}
-            <div className="mb-16 text-center">
+            <ScrollReveal>
+              <div className="mb-16 text-center">
               <p className="text-sm font-geist mb-4" style={{ fontSize: '15px', color: '#686868' }}>
                 Nuestros proyectos
               </p>
@@ -161,8 +165,11 @@ export default function ProductosPage() {
               </h2>
             </div>
 
+            </ScrollReveal>
+
             {/* Product Cards */}
-            <div className="space-y-8">
+            <ScrollReveal>
+              <div className="space-y-8">
               {/* Card 1 - CRACK BETANO */}
               <div className="bg-white rounded-2xl shadow-sm overflow-hidden">
                 <div className="grid gap-0 lg:grid-cols-2 items-stretch">
@@ -319,10 +326,12 @@ export default function ProductosPage() {
                   </div>
                 </div>
               </div>
-            </div>
+              </div>
+            </ScrollReveal>
 
             {/* Additional Cards */}
-            <div className="grid gap-8 md:grid-cols-[minmax(0,1fr)_minmax(0,0.7fr)] mt-8 lg:mt-12">
+            <ScrollReveal>
+              <div className="grid gap-8 md:grid-cols-[minmax(0,1fr)_minmax(0,0.7fr)] mt-8 lg:mt-12">
               <div className="bg-white rounded-2xl shadow-sm p-8 lg:p-12 flex flex-col">
                 <div className="space-y-6">
                   <h3 className="text-4xl font-medium font-stack-sans-notch" style={{ color: '#04001B' }}>
@@ -365,13 +374,15 @@ export default function ProductosPage() {
                   </Button>
                 </div>
               </div>
-            </div>
+              </div>
+            </ScrollReveal>
           </div>
         </div>
       </main>
 
       {/* Contact Section */}
       <section className="py-20 relative" style={{ backgroundColor: '#FAFAFA' }}>
+        <ScrollReveal>
         {/* Logo positioned at right edge */}
         <div className="absolute right-0 top-0 h-full flex items-center" style={{ zIndex: 1, transform: 'scale(0.7)', transformOrigin: 'right center' }}>
           <Image
@@ -499,6 +510,7 @@ export default function ProductosPage() {
             </div>
           </div>
         </div>
+        </ScrollReveal>
       </section>
 
       {/* Footer */}
@@ -531,6 +543,9 @@ export default function ProductosPage() {
                   </svg>
                 </Link>
               </div>
+              <p className="mt-4" style={{ color: '#E7E3FE' }}>
+                holanoddo@gmail.com
+              </p>
             </div>
 
             <div className="space-y-4">

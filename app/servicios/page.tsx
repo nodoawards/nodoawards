@@ -5,6 +5,7 @@ import { Check, ArrowRight, Twitter, Linkedin, Github, Mail, Trophy, Copyright, 
 import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
+import { ScrollReveal } from "@/components/scroll-reveal"
 
 export default function ServiciosPage() {
   const [isSubmitted, setIsSubmitted] = useState(false)
@@ -15,7 +16,7 @@ export default function ServiciosPage() {
     const formData = new FormData(e.currentTarget)
     
     try {
-      const response = await fetch('https://formspree.io/f/mrblrqqb', {
+      const response = await fetch('https://formspree.io/f/mjggggkn', {
         method: 'POST',
         body: formData,
         headers: {
@@ -123,14 +124,16 @@ export default function ServiciosPage() {
           </nav>
 
           <div className="flex items-center space-x-4">
-            <Button 
-              className="font-geist" 
-              style={{ backgroundColor: '#7652FA', color: '#E7E3FE' }}
-              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#5d3fd9'}
-              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#7652FA'}
-            >
-              Contactanos
-            </Button>
+            <Link href="https://wa.me/5491122704706" target="_blank" rel="noopener noreferrer">
+              <Button 
+                className="font-geist" 
+                style={{ backgroundColor: '#7652FA', color: '#E7E3FE' }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#5d3fd9'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#7652FA'}
+              >
+                Contactanos
+              </Button>
+            </Link>
           </div>
         </div>
       </header>
@@ -151,8 +154,9 @@ export default function ServiciosPage() {
 
       {/* Services Content */}
       <main className="py-20" style={{ backgroundColor: '#f1f1f1' }}>
-        <div className="container px-4 md:px-6">
-          <div className="max-w-5xl mx-auto relative">
+        <ScrollReveal>
+          <div className="container px-4 md:px-6">
+            <div className="max-w-5xl mx-auto relative">
             {/* Background Line SVG */}
             <div
               className="pointer-events-none absolute left-1/2 -translate-x-1/2 z-0"
@@ -303,10 +307,12 @@ export default function ServiciosPage() {
             </div>
           </div>
         </div>
+        </ScrollReveal>
       </main>
 
       {/* Contact Section */}
       <section className="py-20 relative" style={{ backgroundColor: '#FAFAFA' }}>
+        <ScrollReveal>
         {/* Logo positioned at right edge */}
         <div className="absolute right-0 top-0 h-full flex items-center" style={{ zIndex: 1, transform: 'scale(0.7)', transformOrigin: 'right center' }}>
           <Image
@@ -434,6 +440,7 @@ export default function ServiciosPage() {
             </div>
           </div>
         </div>
+        </ScrollReveal>
       </section>
 
       {/* Footer */}
@@ -466,6 +473,9 @@ export default function ServiciosPage() {
                   </svg>
                 </Link>
               </div>
+              <p className="mt-4" style={{ color: '#E7E3FE' }}>
+                holanoddo@gmail.com
+              </p>
             </div>
 
             <div className="space-y-4">

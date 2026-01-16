@@ -8,6 +8,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { AspectRatio } from "@/components/ui/aspect-ratio"
 import { useState, useEffect } from "react"
+import { ScrollReveal } from "@/components/scroll-reveal"
 
 export default function LandingPage() {
   const [isSubmitted, setIsSubmitted] = useState(false)
@@ -42,7 +43,7 @@ export default function LandingPage() {
     const formData = new FormData(e.currentTarget)
     
     try {
-      const response = await fetch('https://formspree.io/f/mrblrqqb', {
+      const response = await fetch('https://formspree.io/f/mjggggkn', {
         method: 'POST',
         body: formData,
         headers: {
@@ -115,14 +116,16 @@ export default function LandingPage() {
           </nav>
 
           <div className="flex items-center space-x-4">
-            <Button 
-              className="font-geist" 
-              style={{ backgroundColor: '#7652FA', color: '#E7E3FE' }}
-              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#5d3fd9'}
-              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#7652FA'}
-            >
-              Contactanos
-            </Button>
+            <Link href="https://wa.me/5491122704706" target="_blank" rel="noopener noreferrer">
+              <Button 
+                className="font-geist" 
+                style={{ backgroundColor: '#7652FA', color: '#E7E3FE' }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#5d3fd9'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#7652FA'}
+              >
+                Contactanos
+              </Button>
+            </Link>
           </div>
         </div>
       </header>
@@ -237,8 +240,9 @@ export default function LandingPage() {
 
       {/* Clients Logo Section */}
       <section className="py-16" style={{ backgroundColor: '#FFFFFF' }}>
-        <div className="container px-4 md:px-6">
-          <div className="max-w-6xl mx-auto">
+        <ScrollReveal>
+          <div className="container px-4 md:px-6">
+            <div className="max-w-6xl mx-auto">
             {/* Optional Title */}
             <div className="text-center mb-12">
               <p className="text-sm font-geist uppercase tracking-wider" style={{ color: '#686868' }}>
@@ -297,12 +301,14 @@ export default function LandingPage() {
             </div>
           </div>
         </div>
+        </ScrollReveal>
       </section>
 
       {/* Mission Statement */}
       <section className="pt-32 pb-16" style={{ backgroundColor: '#FAFAFA' }}>
-        <div className="container px-4 md:px-6">
-          <div className="max-w-4xl mx-auto text-center">
+        <ScrollReveal>
+          <div className="container px-4 md:px-6">
+            <div className="max-w-4xl mx-auto text-center">
             <p className="text-2xl md:text-3xl font-geist leading-relaxed" style={{ color: '#04001B' }}>
               Ayudamos a empresas a <span style={{ color: '#7652FA' }}>transformar</span> la manera en que <span style={{ color: '#7652FA' }}>reconocen el valor</span> de su gente, sus aliados y quienes impulsan su crecimiento.
             </p>
@@ -327,13 +333,15 @@ export default function LandingPage() {
             </div>
           </div>
         </div>
+        </ScrollReveal>
       </section>
 
 
       {/* Betano Trophy Section */}
       <section className="py-20" style={{ backgroundColor: '#FAFAFA' }}>
-        <div className="container px-4 md:px-6">
-          <div className="max-w-6xl mx-auto">
+        <ScrollReveal>
+          <div className="container px-4 md:px-6">
+            <div className="max-w-6xl mx-auto">
             <div className="grid gap-8 lg:grid-cols-2 items-start">
                {/* Left Column - Full Trophy Image */}
                <div className="lg:col-span-1 space-y-48">
@@ -377,12 +385,64 @@ export default function LandingPage() {
             </div>
           </div>
         </div>
+        </ScrollReveal>
+      </section>
+
+      {/* Workflow Section */}
+      <section className="py-20" style={{ backgroundColor: '#FAFAFA' }}>
+        <ScrollReveal>
+          <div className="container px-4 md:px-6">
+            <div className="max-w-4xl mx-auto">
+            <div className="flex flex-col items-center">
+              <Image
+                src="/Card Overlay Workflow.png"
+                alt="Workflow"
+                width={80}
+                height={40}
+                className="mb-12"
+              />
+              <h2 className="font-medium font-stack-sans-notch mb-8" style={{ color: '#04001B', fontSize: '38.4px' }}>
+                Workflow
+              </h2>
+              
+              {/* Workflow Cards */}
+              <div className="flex justify-center gap-4" style={{ flexWrap: 'nowrap' }}>
+                <Image
+                  src="/Tarjeta discovery.png"
+                  alt="Discovery"
+                  width={300}
+                  height={200}
+                  className="h-auto"
+                  style={{ transform: 'scale(1.10)', transformOrigin: 'center' }}
+                />
+                <Image
+                  src="/Tarjeta Fabricación.png"
+                  alt="Fabricación"
+                  width={300}
+                  height={200}
+                  className="h-auto"
+                  style={{ transform: 'scale(1.10)', transformOrigin: 'center' }}
+                />
+                <Image
+                  src="/Tarjeta entrega.png"
+                  alt="Entrega"
+                  width={300}
+                  height={200}
+                  className="h-auto"
+                  style={{ transform: 'scale(1.10)', transformOrigin: 'center' }}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        </ScrollReveal>
       </section>
 
       {/* Testimonial Section */}
       <section className="py-20" style={{ backgroundColor: '#FAFAFA' }}>
-        <div className="container px-4 md:px-6">
-          <div className="max-w-4xl mx-auto flex justify-center">
+        <ScrollReveal>
+          <div className="container px-4 md:px-6">
+            <div className="max-w-4xl mx-auto flex justify-center">
             <div className="relative flex items-start">
               {/* Vertical Bar */}
               <div className="rounded-full mr-12" style={{ backgroundColor: '#F4EEFF', height: '280px', width: '15px', marginLeft: '-10px' }}></div>
@@ -433,12 +493,14 @@ export default function LandingPage() {
             </div>
           </div>
         </div>
+        </ScrollReveal>
       </section>
 
       {/* Why Choose NodoAwards Section */}
       <section className="py-20" style={{ backgroundColor: '#FAFAFA' }}>
-        <div className="container px-4 md:px-6">
-          {/* Section Title */}
+        <ScrollReveal>
+          <div className="container px-4 md:px-6">
+            {/* Section Title */}
           <div className="mb-16 text-center">
             <h2 className="text-4xl font-medium tracking-tight font-stack-sans-notch" style={{ color: '#04001B', fontSize: '36px' }}>
               Por qué elegir Noddo
@@ -496,10 +558,12 @@ export default function LandingPage() {
             </div>
           </div>
         </div>
+        </ScrollReveal>
       </section>
 
       {/* Contact Section */}
       <section id="contact" className="py-20 relative" style={{ backgroundColor: '#FAFAFA' }}>
+        <ScrollReveal>
         {/* Logo positioned at right edge */}
         <div className="absolute right-0 top-0 h-full flex items-center" style={{ zIndex: 1, transform: 'scale(0.7)', transformOrigin: 'right center' }}>
           <Image
@@ -709,6 +773,7 @@ export default function LandingPage() {
             </div>
           </div>
         </div>
+        </ScrollReveal>
       </section>
 
       {/* Footer */}
@@ -741,6 +806,9 @@ export default function LandingPage() {
                   </svg>
                 </Link>
               </div>
+              <p className="mt-4" style={{ color: '#E7E3FE' }}>
+                holanoddo@gmail.com
+              </p>
             </div>
 
             <div className="space-y-4">
