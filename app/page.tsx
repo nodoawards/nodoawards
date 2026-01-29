@@ -131,7 +131,7 @@ export default function LandingPage() {
       </header>
 
       {/* Hero Section */}
-      <section id="hero-section" className="relative py-20 md:py-32 bg-white overflow-hidden" style={{ borderBottomLeftRadius: '24px', borderBottomRightRadius: '24px', minHeight: '90vh' }}>
+      <section id="hero-section" className="relative bg-white overflow-hidden flex items-center" style={{ borderBottomLeftRadius: '24px', borderBottomRightRadius: '24px', minHeight: '90vh' }}>
         {/* Background Image - Behind everything */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -143,8 +143,8 @@ export default function LandingPage() {
           />
         </div>
 
-        <div className="relative z-10 flex items-center justify-start min-h-full w-full">
-          <div className="w-11/12 max-w-6xl relative" style={{ marginLeft: 'calc((100% - min(91.67%, 72rem)) / 2)' }}>
+        <div className="relative z-10 w-full flex items-center justify-start">
+          <div className="w-11/12 max-w-6xl mx-auto">
             <div className="text-left space-y-8">
             {/* Overlay Badge */}
             <div className="flex justify-start mb-6">
@@ -213,25 +213,27 @@ export default function LandingPage() {
                   </p>
                 </div>
               </div>
-              <Button 
-                size="lg" 
-                className="font-geist w-full sm:w-auto"
-                style={{ backgroundColor: '#E7E3FE', color: '#04001B', border: 'none', minWidth: '200px' }}
-                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#d4cfe8'}
-                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#E7E3FE'}
-              >
-                <span className="flex items-center gap-2 justify-center">
-                  <Image
-                    src="/vector-user.svg"
-                    alt="Usuario"
-                    width={25}
-                    height={25}
-                    className="h-6 w-6"
-                    style={{ opacity: 1 }}
-                  />
-                  Agendar una reunión
-                </span>
-              </Button>
+              <Link href="https://calendar.app.google/oQm6gqMmpRb3dyf57" target="_blank" rel="noopener noreferrer">
+                <Button 
+                  size="lg" 
+                  className="font-geist w-full sm:w-auto"
+                  style={{ backgroundColor: '#E7E3FE', color: '#04001B', border: 'none', minWidth: '200px' }}
+                  onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#d4cfe8'}
+                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#E7E3FE'}
+                >
+                  <span className="flex items-center gap-2 justify-center">
+                    <Image
+                      src="/vector-user.svg"
+                      alt="Usuario"
+                      width={25}
+                      height={25}
+                      className="h-6 w-6"
+                      style={{ opacity: 1 }}
+                    />
+                    Agendar una reunión
+                  </span>
+                </Button>
+              </Link>
             </div>
             </div>
           </div>

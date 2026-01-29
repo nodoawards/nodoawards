@@ -42,7 +42,7 @@ export default function ServiciosPage() {
           Diseñamos trofeos, premios, menciones, medallas y regalos corporativos a medida. Trabajamos codo a codo con cada cliente, desarrollando propuestas que superan expectativas y transmiten la identidad de quienes premian.
         </>
       ),
-      image: "/servicio-01.PNG"
+      image: "/servicio-01.png"
     },
     {
       title: "Fabricación",
@@ -51,7 +51,7 @@ export default function ServiciosPage() {
           Contamos con procesos de <span className="font-semibold">producción de alta calidad,</span> donde combinamos tecnología y artesanía para lograr piezas únicas. Cada detalle se cuida al máximo, desde los materiales hasta las terminaciones, asegurando un resultado impecable.
         </>
       ),
-      image: "/servicio-02.PNG"
+      image: "/servicio-02.png"
     },
     {
       title: "Entrega",
@@ -60,7 +60,7 @@ export default function ServiciosPage() {
           Ofrecemos un servicio completo que incluye <span className="font-semibold">opciones de packaging premium.</span> Cajas y presentaciones de alta calidad que realzan el valor del objeto y convierten la entrega en un momento inolvidable.
         </>
       ),
-      image: "/servicio-03.PNG"
+      image: "/servicio-03.png"
     },
     {
       title: "Fotografía en evento",
@@ -69,7 +69,7 @@ export default function ServiciosPage() {
           Acompañamos la experiencia de premiación con <span className="font-semibold">cobertura fotográfica profesional,</span> capturando la emoción y el valor simbólico de cada entrega para generar recuerdos y material de comunicación de gran impacto.
         </>
       ),
-      image: "/servicio-04.PNG"
+      image: "/servicio-04.png"
     }
   ]
 
@@ -154,9 +154,8 @@ export default function ServiciosPage() {
 
       {/* Services Content */}
       <main className="py-20" style={{ backgroundColor: '#f1f1f1' }}>
-        <ScrollReveal>
-          <div className="container px-4 md:px-6">
-            <div className="max-w-5xl mx-auto relative">
+        <div className="container px-4 md:px-6">
+          <div className="max-w-5xl mx-auto relative">
             {/* Background Line SVG */}
             <div
               className="pointer-events-none absolute left-1/2 -translate-x-1/2 z-0"
@@ -173,19 +172,22 @@ export default function ServiciosPage() {
               }}
             />
             {/* Title */}
-            <div className="text-center space-y-3 mb-16 relative z-10">
-              <p className="text-sm font-geist mb-4" style={{ fontSize: '15px', color: '#686868' }}>
-                Nuestro servicio
-              </p>
-              <h2 className="text-3xl md:text-4xl font-medium font-stack-sans-notch">
-                <span style={{ color: '#04001B' }}>Cubrimos </span>
-                <span className="hero-gradient">cada paso</span>
-                <span style={{ color: '#04001B' }}> del proceso</span>
-              </h2>
-            </div>
+            <ScrollReveal>
+              <div className="text-center space-y-3 mb-16 relative z-10">
+                <p className="text-sm font-geist mb-4" style={{ fontSize: '15px', color: '#686868' }}>
+                  Nuestro servicio
+                </p>
+                <h2 className="text-3xl md:text-4xl font-medium font-stack-sans-notch">
+                  <span style={{ color: '#04001B' }}>Cubrimos </span>
+                  <span className="hero-gradient">cada paso</span>
+                  <span style={{ color: '#04001B' }}> del proceso</span>
+                </h2>
+              </div>
+            </ScrollReveal>
 
             {/* Services Sections */}
-            <div className="grid gap-16 lg:grid-cols-2 items-start relative z-10">
+            <ScrollReveal>
+              <div className="grid gap-16 lg:grid-cols-2 items-start relative z-10">
               {/* Left Column */}
               <div className="flex flex-col space-y-8">
                 {/* Diseño */}
@@ -304,10 +306,10 @@ export default function ServiciosPage() {
                   </div>
                 </div>
               </div>
-            </div>
+              </div>
+            </ScrollReveal>
           </div>
         </div>
-        </ScrollReveal>
       </main>
 
       {/* Contact Section */}

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Check, ArrowRight, Twitter, Linkedin, Github, Mail, Trophy, Copyright, Wrench } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { ScrollReveal } from "@/components/scroll-reveal"
 
 export default function ProductosPage() {
@@ -34,6 +34,30 @@ export default function ProductosPage() {
 
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [betanoSlideIndex, setBetanoSlideIndex] = useState(0)
+
+  // Preload todas las imágenes del carousel al montar el componente
+  useEffect(() => {
+    betanoSliderImages.forEach((image) => {
+      const img = new window.Image()
+      img.src = image.src
+    })
+  }, [])
+
+  // Preload imágenes adyacentes cuando cambia el índice
+  useEffect(() => {
+    const preloadImage = (index: number) => {
+      const img = new window.Image()
+      img.src = betanoSliderImages[index].src
+    }
+
+    // Preload siguiente
+    const nextIndex = (betanoSlideIndex + 1) % betanoSliderImages.length
+    preloadImage(nextIndex)
+
+    // Preload anterior
+    const prevIndex = (betanoSlideIndex - 1 + betanoSliderImages.length) % betanoSliderImages.length
+    preloadImage(prevIndex)
+  }, [betanoSlideIndex])
 
   const handleBetanoNext = () => {
     setBetanoSlideIndex((prev) => (prev + 1) % betanoSliderImages.length)
@@ -285,7 +309,7 @@ export default function ProductosPage() {
                 </div>
               </div>
 
-              {/* Card 3 - NODO */}
+              {/* Card 3 - NODDO */}
               <div className="bg-white rounded-2xl shadow-sm overflow-hidden">
                 <div className="grid gap-0 lg:grid-cols-2 items-center">
                   {/* Left Section - Text Content */}
@@ -293,7 +317,7 @@ export default function ProductosPage() {
                     <div className="space-y-8">
                       {/* Título y subtítulo arriba */}
                       <div className="space-y-2 -mt-4">
-                        <h3 className="text-4xl font-medium font-stack-sans-notch hero-gradient">NODO</h3>
+                        <h3 className="text-4xl font-medium font-stack-sans-notch hero-gradient">NODDO</h3>
                         <p className="text-lg font-geist" style={{ color: '#686868' }}>TROFEO</p>
                       </div>
                       

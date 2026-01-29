@@ -17,7 +17,7 @@ export function useScrollAnimation() {
       },
       {
         threshold: 0.1, // Se activa cuando el 10% del elemento es visible
-        rootMargin: '0px 0px -50px 0px' // Se activa un poco antes de que entre completamente
+        rootMargin: '300px 0px -50px 0px' // Se activa cuando el elemento está 300px antes de entrar al viewport por arriba
       }
     )
 
