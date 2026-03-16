@@ -106,7 +106,7 @@ export default function ProductosPage() {
               href="/servicios" 
               className="text-sm font-medium transition-colors duration-300 font-geist" 
               style={{ color: '#04001B' }}
-              onMouseEnter={(e) => e.currentTarget.style.color = '#7652FA'}
+              onMouseEnter={(e) => e.currentTarget.style.color = '#AF89FF'}
               onMouseLeave={(e) => e.currentTarget.style.color = '#04001B'}
             >
               Servicios
@@ -115,7 +115,7 @@ export default function ProductosPage() {
               href="/productos" 
               className="text-sm font-medium transition-colors duration-300 font-geist" 
               style={{ color: '#04001B' }}
-              onMouseEnter={(e) => e.currentTarget.style.color = '#7652FA'}
+              onMouseEnter={(e) => e.currentTarget.style.color = '#AF89FF'}
               onMouseLeave={(e) => e.currentTarget.style.color = '#04001B'}
             >
               Productos
@@ -124,7 +124,7 @@ export default function ProductosPage() {
               href="/nosotros" 
               className="text-sm font-medium transition-colors duration-300 font-geist" 
               style={{ color: '#04001B' }}
-              onMouseEnter={(e) => e.currentTarget.style.color = '#7652FA'}
+              onMouseEnter={(e) => e.currentTarget.style.color = '#AF89FF'}
               onMouseLeave={(e) => e.currentTarget.style.color = '#04001B'}
             >
               Nosotros
@@ -133,7 +133,7 @@ export default function ProductosPage() {
               href="/#contact" 
               className="text-sm font-medium transition-colors duration-300 font-geist" 
               style={{ color: '#04001B' }}
-              onMouseEnter={(e) => e.currentTarget.style.color = '#7652FA'}
+              onMouseEnter={(e) => e.currentTarget.style.color = '#AF89FF'}
               onMouseLeave={(e) => e.currentTarget.style.color = '#04001B'}
             >
               Contacto
@@ -142,11 +142,11 @@ export default function ProductosPage() {
 
           <div className="flex items-center space-x-4">
             <Link href="https://wa.me/5491122704706" target="_blank" rel="noopener noreferrer">
-              <Button 
-                className="font-geist" 
-                style={{ backgroundColor: '#7652FA', color: '#E7E3FE' }}
-                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#5d3fd9'}
-                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#7652FA'}
+<Button
+                className="font-geist"
+                style={{ backgroundColor: '#AF89FF', color: '#FFFFFF' }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#9B7BED'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#AF89FF'}
               >
                 Contactanos
               </Button>
@@ -182,9 +182,9 @@ export default function ProductosPage() {
               </p>
               <h2 className="text-4xl font-medium tracking-tight font-stack-sans-notch" style={{ fontSize: '36px' }}>
                 <span style={{ color: '#04001B' }}>Cómo </span>
-                <span className="hero-gradient">elevamos</span>
+                <span style={{ color: '#AF89FF' }}>elevamos</span>
                 <span style={{ color: '#04001B' }}> el </span>
-                <span className="hero-gradient">estándar</span>
+                <span style={{ color: '#AF89FF' }}>estándar</span>
                 <span style={{ color: '#04001B' }}> de la premiación</span>
               </h2>
             </div>
@@ -202,7 +202,7 @@ export default function ProductosPage() {
                     <div className="space-y-8">
                       {/* Título y subtítulo arriba */}
                       <div className="space-y-2">
-                        <h3 className="text-4xl font-medium font-stack-sans-notch hero-gradient">"CRACK" BETANO</h3>
+                        <h3 className="text-4xl font-medium font-stack-sans-notch" style={{ color: '#AF89FF' }}>"CRACK" BETANO</h3>
                         <p className="text-lg font-geist" style={{ color: '#686868' }}>TROFEO</p>
                       </div>
                       
@@ -285,7 +285,7 @@ export default function ProductosPage() {
                     <div className="space-y-8">
                       {/* Título y subtítulo arriba */}
                       <div className="space-y-2 -mt-4">
-                        <h3 className="text-4xl font-medium font-stack-sans-notch hero-gradient">CUEVA</h3>
+                        <h3 className="text-4xl font-medium font-stack-sans-notch" style={{ color: '#AF89FF' }}>CUEVA</h3>
                         <p className="text-lg font-geist" style={{ color: '#686868' }}>MEDALLA</p>
                       </div>
                       
@@ -317,7 +317,7 @@ export default function ProductosPage() {
                     <div className="space-y-8">
                       {/* Título y subtítulo arriba */}
                       <div className="space-y-2 -mt-4">
-                        <h3 className="text-4xl font-medium font-stack-sans-notch hero-gradient">NODDO</h3>
+                        <h3 className="text-4xl font-medium font-stack-sans-notch" style={{ color: '#AF89FF' }}>NODDO</h3>
                         <p className="text-lg font-geist" style={{ color: '#686868' }}>TROFEO</p>
                       </div>
                       
@@ -328,8 +328,8 @@ export default function ProductosPage() {
                         </p>
                         <div className="pt-4 mt-12">
                           <Image
-                            src="/logo-nodo.png"
-                            alt="NODO AWARDS Logo"
+                            src="/Logo PNG - texto negro.png"
+                            alt="Noddo Logo"
                             width={145}
                             height={48}
                             className="h-10 w-auto"
@@ -382,20 +382,22 @@ export default function ProductosPage() {
                   </p>
                 </div>
                 <div className="pt-6">
-                  <Button
-                    style={{ backgroundColor: '#04001B', color: '#FFFFFF' }}
-                    className="font-geist px-6"
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.backgroundColor = '#AF89FF'
-                      e.currentTarget.style.color = '#04001B'
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.backgroundColor = '#04001B'
-                      e.currentTarget.style.color = '#FFFFFF'
-                    }}
-                  >
-                    Contactanos
-                  </Button>
+                  <Link href="/#contact">
+                    <Button
+                      style={{ backgroundColor: '#04001B', color: '#FFFFFF' }}
+                      className="font-geist px-6"
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.backgroundColor = '#AF89FF'
+                        e.currentTarget.style.color = '#04001B'
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.backgroundColor = '#04001B'
+                        e.currentTarget.style.color = '#FFFFFF'
+                      }}
+                    >
+                      Contactanos
+                    </Button>
+                  </Link>
                 </div>
               </div>
               </div>
@@ -502,8 +504,8 @@ export default function ProductosPage() {
                         Solicitar propuesta
                       </Button>
                       <div className="flex items-center space-x-2">
-                        <Check className="h-4 w-4" style={{ color: '#7652FA' }} />
-                        <span className="text-sm font-geist font-medium" style={{ color: '#7652FA' }}>
+                        <Check className="h-4 w-4" style={{ color: '#AF89FF' }} />
+                        <span className="text-sm font-geist font-medium" style={{ color: '#AF89FF' }}>
                           Primera propuesta sin cargo
                         </span>
                       </div>
@@ -550,7 +552,7 @@ export default function ProductosPage() {
                 className="h-12 w-auto"
               />
               <h2 className="font-light tracking-tight font-stack-sans-notch" style={{ fontSize: '20px', color: '#AF89FF' }}>
-                El valor de ser visto
+                El valor del reconocimiento
               </h2>
               <div className="flex space-x-4">
                 <Link href="https://www.instagram.com/somosnoddo/" target="_blank" rel="noopener noreferrer" className="transition-colors" style={{ color: '#E7E3FE' }}>

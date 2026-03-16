@@ -49,7 +49,7 @@ export default function NosotrosPage() {
               href="/servicios" 
               className="text-sm font-medium transition-colors duration-300 font-geist" 
               style={{ color: '#04001B' }}
-              onMouseEnter={(e) => e.currentTarget.style.color = '#7652FA'}
+              onMouseEnter={(e) => e.currentTarget.style.color = '#AF89FF'}
               onMouseLeave={(e) => e.currentTarget.style.color = '#04001B'}
             >
               Servicios
@@ -58,7 +58,7 @@ export default function NosotrosPage() {
               href="/productos" 
               className="text-sm font-medium transition-colors duration-300 font-geist" 
               style={{ color: '#04001B' }}
-              onMouseEnter={(e) => e.currentTarget.style.color = '#7652FA'}
+              onMouseEnter={(e) => e.currentTarget.style.color = '#AF89FF'}
               onMouseLeave={(e) => e.currentTarget.style.color = '#04001B'}
             >
               Productos
@@ -67,7 +67,7 @@ export default function NosotrosPage() {
               href="/nosotros" 
               className="text-sm font-medium transition-colors duration-300 font-geist" 
               style={{ color: '#04001B' }}
-              onMouseEnter={(e) => e.currentTarget.style.color = '#7652FA'}
+              onMouseEnter={(e) => e.currentTarget.style.color = '#AF89FF'}
               onMouseLeave={(e) => e.currentTarget.style.color = '#04001B'}
             >
               Nosotros
@@ -76,7 +76,7 @@ export default function NosotrosPage() {
               href="/#contact" 
               className="text-sm font-medium transition-colors duration-300 font-geist" 
               style={{ color: '#04001B' }}
-              onMouseEnter={(e) => e.currentTarget.style.color = '#7652FA'}
+              onMouseEnter={(e) => e.currentTarget.style.color = '#AF89FF'}
               onMouseLeave={(e) => e.currentTarget.style.color = '#04001B'}
             >
               Contacto
@@ -85,13 +85,13 @@ export default function NosotrosPage() {
 
           <div className="flex items-center space-x-4">
             <Link href="https://wa.me/5491122704706" target="_blank" rel="noopener noreferrer">
-              <Button 
-                className="font-geist" 
-                style={{ backgroundColor: '#7652FA', color: '#E7E3FE' }}
-                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#5d3fd9'}
-                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#7652FA'}
-              >
-                Contactanos
+<Button
+              className="font-geist"
+              style={{ backgroundColor: '#AF89FF', color: '#FFFFFF' }}
+              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#9B7BED'}
+              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#AF89FF'}
+            >
+              Contactanos
               </Button>
             </Link>
           </div>
@@ -125,9 +125,9 @@ export default function NosotrosPage() {
               </p>
               <h2 className="text-3xl md:text-4xl font-medium font-stack-sans-notch">
                 <span style={{ color: '#04001B' }}>Visibilizar el </span>
-                <span style={{ color: '#7652FA' }}>valor de las personas</span>
+                <span style={{ color: '#AF89FF' }}>valor de las personas</span>
                 <span style={{ color: '#04001B' }}> a través del </span>
-                <span style={{ color: '#7652FA' }}>reconocimiento</span>
+                <span style={{ color: '#AF89FF' }}>reconocimiento</span>
               </h2>
               </div>
             </ScrollReveal>
@@ -149,7 +149,7 @@ export default function NosotrosPage() {
                 }}
               >
                 <div className="absolute" style={{ top: '35px', left: '20px', zIndex: 10 }}>
-                  <div className="h-12 w-12 rounded-full flex items-center justify-center" style={{ backgroundColor: '#F4EEFF', border: '1px solid #7652FA' }}>
+                  <div className="h-12 w-12 rounded-full flex items-center justify-center" style={{ backgroundColor: '#F4EEFF', border: '1px solid #AF89FF' }}>
                     <Image src="/medal-svg.svg" alt="Misión" width={22} height={22} />
                   </div>
                 </div>
@@ -179,7 +179,7 @@ export default function NosotrosPage() {
                 }}
               >
                 <div className="absolute" style={{ top: '35px', left: '20px', zIndex: 10 }}>
-                  <div className="h-12 w-12 rounded-full flex items-center justify-center" style={{ backgroundColor: '#F4EEFF', border: '1px solid #7652FA' }}>
+                  <div className="h-12 w-12 rounded-full flex items-center justify-center" style={{ backgroundColor: '#F4EEFF', border: '1px solid #AF89FF' }}>
                     <Image src="/ojo-svg.svg" alt="Visión" width={22} height={22} />
                   </div>
                 </div>
@@ -204,7 +204,7 @@ export default function NosotrosPage() {
                 <span
                   key={value}
                   className="px-6 py-2 rounded-full border text-sm md:text-base font-geist font-medium"
-                  style={{ borderColor: '#7652FA', color: '#7652FA', backgroundColor: '#F4EEFF' }}
+                  style={{ borderColor: '#AF89FF', color: '#AF89FF', backgroundColor: '#F4EEFF' }}
                 >
                   {value}
                 </span>
@@ -220,7 +220,7 @@ export default function NosotrosPage() {
               </p>
               <h2 className="text-3xl md:text-4xl font-medium font-stack-sans-notch">
                 <span style={{ color: '#04001B' }}>La gente solo nota cuando ganás. Noddo ve </span>
-                <span style={{ color: '#7652FA' }}>todo el proceso</span>
+                <span style={{ color: '#AF89FF' }}>todo el proceso</span>
               </h2>
               </div>
             </ScrollReveal>
@@ -374,7 +374,7 @@ export default function NosotrosPage() {
                 className="h-12 w-auto"
               />
               <h2 className="font-light tracking-tight font-stack-sans-notch" style={{ fontSize: '20px', color: '#AF89FF' }}>
-                El valor de ser visto
+                El valor del reconocimiento
               </h2>
               <div className="flex space-x-4">
                 <Link href="https://www.instagram.com/somosnoddo/" target="_blank" rel="noopener noreferrer" className="transition-colors" style={{ color: '#E7E3FE' }}>

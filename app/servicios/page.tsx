@@ -39,7 +39,7 @@ export default function ServiciosPage() {
       title: "Diseño",
       description: (
         <>
-          Diseñamos trofeos, premios, menciones, medallas y regalos corporativos a medida. Trabajamos codo a codo con cada cliente, desarrollando propuestas que superan expectativas y transmiten la identidad de quienes premian.
+          Diseñamos trofeos, premios, menciones, medallas y regalos corporativos a medida.
         </>
       ),
       image: "/servicio-01.png"
@@ -48,7 +48,7 @@ export default function ServiciosPage() {
       title: "Fabricación",
       description: (
         <>
-          Contamos con procesos de <span className="font-semibold">producción de alta calidad,</span> donde combinamos tecnología y artesanía para lograr piezas únicas. Cada detalle se cuida al máximo, desde los materiales hasta las terminaciones, asegurando un resultado impecable.
+          Contamos con procesos de <span className="font-semibold">producción de alta calidad,</span> donde combinamos tecnología y artesanía para lograr piezas únicas.
         </>
       ),
       image: "/servicio-02.png"
@@ -57,7 +57,7 @@ export default function ServiciosPage() {
       title: "Entrega",
       description: (
         <>
-          Ofrecemos un servicio completo que incluye <span className="font-semibold">opciones de packaging premium.</span> Cajas y presentaciones de alta calidad que realzan el valor del objeto y convierten la entrega en un momento inolvidable.
+          Ofrecemos un servicio completo que incluye <span className="font-semibold">opciones de packaging premium.</span>
         </>
       ),
       image: "/servicio-03.png"
@@ -66,7 +66,7 @@ export default function ServiciosPage() {
       title: "Fotografía en evento",
       description: (
         <>
-          Acompañamos la experiencia de premiación con <span className="font-semibold">cobertura fotográfica profesional,</span> capturando la emoción y el valor simbólico de cada entrega para generar recuerdos y material de comunicación de gran impacto.
+          Acompañamos la experiencia de premiación con <span className="font-semibold">cobertura fotográfica profesional,</span> capturando la emoción y el momento de entrega.
         </>
       ),
       image: "/servicio-04.png"
@@ -125,11 +125,11 @@ export default function ServiciosPage() {
 
           <div className="flex items-center space-x-4">
             <Link href="https://wa.me/5491122704706" target="_blank" rel="noopener noreferrer">
-              <Button 
-                className="font-geist" 
-                style={{ backgroundColor: '#7652FA', color: '#E7E3FE' }}
-                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#5d3fd9'}
-                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#7652FA'}
+<Button
+                className="font-geist"
+                style={{ backgroundColor: '#AF89FF', color: '#FFFFFF' }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#9B7BED'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#AF89FF'}
               >
                 Contactanos
               </Button>
@@ -191,7 +191,10 @@ export default function ServiciosPage() {
               {/* Left Column */}
               <div className="flex flex-col space-y-8">
                 {/* Diseño */}
-                <div className="flex flex-col items-center text-center space-y-6" style={{ maxWidth: '420px', margin: '0 auto' }}>
+                <div
+                  className="flex flex-col items-center text-center space-y-6"
+                  style={{ maxWidth: '420px', margin: '60px auto 0 auto' }}
+                >
                   <h3 className="text-3xl md:text-4xl font-medium font-stack-sans-notch" style={{ color: '#04001B' }}>
                     {servicios[0].title}
                   </h3>
@@ -221,7 +224,10 @@ export default function ServiciosPage() {
                 <div className="h-[150px]" />
 
                 {/* Entrega */}
-                <div className="flex flex-col items-center text-center space-y-6 lg:pt-[169px]" style={{ maxWidth: '420px', margin: '0 auto' }}>
+                <div
+                  className="flex flex-col items-center text-center space-y-6 lg:pt-[169px]"
+                  style={{ maxWidth: '420px', margin: '60px auto 0 auto' }}
+                >
                   <h3 className="text-3xl md:text-4xl font-medium font-stack-sans-notch" style={{ color: '#04001B' }}>
                     {servicios[2].title}
                   </h3>
@@ -251,7 +257,10 @@ export default function ServiciosPage() {
               {/* Right Column */}
               <div className="flex flex-col space-y-8">
                 {/* Fabricación */}
-                <div className="flex flex-col items-center text-center space-y-6 lg:pt-[338px]" style={{ maxWidth: '420px', margin: '0 auto', marginTop: '170px' }}>
+                <div
+                  className="flex flex-col items-center text-center space-y-6 lg:pt-[338px]"
+                  style={{ maxWidth: '420px', margin: '0 auto', marginTop: '185px' }}
+                >
                   <h3 className="text-3xl md:text-4xl font-medium font-stack-sans-notch" style={{ color: '#04001B' }}>
                     {servicios[1].title}
                   </h3>
@@ -278,7 +287,10 @@ export default function ServiciosPage() {
                 </div>
                 
                 {/* Fotografía en evento */}
-                <div className="flex flex-col items-center text-center space-y-6 lg:pt-[169px] lg:pb-72" style={{ maxWidth: '420px', margin: '0 auto', marginTop: '50px' }}>
+                <div
+                  className="flex flex-col items-center text-center space-y-6 lg:pt-[169px] lg:pb-72"
+                  style={{ maxWidth: '420px', margin: '0 auto', marginTop: '110px' }}
+                >
                   <h3 className="text-3xl md:text-4xl font-medium font-stack-sans-notch" style={{ color: '#04001B' }}>
                     Fotografia
                     <br />
@@ -458,7 +470,7 @@ export default function ServiciosPage() {
                 className="h-12 w-auto"
               />
               <h2 className="font-light tracking-tight font-stack-sans-notch" style={{ fontSize: '20px', color: '#AF89FF' }}>
-                El valor de ser visto
+                El valor del reconocimiento
               </h2>
               <div className="flex space-x-4">
                 <Link href="https://www.instagram.com/somosnoddo/" target="_blank" rel="noopener noreferrer" className="transition-colors" style={{ color: '#E7E3FE' }}>

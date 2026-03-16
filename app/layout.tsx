@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Noddo - El valor de ser visto | Reconocimientos físicos y digitales",
+  title: "Noddo - El valor del reconocimiento | Reconocimientos físicos y digitales",
   description: "Diseñamos y creamos reconocimientos físicos y digitales que celebran a las personas, fortalezcan la cultura de las organizaciones y devuelvan sentido al acto de reconocer.",
   keywords: "reconocimientos, premios, trofeos, medallas, reconocimiento empresarial, cultura organizacional, reconocimientos digitales, reconocimientos físicos, modelado 3D, trofeos futbol, equipo, medalla de futbol, medalla de deporte, trofeo particular, diseño, personalizado",
   authors: [{ name: "Noddo" }],
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: "Noddo - El valor de ser visto",
+    title: "Noddo - El valor del reconocimiento",
     description: "Diseñamos y creamos reconocimientos físicos y digitales que celebran a las personas, fortalezcan la cultura de las organizaciones y devuelvan sentido al acto de reconocer.",
     url: 'https://nodoawards.com',
     siteName: 'Noddo',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
         url: '/favicon - noddo.svg',
         width: 1200,
         height: 630,
-        alt: 'Noddo - El valor de ser visto',
+        alt: 'Noddo - El valor del reconocimiento',
       },
     ],
     locale: 'es_AR',
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Noddo - El valor de ser visto",
+    title: "Noddo - El valor del reconocimiento",
     description: "Diseñamos y creamos reconocimientos físicos y digitales que celebran a las personas, fortalezcan la cultura de las organizaciones y devuelvan sentido al acto de reconocer.",
     images: ['/favicon - noddo.svg'],
   },

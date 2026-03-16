@@ -64,15 +64,15 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen" style={{ backgroundColor: '#f1f1f1' }}>
       {/* Header */}
-      <header className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-11/12 max-w-6xl border border-white/20 bg-white/10 backdrop-blur-md rounded-2xl shadow-lg font-geist">
-        <div className="container flex h-16 items-center justify-between px-4 md:px-6">
+      <header className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-[95%] max-w-6xl bg-white/10 backdrop-blur-md rounded-2xl shadow-lg font-geist" style={{ border: '1px solid rgba(175, 137, 255, 0.13)' }}>
+        <div className="container flex h-[52px] items-center justify-between px-4 md:px-6">
           <div className="flex items-center space-x-2">
             <Image 
-              src={isScrolledPastHero ? "/Logo PNG - texto negro.png" : "/Logo PNG.png"} 
+              src="/Logo PNG - texto negro.png" 
               alt="NODO AWARDS" 
-              width={140} 
-              height={32} 
-              className="h-8 w-auto transition-opacity duration-300" 
+              width={130} 
+              height={28} 
+              className="h-7 w-auto transition-opacity duration-300" 
             />
           </div>
 
@@ -80,36 +80,36 @@ export default function LandingPage() {
             <Link 
               href="/servicios" 
               className="text-sm font-medium transition-colors duration-300 font-geist" 
-              style={{ color: isScrolledPastHero ? '#04001B' : '#E7E3FE' }}
-              onMouseEnter={(e) => e.currentTarget.style.color = '#7652FA'}
-              onMouseLeave={(e) => e.currentTarget.style.color = isScrolledPastHero ? '#04001B' : '#E7E3FE'}
+              style={{ color: '#04001B' }}
+              onMouseEnter={(e) => e.currentTarget.style.color = '#AF89FF'}
+              onMouseLeave={(e) => e.currentTarget.style.color = '#04001B'}
             >
               Servicios
             </Link>
             <Link 
               href="/productos" 
               className="text-sm font-medium transition-colors duration-300 font-geist" 
-              style={{ color: isScrolledPastHero ? '#04001B' : '#E7E3FE' }}
-              onMouseEnter={(e) => e.currentTarget.style.color = '#7652FA'}
-              onMouseLeave={(e) => e.currentTarget.style.color = isScrolledPastHero ? '#04001B' : '#E7E3FE'}
+              style={{ color: '#04001B' }}
+              onMouseEnter={(e) => e.currentTarget.style.color = '#AF89FF'}
+              onMouseLeave={(e) => e.currentTarget.style.color = '#04001B'}
             >
               Productos
             </Link>
             <Link 
               href="/nosotros" 
               className="text-sm font-medium transition-colors duration-300 font-geist" 
-              style={{ color: isScrolledPastHero ? '#04001B' : '#E7E3FE' }}
-              onMouseEnter={(e) => e.currentTarget.style.color = '#7652FA'}
-              onMouseLeave={(e) => e.currentTarget.style.color = isScrolledPastHero ? '#04001B' : '#E7E3FE'}
+              style={{ color: '#04001B' }}
+              onMouseEnter={(e) => e.currentTarget.style.color = '#AF89FF'}
+              onMouseLeave={(e) => e.currentTarget.style.color = '#04001B'}
             >
               Nosotros
             </Link>
             <Link 
               href="#contact" 
               className="text-sm font-medium transition-colors duration-300 font-geist" 
-              style={{ color: isScrolledPastHero ? '#04001B' : '#E7E3FE' }}
-              onMouseEnter={(e) => e.currentTarget.style.color = '#7652FA'}
-              onMouseLeave={(e) => e.currentTarget.style.color = isScrolledPastHero ? '#04001B' : '#E7E3FE'}
+              style={{ color: '#04001B' }}
+              onMouseEnter={(e) => e.currentTarget.style.color = '#AF89FF'}
+              onMouseLeave={(e) => e.currentTarget.style.color = '#04001B'}
             >
               Contacto
             </Link>
@@ -117,11 +117,11 @@ export default function LandingPage() {
 
           <div className="flex items-center space-x-4">
             <Link href="https://wa.me/5491122704706" target="_blank" rel="noopener noreferrer">
-              <Button 
-                className="font-geist" 
-                style={{ backgroundColor: '#7652FA', color: '#E7E3FE' }}
-                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#5d3fd9'}
-                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#7652FA'}
+              <Button
+                className="font-geist h-9 px-4"
+                style={{ backgroundColor: '#AF89FF', color: '#FFFFFF' }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#9B7BED'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#AF89FF'}
               >
                 Contactanos
               </Button>
@@ -131,7 +131,11 @@ export default function LandingPage() {
       </header>
 
       {/* Hero Section */}
-      <section id="hero-section" className="relative bg-white overflow-hidden flex items-center" style={{ borderBottomLeftRadius: '24px', borderBottomRightRadius: '24px', minHeight: '90vh' }}>
+      <section
+        id="hero-section"
+        className="relative bg-white overflow-hidden flex items-center"
+        style={{ borderBottomLeftRadius: '24px', borderBottomRightRadius: '24px', minHeight: '90vh', paddingTop: '64px' }}
+      >
         {/* Background Image - Behind everything */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -144,8 +148,8 @@ export default function LandingPage() {
         </div>
 
         <div className="relative z-10 w-full flex items-center justify-start">
-          <div className="w-11/12 max-w-6xl mx-auto">
-            <div className="text-left space-y-8">
+          <div className="w-11/12 max-w-6xl mx-auto flex flex-col lg:flex-row gap-6 lg:gap-10 items-stretch w-full">
+            <div className="flex-1 min-w-0 text-left space-y-6">
             {/* Overlay Badge */}
             <div className="flex justify-start mb-6">
               <div 
@@ -169,23 +173,27 @@ export default function LandingPage() {
               </div>
             </div>
             
-            <div className="space-y-6">
-              <h1 className="text-5xl font-light tracking-tight sm:text-6xl md:text-7xl lg:text-[84px] font-stack-sans-notch" style={{ color: '#AF89FF' }}>
-                El valor de ser visto
+            <div className="space-y-4">
+              <h1 className="text-4xl font-normal tracking-tight sm:text-5xl md:text-6xl lg:text-[72px] font-stack-sans-notch">
+                <span style={{ color: '#04001B', fontWeight: 400 }}>El </span>
+                <span style={{ color: '#AF89FF', fontWeight: 500 }}>valor </span>
+                <span style={{ color: '#04001B', fontWeight: 400 }}>del</span>
+                <br />
+                <span style={{ color: '#04001B', fontWeight: 400 }}>reconocimiento</span>
               </h1>
-              <p className="text-lg max-w-[600px] font-geist" style={{ color: '#E7E3FE' }}>
-                Tu organización necesita un sistema de reconocimientos, físicos y digitales, con estándares claros que pongan en valor el trabajo de sus miembros y stakeholders.
+              <p className="text-base md:text-lg max-w-[560px] font-geist" style={{ color: '#04001B' }}>
+                Tu organización necesita un sistema de reconocimientos, físicos y/o digitales, que ponga en valor el trabajo de sus miembros y refuerce el posicionamiento de tu marca.
               </p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-start">
               <div className="flex flex-col items-start gap-3">
-                <Button 
-                  size="lg" 
+<Button
+                  size="lg"
                   className="font-geist w-full sm:w-auto"
-                  style={{ backgroundColor: '#7652FA', color: '#E7E3FE', minWidth: '200px' }}
-                  onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#5d3fd9'}
-                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#7652FA'}
+                  style={{ backgroundColor: '#AF89FF', color: '#FFFFFF', minWidth: '200px' }}
+                  onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#9B7BED'}
+                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#AF89FF'}
                 >
                   <span className="flex items-center gap-2 justify-center">
                     Solicitar propuesta gratuita
@@ -235,6 +243,15 @@ export default function LandingPage() {
                 </Button>
               </Link>
             </div>
+            </div>
+
+            {/* Placeholder imagen hero - cuadrado, 30px redondeo, altura = contenido izquierda, borde derecho alineado al navbar */}
+            <div className="hidden lg:flex flex-1 justify-end self-stretch min-w-0">
+              <div
+                className="h-full aspect-square rounded-[30px] bg-neutral-300/80"
+                aria-hidden
+                style={{ transform: 'scale(0.95)', transformOrigin: 'center' }}
+              />
             </div>
           </div>
         </div>
@@ -312,7 +329,7 @@ export default function LandingPage() {
           <div className="container px-4 md:px-6">
             <div className="max-w-4xl mx-auto text-center">
             <p className="text-2xl md:text-3xl font-geist leading-relaxed" style={{ color: '#04001B' }}>
-              Ayudamos a empresas a <span style={{ color: '#7652FA' }}>transformar</span> la manera en que <span style={{ color: '#7652FA' }}>reconocen el valor</span> de su gente, sus aliados y quienes impulsan su crecimiento.
+              Ayudamos a empresas a <span style={{ color: '#AF89FF' }}>transformar</span> la manera en que <span style={{ color: '#AF89FF' }}>reconocen el valor</span> de su gente, sus aliados y quienes impulsan su crecimiento.
             </p>
             
             {/* Tags Section */}
@@ -346,7 +363,7 @@ export default function LandingPage() {
             <div className="max-w-6xl mx-auto">
             <div className="grid gap-8 lg:grid-cols-2 items-start">
                {/* Left Column - Full Trophy Image */}
-               <div className="lg:col-span-1 space-y-48">
+               <div className="lg:col-span-1 space-y-8">
                  <div className="relative h-96 lg:h-[500px] overflow-hidden rounded-[64px]">
                    <Image
                      src="/trofeo.betano.portada.jpg"
@@ -357,24 +374,32 @@ export default function LandingPage() {
                    />
                  </div>
                  {/* Text below image */}
-                 <div>
-                   <p className="text-lg font-geist leading-relaxed text-center max-w-xs mx-auto" style={{ color: '#04001B' }}>
+                 <div
+                   className="relative h-40 lg:h-[360px] rounded-[64px] flex items-center justify-center text-center px-10"
+                   style={{ border: '1.2px solid rgba(4, 0, 27, 0.2)' }}
+                 >
+                   <p className="text-lg font-geist leading-relaxed max-w-xs mx-auto" style={{ color: '#04001B' }}>
                      Cada proyecto es pensado de forma integral: concepto, presupuesto, calidad percibida y tiempos de entrega. Trabajamos día a día para superar las expectativas en cada entrega y mejorar constantemente nuestros procesos.
                    </p>
                  </div>
                </div>
 
               {/* Right Column - Text and Close-up Image */}
-              <div className="lg:col-span-1 space-y-8 -mt-[30%]">
+              <div className="lg:col-span-1 space-y-8">
                 {/* Text Content */}
-                <div className="flex items-end justify-center h-96 lg:h-[500px] pb-16">
-                  <p className="text-lg font-geist leading-relaxed text-center max-w-xs" style={{ color: '#04001B' }}>
-                    Creamos un trofeo exclusivo para Betano, una de las empresas líderes en entretenimiento deportivo. El Trofeo "<span className="font-semibold">Crack Betano</span>", destinado a distinguir al mejor jugador de cada fecha del Torneo Clausura Betano 2025, fue diseñado, ajustado y fabricado íntegramente por nuestro equipo.
-                  </p>
+                <div className="flex justify-center h-80 lg:h-[420px]">
+                  <div
+                    className="w-full h-full rounded-[64px] flex items-center justify-center text-center px-10"
+                    style={{ border: '1.2px solid rgba(4, 0, 27, 0.2)' }}
+                  >
+                    <p className="text-lg font-geist leading-relaxed max-w-xs mx-auto" style={{ color: '#04001B' }}>
+                      Creamos un trofeo exclusivo para Betano, una de las empresas líderes en entretenimiento deportivo. El Trofeo "<span className="font-semibold">Crack Betano</span>", destinado a distinguir al mejor jugador de cada fecha del Torneo Clausura Betano 2025, fue diseñado, ajustado y fabricado íntegramente por nuestro equipo.
+                    </p>
+                  </div>
                 </div>
 
                 {/* Close-up Image */}
-                <div className="relative h-80 lg:h-[720px] overflow-hidden rounded-[64px]">
+                <div className="relative h-80 lg:h-[720px] overflow-hidden rounded-[64px] -mt-10">
                   <Image
                     src="/render-detalle-betano.jpg"
                     alt="Trofeo Crack Betano - Detalle"
@@ -434,6 +459,15 @@ export default function LandingPage() {
                   style={{ transform: 'scale(1.10)', transformOrigin: 'center' }}
                 />
               </div>
+
+              <div className="mt-8 text-center">
+                <p className="font-geist text-base" style={{ color: '#848691' }}>
+                  Duración aproximada por proyecto | 30-35 días
+                </p>
+                <p className="font-geist text-[11px] mt-1" style={{ color: '#AF89FF' }}>
+                  *La duración del proyecto queda sujeta a la complejidad del mismo
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -483,7 +517,7 @@ export default function LandingPage() {
                     style={{ top: '10px' }}
                   />
                   <blockquote className="text-lg font-geist font-medium leading-relaxed pl-6" style={{ color: '#04001B' }}>
-                    La colaboración con Nodo nos permitió crear un<br />
+                    La colaboración con Noddo nos permitió crear un<br />
                     trofeo exclusivo que representa nuestra esencia.<br />
                     Supieron captar nuestra visión y transformarla en<br />
                     una pieza que transmite la energía y el espíritu<br />
@@ -509,17 +543,12 @@ export default function LandingPage() {
             </h2>
           </div>
 
-          {/* Main Content Box */}
-          <div className="max-w-6xl mx-auto">
-            <div className="relative border rounded-2xl px-3 py-6 md:px-4 md:py-8" style={{ 
-              backgroundColor: '#F9F6FF',
-              borderColor: '#7652FA',
-              borderRadius: '16px'
-            }}>
+          {/* Main Content */}
+          <div className="max-w-6xl mx-auto relative">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {/* Column 1 - End-to-end */}
                 <div className="text-center">
-                  <h3 className="text-2xl font-medium font-stack-sans-notch mb-4" style={{ color: '#04001B' }}>
+                  <h3 className="text-2xl font-medium font-stack-sans-notch mb-4" style={{ color: '#AF89FF' }}>
                     End-to-end
                   </h3>
                   <p className="text-base font-normal font-geist leading-relaxed" style={{ color: '#04001B' }}>
@@ -531,7 +560,7 @@ export default function LandingPage() {
 
                 {/* Column 2 - Versatilidad */}
                 <div className="text-center">
-                  <h3 className="text-2xl font-medium font-stack-sans-notch mb-4" style={{ color: '#04001B' }}>
+                  <h3 className="text-2xl font-medium font-stack-sans-notch mb-4" style={{ color: '#AF89FF' }}>
                     Versatilidad
                   </h3>
                   <p className="text-base font-normal font-geist leading-relaxed" style={{ color: '#04001B' }}>
@@ -543,7 +572,7 @@ export default function LandingPage() {
 
                 {/* Column 3 - Calidad */}
                 <div className="text-center">
-                  <h3 className="text-2xl font-medium font-stack-sans-notch mb-4" style={{ color: '#04001B' }}>
+                  <h3 className="text-2xl font-medium font-stack-sans-notch mb-4" style={{ color: '#AF89FF' }}>
                     Calidad
                   </h3>
                   <p className="text-base font-normal font-geist leading-relaxed" style={{ color: '#04001B' }}>
@@ -555,9 +584,8 @@ export default function LandingPage() {
               </div>
 
               {/* Vertical Dividers */}
-              <div className="hidden md:block absolute left-1/3 top-6 bottom-6 w-0.5" style={{ backgroundColor: '#7652FA', opacity: 0.25 }}></div>
-              <div className="hidden md:block absolute left-2/3 top-6 bottom-6 w-0.5" style={{ backgroundColor: '#7652FA', opacity: 0.25 }}></div>
-            </div>
+              <div className="hidden md:block absolute left-1/3 top-6 bottom-6 w-0.5" style={{ backgroundColor: '#AF89FF', opacity: 0.25 }}></div>
+              <div className="hidden md:block absolute left-2/3 top-6 bottom-6 w-0.5" style={{ backgroundColor: '#AF89FF', opacity: 0.25 }}></div>
           </div>
         </div>
         </ScrollReveal>
@@ -661,8 +689,8 @@ export default function LandingPage() {
                         Solicitar propuesta
                       </Button>
                       <div className="flex items-center space-x-2">
-                        <Check className="h-4 w-4" style={{ color: '#7652FA' }} />
-                        <span className="text-sm font-geist font-medium" style={{ color: '#7652FA' }}>
+                        <Check className="h-4 w-4" style={{ color: '#AF89FF' }} />
+                        <span className="text-sm font-geist font-medium" style={{ color: '#AF89FF' }}>
                           Primera propuesta sin cargo
                         </span>
                       </div>
@@ -743,8 +771,8 @@ export default function LandingPage() {
                         Solicitar propuesta
                       </Button>
                       <div className="flex items-center space-x-2">
-                        <Check className="h-4 w-4" style={{ color: '#7652FA' }} />
-                        <span className="text-sm font-geist font-medium" style={{ color: '#7652FA' }}>
+                        <Check className="h-4 w-4" style={{ color: '#AF89FF' }} />
+                        <span className="text-sm font-geist font-medium" style={{ color: '#AF89FF' }}>
                           Primera propuesta sin cargo
                         </span>
                       </div>
@@ -782,7 +810,7 @@ export default function LandingPage() {
       <footer className="py-16" style={{ backgroundColor: '#04001B' }}>
         <div className="container px-4 md:px-6">
           <div className="grid gap-8 md:grid-cols-2 items-start">
-            <div className="space-y-4">
+            <div className="space-y-4 pl-8 lg:pl-12">
               <Image
                 src="/Logo PNG.png"
                 alt="Noddo"
@@ -791,7 +819,7 @@ export default function LandingPage() {
                 className="h-12 w-auto"
               />
               <h2 className="font-light tracking-tight font-stack-sans-notch" style={{ fontSize: '20px', color: '#AF89FF' }}>
-                El valor de ser visto
+                El valor del reconocimiento
               </h2>
               <div className="flex space-x-4">
                 <Link href="https://www.instagram.com/somosnoddo/" target="_blank" rel="noopener noreferrer" className="transition-colors" style={{ color: '#E7E3FE' }}>
