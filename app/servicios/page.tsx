@@ -76,11 +76,20 @@ export default function ServiciosPage() {
   return (
     <div className="min-h-screen" style={{ backgroundColor: '#f1f1f1' }}>
       {/* Header */}
-      <header className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-11/12 max-w-6xl border border-white/20 bg-white/10 backdrop-blur-md rounded-2xl shadow-lg font-geist">
-        <div className="container flex h-16 items-center justify-between px-4 md:px-6">
+      <header
+        className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-[95%] max-w-6xl bg-white/10 backdrop-blur-md rounded-2xl shadow-lg font-geist"
+        style={{ border: '1px solid rgba(175, 137, 255, 0.13)' }}
+      >
+        <div className="container flex h-[52px] items-center justify-between px-4 md:px-6">
           <div className="flex items-center space-x-2">
             <Link href="/">
-              <Image src="/Logo PNG - texto negro.png" alt="NODO AWARDS" width={140} height={32} className="h-8 w-auto" />
+              <Image 
+                src="/Logo PNG - texto negro.png" 
+                alt="NODO AWARDS" 
+                width={130} 
+                height={28} 
+                className="h-7 w-auto transition-opacity duration-300" 
+              />
             </Link>
           </div>
 
@@ -89,7 +98,7 @@ export default function ServiciosPage() {
               href="/servicios" 
               className="text-sm font-medium transition-colors duration-300 font-geist" 
               style={{ color: '#04001B' }}
-              onMouseEnter={(e) => e.currentTarget.style.color = '#7652FA'}
+              onMouseEnter={(e) => e.currentTarget.style.color = '#AF89FF'}
               onMouseLeave={(e) => e.currentTarget.style.color = '#04001B'}
             >
               Servicios
@@ -98,7 +107,7 @@ export default function ServiciosPage() {
               href="/productos" 
               className="text-sm font-medium transition-colors duration-300 font-geist" 
               style={{ color: '#04001B' }}
-              onMouseEnter={(e) => e.currentTarget.style.color = '#7652FA'}
+              onMouseEnter={(e) => e.currentTarget.style.color = '#AF89FF'}
               onMouseLeave={(e) => e.currentTarget.style.color = '#04001B'}
             >
               Productos
@@ -107,7 +116,7 @@ export default function ServiciosPage() {
               href="/nosotros" 
               className="text-sm font-medium transition-colors duration-300 font-geist" 
               style={{ color: '#04001B' }}
-              onMouseEnter={(e) => e.currentTarget.style.color = '#7652FA'}
+              onMouseEnter={(e) => e.currentTarget.style.color = '#AF89FF'}
               onMouseLeave={(e) => e.currentTarget.style.color = '#04001B'}
             >
               Nosotros
@@ -116,7 +125,7 @@ export default function ServiciosPage() {
               href="/#contact" 
               className="text-sm font-medium transition-colors duration-300 font-geist" 
               style={{ color: '#04001B' }}
-              onMouseEnter={(e) => e.currentTarget.style.color = '#7652FA'}
+              onMouseEnter={(e) => e.currentTarget.style.color = '#AF89FF'}
               onMouseLeave={(e) => e.currentTarget.style.color = '#04001B'}
             >
               Contacto
@@ -125,8 +134,8 @@ export default function ServiciosPage() {
 
           <div className="flex items-center space-x-4">
             <Link href="https://wa.me/5491122704706" target="_blank" rel="noopener noreferrer">
-<Button
-                className="font-geist"
+              <Button
+                className="font-geist h-9 px-4"
                 style={{ backgroundColor: '#AF89FF', color: '#FFFFFF' }}
                 onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#9B7BED'}
                 onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#AF89FF'}
@@ -179,7 +188,7 @@ export default function ServiciosPage() {
                 </p>
                 <h2 className="text-3xl md:text-4xl font-medium font-stack-sans-notch">
                   <span style={{ color: '#04001B' }}>Cubrimos </span>
-                  <span className="hero-gradient">cada paso</span>
+                  <span style={{ color: '#AF89FF' }}>cada paso</span>
                   <span style={{ color: '#04001B' }}> del proceso</span>
                 </h2>
               </div>
