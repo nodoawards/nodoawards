@@ -80,7 +80,7 @@ export default function LandingPage() {
           <nav className="hidden md:flex items-center space-x-8">
             <Link 
               href="/servicios" 
-              className="text-sm font-medium transition-colors duration-300 font-geist" 
+              className="text-xs font-medium transition-colors duration-300 font-geist" 
               style={{ color: '#04001B' }}
               onMouseEnter={(e) => e.currentTarget.style.color = '#AF89FF'}
               onMouseLeave={(e) => e.currentTarget.style.color = '#04001B'}
@@ -89,7 +89,7 @@ export default function LandingPage() {
             </Link>
             <Link 
               href="/productos" 
-              className="text-sm font-medium transition-colors duration-300 font-geist" 
+              className="text-xs font-medium transition-colors duration-300 font-geist" 
               style={{ color: '#04001B' }}
               onMouseEnter={(e) => e.currentTarget.style.color = '#AF89FF'}
               onMouseLeave={(e) => e.currentTarget.style.color = '#04001B'}
@@ -98,7 +98,7 @@ export default function LandingPage() {
             </Link>
             <Link 
               href="/nosotros" 
-              className="text-sm font-medium transition-colors duration-300 font-geist" 
+              className="text-xs font-medium transition-colors duration-300 font-geist" 
               style={{ color: '#04001B' }}
               onMouseEnter={(e) => e.currentTarget.style.color = '#AF89FF'}
               onMouseLeave={(e) => e.currentTarget.style.color = '#04001B'}
@@ -107,7 +107,7 @@ export default function LandingPage() {
             </Link>
             <Link 
               href="#contact" 
-              className="text-sm font-medium transition-colors duration-300 font-geist" 
+              className="text-xs font-medium transition-colors duration-300 font-geist" 
               style={{ color: '#04001B' }}
               onMouseEnter={(e) => e.currentTarget.style.color = '#AF89FF'}
               onMouseLeave={(e) => e.currentTarget.style.color = '#04001B'}
@@ -119,7 +119,7 @@ export default function LandingPage() {
           <div className="flex items-center space-x-3">
             <Link href="https://wa.me/5491122704706" target="_blank" rel="noopener noreferrer">
               <Button
-                className="font-geist h-9 px-4"
+                className="font-geist h-9 px-4 text-xs"
                 style={{ backgroundColor: '#AF89FF', color: '#FFFFFF' }}
                 onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#9B7BED'}
                 onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#AF89FF'}
@@ -251,7 +251,7 @@ export default function LandingPage() {
                     onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#9B7BED'}
                     onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#AF89FF'}
                   >
-                    <span className="flex items-center gap-2 justify-center">
+                    <span className="flex items-center gap-2 justify-center text-xs">
                       Solicitar propuesta gratuita
                       <Image
                         src="/vector-flecha.svg"
@@ -286,7 +286,7 @@ export default function LandingPage() {
                   onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#d4cfe8'}
                   onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#E7E3FE'}
                 >
-                  <span className="flex items-center gap-2 justify-center">
+                  <span className="flex items-center gap-2 justify-center text-xs">
                     <Image
                       src="/vector-user.svg"
                       alt="Usuario"
@@ -323,7 +323,7 @@ export default function LandingPage() {
       {/* Clients Logo Section */}
       <section className="py-16" style={{ backgroundColor: '#FFFFFF' }}>
         <ScrollReveal>
-          <div className="container px-4 md:px-6">
+          <div className="container px-4 md:px-6 lg:px-5">
             <div className="max-w-6xl mx-auto">
             {/* Optional Title */}
             <div className="text-center mb-12">
@@ -389,7 +389,7 @@ export default function LandingPage() {
       {/* Mission Statement */}
       <section className="pt-32 pb-16" style={{ backgroundColor: '#FAFAFA' }}>
         <ScrollReveal>
-          <div className="container px-4 md:px-6">
+          <div className="container px-4 md:px-6 lg:px-5">
             <div className="max-w-4xl mx-auto text-center">
             <p className="text-2xl md:text-3xl font-geist leading-relaxed" style={{ color: '#04001B' }}>
               Ayudamos a empresas a <span style={{ color: '#AF89FF' }}>transformar</span> la manera en que <span style={{ color: '#AF89FF' }}>reconocen el valor</span> de su gente, sus aliados y quienes impulsan su crecimiento.
@@ -422,7 +422,7 @@ export default function LandingPage() {
       {/* Betano Trophy Section */}
       <section className="py-20" style={{ backgroundColor: '#FAFAFA' }}>
         <ScrollReveal>
-          <div className="container px-4 md:px-6">
+          <div className="container px-4 md:px-6 lg:px-5">
             <div className="max-w-6xl mx-auto">
             <div className="grid gap-8 lg:grid-cols-2 items-start">
                {/* Left Column - Full Trophy Image */}
@@ -481,7 +481,7 @@ export default function LandingPage() {
       {/* Workflow Section */}
       <section className="py-20" style={{ backgroundColor: '#FAFAFA' }}>
         <ScrollReveal>
-          <div className="container px-4 md:px-6">
+          <div className="container px-4 md:px-6 lg:px-5">
             <div className="max-w-4xl mx-auto">
             <div className="flex flex-col items-center">
               <Image
@@ -540,7 +540,7 @@ export default function LandingPage() {
       {/* Testimonial Section */}
       <section className="py-20" style={{ backgroundColor: '#FAFAFA' }}>
         <ScrollReveal>
-          <div className="container px-4 md:px-6">
+          <div className="container px-4 md:px-6 lg:px-5">
             <div className="max-w-4xl mx-auto flex justify-center">
             <div className="relative flex items-start">
               {/* Vertical Bar */}
@@ -598,7 +598,7 @@ export default function LandingPage() {
       {/* Why Choose NodoAwards Section */}
       <section className="py-20" style={{ backgroundColor: '#FAFAFA' }}>
         <ScrollReveal>
-          <div className="container px-4 md:px-6">
+          <div className="container px-4 md:px-6 lg:px-5">
             {/* Section Title */}
           <div className="mb-16 text-center">
             <h2 className="text-4xl font-medium tracking-tight font-stack-sans-notch" style={{ color: '#04001B', fontSize: '36px' }}>
@@ -668,7 +668,7 @@ export default function LandingPage() {
             style={{ objectFit: 'contain' }}
           />
         </div>
-        <div className="container px-4 md:px-6 relative" style={{ zIndex: 2 }}>
+        <div className="container px-4 md:px-6 lg:px-5 relative" style={{ zIndex: 2 }}>
           <div className="max-w-2xl">
             {/* Contact Form */}
             <div className="p-8 lg:p-12">
@@ -871,7 +871,7 @@ export default function LandingPage() {
 
       {/* Footer */}
       <footer className="py-16" style={{ backgroundColor: '#04001B' }}>
-        <div className="container px-4 md:px-6">
+        <div className="container px-4 md:px-6 lg:px-5">
           <div className="grid gap-8 md:grid-cols-2 items-start">
             <div className="space-y-4 pl-8 lg:pl-12">
               <Image

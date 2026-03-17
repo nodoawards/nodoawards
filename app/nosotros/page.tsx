@@ -57,7 +57,7 @@ export default function NosotrosPage() {
           <nav className="hidden md:flex items-center space-x-8">
             <Link 
               href="/servicios" 
-              className="text-sm font-medium transition-colors duration-300 font-geist" 
+              className="text-xs font-medium transition-colors duration-300 font-geist" 
               style={{ color: '#04001B' }}
               onMouseEnter={(e) => e.currentTarget.style.color = '#AF89FF'}
               onMouseLeave={(e) => e.currentTarget.style.color = '#04001B'}
@@ -66,7 +66,7 @@ export default function NosotrosPage() {
             </Link>
             <Link 
               href="/productos" 
-              className="text-sm font-medium transition-colors duration-300 font-geist" 
+              className="text-xs font-medium transition-colors duration-300 font-geist" 
               style={{ color: '#04001B' }}
               onMouseEnter={(e) => e.currentTarget.style.color = '#AF89FF'}
               onMouseLeave={(e) => e.currentTarget.style.color = '#04001B'}
@@ -75,7 +75,7 @@ export default function NosotrosPage() {
             </Link>
             <Link 
               href="/nosotros" 
-              className="text-sm font-medium transition-colors duration-300 font-geist" 
+              className="text-xs font-medium transition-colors duration-300 font-geist" 
               style={{ color: '#04001B' }}
               onMouseEnter={(e) => e.currentTarget.style.color = '#AF89FF'}
               onMouseLeave={(e) => e.currentTarget.style.color = '#04001B'}
@@ -84,7 +84,7 @@ export default function NosotrosPage() {
             </Link>
             <Link 
               href="/#contact" 
-              className="text-sm font-medium transition-colors duration-300 font-geist" 
+              className="text-xs font-medium transition-colors duration-300 font-geist" 
               style={{ color: '#04001B' }}
               onMouseEnter={(e) => e.currentTarget.style.color = '#AF89FF'}
               onMouseLeave={(e) => e.currentTarget.style.color = '#04001B'}
@@ -96,7 +96,7 @@ export default function NosotrosPage() {
           <div className="flex items-center space-x-3">
             <Link href="https://wa.me/5491122704706" target="_blank" rel="noopener noreferrer">
               <Button
-                className="font-geist h-9 px-4"
+                className="font-geist h-9 px-4 text-xs"
                 style={{ backgroundColor: '#AF89FF', color: '#FFFFFF' }}
                 onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#9B7BED'}
                 onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#AF89FF'}
@@ -179,7 +179,7 @@ export default function NosotrosPage() {
 
       {/* About Content */}
       <main className="pt-20 pb-40" style={{ backgroundColor: '#FAFAFA' }}>
-        <div className="container px-4 md:px-6">
+        <div className="container px-4 md:px-6 lg:px-5">
           <div className="max-w-5xl mx-auto space-y-28">
             {/* Purpose */}
             <ScrollReveal>
@@ -306,7 +306,7 @@ export default function NosotrosPage() {
             style={{ objectFit: 'contain' }}
           />
         </div>
-        <div className="container px-4 md:px-6 relative" style={{ zIndex: 2 }}>
+        <div className="container px-4 md:px-6 lg:px-5 relative" style={{ zIndex: 2 }}>
           <div className="max-w-2xl">
             {/* Contact Form */}
             <div className="p-8 lg:p-12">
@@ -427,7 +427,7 @@ export default function NosotrosPage() {
 
       {/* Footer */}
       <footer className="py-16" style={{ backgroundColor: '#04001B' }}>
-        <div className="container px-4 md:px-6">
+        <div className="container px-4 md:px-6 lg:px-5">
           <div className="grid gap-8 md:grid-cols-2 items-start">
             <div className="space-y-4">
               <Image
