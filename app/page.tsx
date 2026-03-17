@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Check, ArrowRight, Twitter, Linkedin, Github, Mail, Trophy, Copyright, Wrench } from "lucide-react"
+import { Check, ArrowRight, Twitter, Linkedin, Github, Mail, Trophy, Copyright, Wrench, Menu, X } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { AspectRatio } from "@/components/ui/aspect-ratio"
@@ -14,6 +14,7 @@ export default function LandingPage() {
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isClient, setIsClient] = useState(false)
   const [isScrolledPastHero, setIsScrolledPastHero] = useState(false)
+  const [isMobileNavOpen, setIsMobileNavOpen] = useState(false)
 
   useEffect(() => {
     setIsClient(true)
@@ -64,7 +65,7 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen" style={{ backgroundColor: '#f1f1f1' }}>
       {/* Header */}
-      <header className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-[95%] max-w-6xl bg-white/10 backdrop-blur-md rounded-2xl shadow-lg font-geist" style={{ border: '1px solid rgba(175, 137, 255, 0.13)' }}>
+      <header className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-[95%] max-w-6xl bg-white/10 backdrop-blur-md rounded-2xl shadow-lg font-geist relative" style={{ border: '1px solid rgba(175, 137, 255, 0.13)' }}>
         <div className="container flex h-[52px] items-center justify-between px-4 md:px-6">
           <div className="flex items-center space-x-2">
             <Image 
@@ -115,7 +116,7 @@ export default function LandingPage() {
             </Link>
           </nav>
 
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-3">
             <Link href="https://wa.me/5491122704706" target="_blank" rel="noopener noreferrer">
               <Button
                 className="font-geist h-9 px-4"
@@ -126,15 +127,69 @@ export default function LandingPage() {
                 Contactanos
               </Button>
             </Link>
+
+            {/* Mobile menu toggle */}
+            <button
+              type="button"
+              className="md:hidden inline-flex items-center justify-center rounded-full border border-white/40 bg-white/60 p-2 shadow-sm"
+              onClick={() => setIsMobileNavOpen((open) => !open)}
+              aria-label="Abrir menú de navegación"
+            >
+              {isMobileNavOpen ? (
+                <X className="h-5 w-5" style={{ color: '#04001B' }} />
+              ) : (
+                <Menu className="h-5 w-5" style={{ color: '#04001B' }} />
+              )}
+            </button>
           </div>
         </div>
+
+        {/* Mobile nav menu */}
+        {isMobileNavOpen && (
+          <div className="md:hidden absolute left-1/2 -translate-x-1/2 top-[calc(100%+8px)] w-full px-3 pb-3">
+            <nav className="rounded-2xl bg-white shadow-lg border border-gray-200/70 py-3 px-4 space-y-2">
+              <Link
+                href="/servicios"
+                className="block text-sm font-medium font-geist"
+                style={{ color: '#04001B' }}
+                onClick={() => setIsMobileNavOpen(false)}
+              >
+                Servicios
+              </Link>
+              <Link
+                href="/productos"
+                className="block text-sm font-medium font-geist"
+                style={{ color: '#04001B' }}
+                onClick={() => setIsMobileNavOpen(false)}
+              >
+                Productos
+              </Link>
+              <Link
+                href="/nosotros"
+                className="block text-sm font-medium font-geist"
+                style={{ color: '#04001B' }}
+                onClick={() => setIsMobileNavOpen(false)}
+              >
+                Nosotros
+              </Link>
+              <Link
+                href="#contact"
+                className="block text-sm font-medium font-geist"
+                style={{ color: '#04001B' }}
+                onClick={() => setIsMobileNavOpen(false)}
+              >
+                Contacto
+              </Link>
+            </nav>
+          </div>
+        )}
       </header>
 
       {/* Hero Section */}
       <section
         id="hero-section"
-        className="relative bg-white overflow-hidden flex items-center"
-        style={{ borderBottomLeftRadius: '24px', borderBottomRightRadius: '24px', minHeight: '90vh', paddingTop: '64px' }}
+        className="relative bg-white overflow-hidden flex items-center -mt-12"
+        style={{ borderBottomLeftRadius: '24px', borderBottomRightRadius: '24px', minHeight: '90vh' }}
       >
         {/* Background Image - Behind everything */}
         <div className="absolute inset-0 z-0">
@@ -148,7 +203,7 @@ export default function LandingPage() {
         </div>
 
         <div className="relative z-10 w-full flex items-center justify-start">
-          <div className="w-11/12 max-w-6xl mx-auto flex flex-col lg:flex-row gap-6 lg:gap-10 items-stretch w-full">
+          <div className="w-11/12 max-w-6xl mx-auto flex flex-col lg:flex-row gap-6 lg:gap-10 items-stretch w-full pt-4">
             <div className="flex-1 min-w-0 text-left space-y-6">
             {/* Overlay Badge */}
             <div className="flex justify-start mb-6">
@@ -245,13 +300,19 @@ export default function LandingPage() {
             </div>
             </div>
 
-            {/* Placeholder imagen hero - cuadrado, 30px redondeo, altura = contenido izquierda, borde derecho alineado al navbar */}
+            {/* Placeholder imagen hero - rectángulo, 30px redondeo, altura = contenido izquierda, borde derecho alineado al navbar */}
             <div className="hidden lg:flex flex-1 justify-end self-stretch min-w-0">
               <div
-                className="h-full aspect-square rounded-[30px] bg-neutral-300/80"
+                className="relative h-full aspect-[4/3] rounded-[30px] bg-neutral-300/80 overflow-hidden"
                 aria-hidden
-                style={{ transform: 'scale(0.95)', transformOrigin: 'center' }}
-              />
+              >
+                <Image
+                  src="/render-hero.jpg"
+                  alt="Hero Noddo"
+                  fill
+                  className="object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>
