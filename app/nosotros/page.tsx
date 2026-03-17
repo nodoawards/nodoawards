@@ -200,7 +200,7 @@ export default function NosotrosPage() {
             <ScrollReveal>
               <div className="grid gap-6 md:grid-cols-2">
               <div
-                className="relative p-10 md:p-14 flex flex-col justify-center"
+                className="relative pl-8 pr-6 py-14 md:px-10 md:py-10 flex flex-col justify-center"
                 style={{
                   backgroundImage: "url('/tarjeta%20nosotros.svg')",
                   backgroundRepeat: 'no-repeat',
@@ -212,25 +212,25 @@ export default function NosotrosPage() {
                   overflow: 'visible'
                 }}
               >
-                <div className="absolute" style={{ top: '28px', left: '16px', zIndex: 10 }}>
-                  <div className="h-10 w-10 md:h-12 md:w-12 rounded-full flex items-center justify-center" style={{ backgroundColor: '#F4EEFF', border: '1px solid #AF89FF' }}>
+                <div className="absolute left-[11px] top-[68px] md:left-[20px] md:top-[35px]" style={{ zIndex: 10 }}>
+                  <div className="h-7 w-7 md:h-12 md:w-12 rounded-full flex items-center justify-center" style={{ backgroundColor: '#F4EEFF', border: '1px solid #AF89FF' }}>
                     <Image src="/medal-svg.svg" alt="Misión" width={18} height={18} />
                   </div>
                 </div>
                 <div className="flex flex-col flex-1 justify-between">
                   <div className="flex justify-end pr-4 pt-4">
-                    <h3 className="text-2xl md:text-4xl font-medium font-stack-sans-notch" style={{ color: '#04001B' }}>
+                    <h3 className="text-xl md:text-4xl font-medium font-stack-sans-notch" style={{ color: '#04001B' }}>
                       Misión
                     </h3>
                   </div>
-                  <p className="text-slate-600 font-geist leading-relaxed text-right pr-4 pb-6" style={{ fontSize: '12px' }}>
+                  <p className="text-slate-600 font-geist leading-relaxed text-right pr-4 pb-8 text-xs md:text-sm">
                     Diseñar y crear reconocimientos físicos y digitales que celebren a las personas, fortalezcan la cultura de las organizaciones y devuelvan sentido al acto de reconocer.
                   </p>
                 </div>
               </div>
 
               <div
-                className="relative p-10 md:p-14 flex flex-col justify-center"
+                className="relative pl-8 pr-6 py-14 md:px-10 md:py-10 flex flex-col justify-center"
                 style={{
                   backgroundImage: "url('/tarjeta%20nosotros.svg')",
                   backgroundRepeat: 'no-repeat',
@@ -242,18 +242,18 @@ export default function NosotrosPage() {
                   overflow: 'visible'
                 }}
               >
-                <div className="absolute" style={{ top: '28px', left: '16px', zIndex: 10 }}>
-                  <div className="h-10 w-10 md:h-12 md:w-12 rounded-full flex items-center justify-center" style={{ backgroundColor: '#F4EEFF', border: '1px solid #AF89FF' }}>
+                <div className="absolute left-[11px] top-[68px] md:left-[20px] md:top-[35px]" style={{ zIndex: 10 }}>
+                  <div className="h-7 w-7 md:h-12 md:w-12 rounded-full flex items-center justify-center" style={{ backgroundColor: '#F4EEFF', border: '1px solid #AF89FF' }}>
                     <Image src="/ojo-svg.svg" alt="Visión" width={18} height={18} />
                   </div>
                 </div>
                 <div className="flex flex-col flex-1 justify-between">
                   <div className="flex justify-end pr-4 pt-4">
-                    <h3 className="text-2xl md:text-4xl font-medium font-stack-sans-notch" style={{ color: '#04001B' }}>
+                    <h3 className="text-xl md:text-4xl font-medium font-stack-sans-notch" style={{ color: '#04001B' }}>
                       Visión
                     </h3>
                   </div>
-                  <p className="text-slate-600 font-geist leading-relaxed text-right pr-4 pb-6" style={{ fontSize: '12px' }}>
+                  <p className="text-slate-600 font-geist leading-relaxed text-right pr-4 pb-8 text-xs md:text-sm">
                     Ser la marca referente en reconocimiento empresarial en Latinoamérica, impulsando culturas de trabajo más humanas, conscientes y duraderas.
                   </p>
                 </div>
