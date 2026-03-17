@@ -219,9 +219,9 @@ export default function ServiciosPage() {
       <main className="py-20" style={{ backgroundColor: '#f1f1f1' }}>
         <div className="container px-4 md:px-6 lg:px-5">
           <div className="max-w-5xl mx-auto relative">
-            {/* Background Line SVG */}
+            {/* Background Line SVG - solo desktop */}
             <div
-              className="pointer-events-none absolute left-1/2 -translate-x-1/2 z-0"
+              className="hidden lg:block pointer-events-none absolute left-1/2 -translate-x-1/2 z-0"
               style={{
                 top: 500,
                 width: '1087px',
@@ -250,13 +250,49 @@ export default function ServiciosPage() {
 
             {/* Services Sections */}
             <ScrollReveal>
-              <div className="grid gap-16 lg:grid-cols-2 items-start relative z-10">
+              {/* Mobile / Tablet layout: stack in order Diseño, Fabricación, Entrega, Fotografía */}
+              <div className="flex flex-col gap-16 items-start relative z-10 lg:hidden">
+                {[0, 1, 2, 3].map((index) => (
+                  <div
+                    key={servicios[index].title}
+                    className="flex flex-col items-center text-center space-y-6 mx-auto mt-4"
+                    style={{ maxWidth: '420px' }}
+                  >
+                    <h3 className="text-3xl md:text-4xl font-medium font-stack-sans-notch" style={{ color: '#04001B' }}>
+                      {servicios[index].title}
+                    </h3>
+                    <p
+                      className="text-sm md:text-base font-geist leading-relaxed mx-auto max-w-[330px] md:max-w-[370px]"
+                      style={{
+                        color: '#04001B',
+                        display: '-webkit-box',
+                        WebkitLineClamp: 5,
+                        WebkitBoxOrient: 'vertical' as any,
+                        overflow: 'hidden'
+                      }}
+                    >
+                      {servicios[index].description}
+                    </p>
+                    <div className="relative w-full overflow-hidden h-[320px] md:h-[360px]">
+                      <Image
+                        src={servicios[index].image}
+                        alt={servicios[index].title}
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Desktop layout: two columns with background line alignment */}
+              <div className="hidden lg:grid lg:grid-cols-2 gap-16 items-start relative z-10">
               {/* Left Column */}
               <div className="flex flex-col space-y-8">
                 {/* Diseño */}
                 <div
-                  className="flex flex-col items-center text-center space-y-6"
-                  style={{ maxWidth: '420px', margin: '60px auto 0 auto' }}
+                  className="flex flex-col items-center text-center space-y-6 mx-auto mt-12 lg:mt-[60px]"
+                  style={{ maxWidth: '420px' }}
                 >
                   <h3 className="text-3xl md:text-4xl font-medium font-stack-sans-notch" style={{ color: '#04001B' }}>
                     {servicios[0].title}
@@ -283,13 +319,13 @@ export default function ServiciosPage() {
                   </div>
                 </div>
 
-                {/* Spacer controlable para bajar "Entrega" */}
-                <div className="h-[150px]" />
+                {/* Spacer controlable para bajar "Entrega" - solo desktop */}
+                <div className="hidden lg:block h-[150px]" />
 
                 {/* Entrega */}
                 <div
-                  className="flex flex-col items-center text-center space-y-6 lg:pt-[169px]"
-                  style={{ maxWidth: '420px', margin: '60px auto 0 auto' }}
+                  className="flex flex-col items-center text-center space-y-6 mx-auto mt-12 lg:mt-[60px] lg:pt-[169px]"
+                  style={{ maxWidth: '420px' }}
                 >
                   <h3 className="text-3xl md:text-4xl font-medium font-stack-sans-notch" style={{ color: '#04001B' }}>
                     {servicios[2].title}
@@ -321,8 +357,8 @@ export default function ServiciosPage() {
               <div className="flex flex-col space-y-8">
                 {/* Fabricación */}
                 <div
-                  className="flex flex-col items-center text-center space-y-6 lg:pt-[338px]"
-                  style={{ maxWidth: '420px', margin: '0 auto', marginTop: '185px' }}
+                  className="flex flex-col items-center text-center space-y-6 mx-auto mt-12 lg:mt-[185px] lg:pt-[338px]"
+                  style={{ maxWidth: '420px' }}
                 >
                   <h3 className="text-3xl md:text-4xl font-medium font-stack-sans-notch" style={{ color: '#04001B' }}>
                     {servicios[1].title}
@@ -351,8 +387,8 @@ export default function ServiciosPage() {
                 
                 {/* Fotografía en evento */}
                 <div
-                  className="flex flex-col items-center text-center space-y-6 lg:pt-[169px] lg:pb-72"
-                  style={{ maxWidth: '420px', margin: '0 auto', marginTop: '110px' }}
+                  className="flex flex-col items-center text-center space-y-6 mx-auto mt-12 lg:mt-[110px] lg:pt-[169px] lg:pb-72"
+                  style={{ maxWidth: '420px' }}
                 >
                   <h3 className="text-3xl md:text-4xl font-medium font-stack-sans-notch" style={{ color: '#04001B' }}>
                     Fotografia

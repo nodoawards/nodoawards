@@ -188,8 +188,8 @@ export default function LandingPage() {
       {/* Hero Section */}
       <section
         id="hero-section"
-        className="relative bg-white overflow-hidden flex items-center -mt-16"
-        style={{ borderBottomLeftRadius: '24px', borderBottomRightRadius: '24px', minHeight: '90vh' }}
+        className="relative bg-white overflow-hidden flex items-center -mt-16 min-h-[110vh] sm:min-h-[100vh] lg:min-h-[90vh]"
+        style={{ borderBottomLeftRadius: '24px', borderBottomRightRadius: '24px' }}
       >
         {/* Background Image - Behind everything */}
         <div className="absolute inset-0 z-0">
@@ -203,7 +203,7 @@ export default function LandingPage() {
         </div>
 
         <div className="relative z-10 w-full flex items-center justify-start">
-          <div className="w-11/12 max-w-6xl mx-auto flex flex-col lg:flex-row gap-6 lg:gap-10 items-stretch w-full pt-8">
+          <div className="container px-6 md:px-6 lg:px-5 max-w-6xl mx-auto flex flex-col lg:flex-row gap-6 lg:gap-10 items-stretch pt-16 sm:pt-14 lg:pt-8">
             <div className="flex-1 min-w-0 text-left space-y-6">
             {/* Overlay Badge */}
             <div className="flex justify-start mb-6">
@@ -246,8 +246,8 @@ export default function LandingPage() {
                 <Link href="#contact">
                   <Button
                     size="lg"
-                    className="font-geist w-full sm:w-auto"
-                    style={{ backgroundColor: '#AF89FF', color: '#FFFFFF', minWidth: '200px' }}
+                    className="font-geist w-full sm:w-[220px] max-w-[220px] mx-auto"
+                    style={{ backgroundColor: '#AF89FF', color: '#FFFFFF' }}
                     onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#9B7BED'}
                     onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#AF89FF'}
                   >
@@ -278,27 +278,29 @@ export default function LandingPage() {
                   </p>
                 </div>
               </div>
-              <Link href="https://calendar.app.google/oQm6gqMmpRb3dyf57" target="_blank" rel="noopener noreferrer">
-                <Button 
-                  size="lg" 
-                  className="font-geist w-full sm:w-auto"
-                  style={{ backgroundColor: '#E7E3FE', color: '#04001B', border: 'none', minWidth: '200px' }}
-                  onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#d4cfe8'}
-                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#E7E3FE'}
-                >
-                  <span className="flex items-center gap-2 justify-center text-xs">
-                    <Image
-                      src="/vector-user.svg"
-                      alt="Usuario"
-                      width={25}
-                      height={25}
-                      className="h-6 w-6"
-                      style={{ opacity: 1 }}
-                    />
-                    Agendar una reunión
-                  </span>
-                </Button>
-              </Link>
+              <div className="flex flex-col items-center">
+                <Link href="https://calendar.app.google/oQm6gqMmpRb3dyf57" target="_blank" rel="noopener noreferrer">
+                  <Button 
+                    size="lg" 
+                    className="font-geist w-full sm:w-[220px] max-w-[220px] mx-auto"
+                    style={{ backgroundColor: '#E7E3FE', color: '#04001B', border: 'none' }}
+                    onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#d4cfe8'}
+                    onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#E7E3FE'}
+                  >
+                    <span className="flex items-center gap-2 justify-center text-xs">
+                      <Image
+                        src="/vector-user.svg"
+                        alt="Usuario"
+                        width={25}
+                        height={25}
+                        className="h-6 w-6"
+                        style={{ opacity: 1 }}
+                      />
+                      Agendar una reunión
+                    </span>
+                  </Button>
+                </Link>
+              </div>
             </div>
             </div>
 
@@ -371,7 +373,7 @@ export default function LandingPage() {
                   className="h-24 w-auto object-contain"
                 />
               </div>
-              <div className="grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100">
+              <div className="grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100 col-span-2 md:col-span-1">
                 <Image
                   src="/Logos clientes web-05.jpg"
                   alt="MITO ESTUDIO"
@@ -438,7 +440,7 @@ export default function LandingPage() {
                  </div>
                  {/* Text below image */}
                  <div
-                   className="relative h-40 lg:h-[360px] rounded-[64px] flex items-center justify-center text-center px-10"
+                   className="relative h-72 lg:h-[360px] rounded-[64px] flex items-center justify-center text-center px-10 py-16 md:py-8"
                    style={{ border: '1.2px solid rgba(4, 0, 27, 0.2)' }}
                  >
                    <p className="text-base font-geist leading-relaxed max-w-xs mx-auto" style={{ color: '#04001B' }}>
@@ -450,9 +452,9 @@ export default function LandingPage() {
               {/* Right Column - Text and Close-up Image */}
               <div className="lg:col-span-1 space-y-8">
                 {/* Text Content */}
-                <div className="flex justify-center h-80 lg:h-[420px]">
+                <div className="flex justify-center h-96 lg:h-[420px]">
                   <div
-                    className="w-full h-full rounded-[64px] flex items-center justify-center text-center px-10"
+                    className="w-full h-full rounded-[64px] flex items-center justify-center text-center px-10 py-10 md:py-8"
                     style={{ border: '1.2px solid rgba(4, 0, 27, 0.2)' }}
                   >
                     <p className="text-base font-geist leading-relaxed max-w-xs mx-auto" style={{ color: '#04001B' }}>
@@ -462,7 +464,7 @@ export default function LandingPage() {
                 </div>
 
                 {/* Close-up Image */}
-                <div className="relative h-80 lg:h-[720px] overflow-hidden rounded-[64px] -mt-10">
+                <div className="relative h-96 lg:h-[720px] overflow-hidden rounded-[64px] -mt-10">
                   <Image
                     src="/Dimaria-betano-nodo-alta.JPEG"
                     alt="Trofeo Crack Betano - Detalle en evento"
@@ -496,7 +498,7 @@ export default function LandingPage() {
               </h2>
               
               {/* Workflow Cards */}
-              <div className="flex justify-center gap-4" style={{ flexWrap: 'nowrap' }}>
+              <div className="flex flex-col md:flex-row items-center justify-center gap-6">
                 <Image
                   src="/Tarjeta discovery.png"
                   alt="Discovery"
