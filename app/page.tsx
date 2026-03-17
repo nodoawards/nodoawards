@@ -71,9 +71,9 @@ export default function LandingPage() {
             <Image 
               src="/Logo PNG - texto negro.png" 
               alt="NODO AWARDS" 
-              width={130} 
-              height={28} 
-              className="h-7 w-auto transition-opacity duration-300" 
+              width={120} 
+              height={24} 
+              className="h-6 w-auto transition-opacity duration-300" 
             />
           </div>
 
@@ -229,7 +229,7 @@ export default function LandingPage() {
             </div>
             
             <div className="space-y-4">
-              <h1 className="text-3xl font-normal tracking-tight sm:text-4xl md:text-5xl lg:text-[64px] font-stack-sans-notch">
+              <h1 className="text-4xl font-normal tracking-tight sm:text-5xl md:text-6xl lg:text-[72px] font-stack-sans-notch">
                 <span style={{ color: '#04001B', fontWeight: 400 }}>El </span>
                 <span style={{ color: '#AF89FF', fontWeight: 500 }}>valor </span>
                 <span style={{ color: '#04001B', fontWeight: 400 }}>del</span>

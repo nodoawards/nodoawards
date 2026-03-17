@@ -104,9 +104,9 @@ export default function ProductosPage() {
               <Image 
                 src="/Logo PNG - texto negro.png" 
                 alt="NODO AWARDS" 
-                width={130} 
-                height={28} 
-                className="h-7 w-auto transition-opacity duration-300" 
+                width={120} 
+                height={24} 
+                className="h-6 w-auto transition-opacity duration-300" 
               />
             </Link>
           </div>
