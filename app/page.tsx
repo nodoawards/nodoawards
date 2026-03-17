@@ -188,7 +188,7 @@ export default function LandingPage() {
       {/* Hero Section */}
       <section
         id="hero-section"
-        className="relative bg-white overflow-hidden flex items-center -mt-12"
+        className="relative bg-white overflow-hidden flex items-center -mt-16"
         style={{ borderBottomLeftRadius: '24px', borderBottomRightRadius: '24px', minHeight: '90vh' }}
       >
         {/* Background Image - Behind everything */}
@@ -203,7 +203,7 @@ export default function LandingPage() {
         </div>
 
         <div className="relative z-10 w-full flex items-center justify-start">
-          <div className="w-11/12 max-w-6xl mx-auto flex flex-col lg:flex-row gap-6 lg:gap-10 items-stretch w-full pt-4">
+          <div className="w-11/12 max-w-6xl mx-auto flex flex-col lg:flex-row gap-6 lg:gap-10 items-stretch w-full pt-8">
             <div className="flex-1 min-w-0 text-left space-y-6">
             {/* Overlay Badge */}
             <div className="flex justify-start mb-6">
