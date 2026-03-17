@@ -441,7 +441,7 @@ export default function LandingPage() {
                    className="relative h-40 lg:h-[360px] rounded-[64px] flex items-center justify-center text-center px-10"
                    style={{ border: '1.2px solid rgba(4, 0, 27, 0.2)' }}
                  >
-                   <p className="text-lg font-geist leading-relaxed max-w-xs mx-auto" style={{ color: '#04001B' }}>
+                   <p className="text-base font-geist leading-relaxed max-w-xs mx-auto" style={{ color: '#04001B' }}>
                      Cada proyecto es pensado de forma integral: concepto, presupuesto, calidad percibida y tiempos de entrega. Trabajamos día a día para superar las expectativas en cada entrega y mejorar constantemente nuestros procesos.
                    </p>
                  </div>
@@ -455,7 +455,7 @@ export default function LandingPage() {
                     className="w-full h-full rounded-[64px] flex items-center justify-center text-center px-10"
                     style={{ border: '1.2px solid rgba(4, 0, 27, 0.2)' }}
                   >
-                    <p className="text-lg font-geist leading-relaxed max-w-xs mx-auto" style={{ color: '#04001B' }}>
+                    <p className="text-base font-geist leading-relaxed max-w-xs mx-auto" style={{ color: '#04001B' }}>
                       Creamos un trofeo exclusivo para Betano, una de las empresas líderes en entretenimiento deportivo. El Trofeo "<span className="font-semibold">Crack Betano</span>", destinado a distinguir al mejor jugador de cada fecha del Torneo Clausura Betano 2025, fue diseñado, ajustado y fabricado íntegramente por nuestro equipo.
                     </p>
                   </div>
@@ -464,8 +464,8 @@ export default function LandingPage() {
                 {/* Close-up Image */}
                 <div className="relative h-80 lg:h-[720px] overflow-hidden rounded-[64px] -mt-10">
                   <Image
-                    src="/render-detalle-betano.jpg"
-                    alt="Trofeo Crack Betano - Detalle"
+                    src="/Dimaria-betano-nodo-alta.JPEG"
+                    alt="Trofeo Crack Betano - Detalle en evento"
                     fill
                     className="object-cover"
                     priority
