@@ -1,7 +1,7 @@
 'use client'
 
 import { Button } from "@/components/ui/button"
-import { Check, ArrowRight, Twitter, Linkedin, Github, Mail, Trophy, Copyright, Wrench } from "lucide-react"
+import { Check, ArrowRight, Twitter, Linkedin, Github, Mail, Trophy, Copyright, Wrench, Menu, X } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
@@ -9,6 +9,7 @@ import { ScrollReveal } from "@/components/scroll-reveal"
 
 export default function ServiciosPage() {
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isMobileNavOpen, setIsMobileNavOpen] = useState(false)
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -77,7 +78,7 @@ export default function ServiciosPage() {
     <div className="min-h-screen" style={{ backgroundColor: '#f1f1f1' }}>
       {/* Header */}
       <header
-        className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-[95%] max-w-6xl bg-white/10 backdrop-blur-md rounded-2xl shadow-lg font-geist"
+        className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-[95%] max-w-6xl bg-white/10 backdrop-blur-md rounded-2xl shadow-lg font-geist relative"
         style={{ border: '1px solid rgba(175, 137, 255, 0.13)' }}
       >
         <div className="container flex h-[52px] items-center justify-between px-4 md:px-6">
@@ -132,7 +133,7 @@ export default function ServiciosPage() {
             </Link>
           </nav>
 
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-3">
             <Link href="https://wa.me/5491122704706" target="_blank" rel="noopener noreferrer">
               <Button
                 className="font-geist h-9 px-4"
@@ -143,12 +144,65 @@ export default function ServiciosPage() {
                 Contactanos
               </Button>
             </Link>
+            {/* Mobile menu toggle */}
+            <button
+              type="button"
+              className="md:hidden inline-flex items-center justify-center rounded-full border border-white/40 bg-white/60 p-2 shadow-sm"
+              onClick={() => setIsMobileNavOpen((open) => !open)}
+              aria-label="Abrir menú de navegación"
+            >
+              {isMobileNavOpen ? (
+                <X className="h-5 w-5" style={{ color: '#04001B' }} />
+              ) : (
+                <Menu className="h-5 w-5" style={{ color: '#04001B' }} />
+              )}
+            </button>
           </div>
         </div>
+
+        {/* Mobile nav menu */}
+        {isMobileNavOpen && (
+          <div className="md:hidden absolute left-1/2 -translate-x-1/2 top-[calc(100%+8px)] w-full px-3 pb-3">
+            <nav className="rounded-2xl bg-white shadow-lg border border-gray-200/70 py-3 px-4 space-y-2">
+              <Link
+                href="/servicios"
+                className="block text-sm font-medium font-geist"
+                style={{ color: '#04001B' }}
+                onClick={() => setIsMobileNavOpen(false)}
+              >
+                Servicios
+              </Link>
+              <Link
+                href="/productos"
+                className="block text-sm font-medium font-geist"
+                style={{ color: '#04001B' }}
+                onClick={() => setIsMobileNavOpen(false)}
+              >
+                Productos
+              </Link>
+              <Link
+                href="/nosotros"
+                className="block text-sm font-medium font-geist"
+                style={{ color: '#04001B' }}
+                onClick={() => setIsMobileNavOpen(false)}
+              >
+                Nosotros
+              </Link>
+              <Link
+                href="/#contact"
+                className="block text-sm font-medium font-geist"
+                style={{ color: '#04001B' }}
+                onClick={() => setIsMobileNavOpen(false)}
+              >
+                Contacto
+              </Link>
+            </nav>
+          </div>
+        )}
       </header>
 
       {/* Hero Section */}
-      <section className="relative py-12 md:py-24 bg-white overflow-hidden" style={{ borderBottomLeftRadius: '24px', borderBottomRightRadius: '24px', minHeight: '70vh' }}>
+      <section className="relative py-12 md:py-24 bg-white overflow-hidden -mt-16" style={{ borderBottomLeftRadius: '24px', borderBottomRightRadius: '24px', minHeight: '70vh' }}>
         <div className="absolute inset-0 z-0">
           <Image
             src="/render-nodo-frente.jpg"

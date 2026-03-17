@@ -229,50 +229,52 @@ export default function LandingPage() {
             </div>
             
             <div className="space-y-4">
-              <h1 className="text-4xl font-normal tracking-tight sm:text-5xl md:text-6xl lg:text-[72px] font-stack-sans-notch">
+              <h1 className="text-3xl font-normal tracking-tight sm:text-4xl md:text-5xl lg:text-[64px] font-stack-sans-notch">
                 <span style={{ color: '#04001B', fontWeight: 400 }}>El </span>
                 <span style={{ color: '#AF89FF', fontWeight: 500 }}>valor </span>
                 <span style={{ color: '#04001B', fontWeight: 400 }}>del</span>
                 <br />
                 <span style={{ color: '#04001B', fontWeight: 400 }}>reconocimiento</span>
               </h1>
-              <p className="text-base md:text-lg max-w-[560px] font-geist" style={{ color: '#04001B' }}>
+              <p className="text-sm md:text-base max-w-[560px] font-geist" style={{ color: '#04001B' }}>
                 Tu organización necesita un sistema de reconocimientos, físicos y/o digitales, que ponga en valor el trabajo de sus miembros y refuerce el posicionamiento de tu marca.
               </p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-start">
-              <div className="flex flex-col items-start gap-3">
-<Button
-                  size="lg"
-                  className="font-geist w-full sm:w-auto"
-                  style={{ backgroundColor: '#AF89FF', color: '#FFFFFF', minWidth: '200px' }}
-                  onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#9B7BED'}
-                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#AF89FF'}
-                >
-                  <span className="flex items-center gap-2 justify-center">
-                    Solicitar propuesta gratuita
-                    <Image
-                      src="/vector-flecha.svg"
-                      alt="Flecha"
-                      width={16}
-                      height={16}
-                      className="h-4 w-4"
-                      style={{ filter: 'brightness(0) saturate(100%) invert(96%) sepia(8%) saturate(1200%) hue-rotate(220deg) brightness(102%) contrast(95%)' }}
-                    />
-                  </span>
-                </Button>
-                <div className="hidden flex items-center gap-2">
+              <div className="flex flex-col items-center gap-3">
+                <Link href="#contact">
+                  <Button
+                    size="lg"
+                    className="font-geist w-full sm:w-auto"
+                    style={{ backgroundColor: '#AF89FF', color: '#FFFFFF', minWidth: '200px' }}
+                    onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#9B7BED'}
+                    onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#AF89FF'}
+                  >
+                    <span className="flex items-center gap-2 justify-center">
+                      Solicitar propuesta gratuita
+                      <Image
+                        src="/vector-flecha.svg"
+                        alt="Flecha"
+                        width={16}
+                        height={16}
+                        className="h-4 w-4"
+                        style={{ filter: 'brightness(0) saturate(100%) invert(96%) sepia(8%) saturate(1200%) hue-rotate(220deg) brightness(102%) contrast(95%)' }}
+                      />
+                    </span>
+                  </Button>
+                </Link>
+                <div className="flex items-center gap-2">
                   <Image
                     src="/vector-gratis.svg"
                     alt="Gratis"
                     width={16}
                     height={16}
                     className="h-4 w-4"
-                    style={{ filter: 'brightness(0) saturate(100%) invert(96%) sepia(8%) saturate(1200%) hue-rotate(220deg) brightness(102%) contrast(95%)' }}
+                    style={{ filter: 'brightness(0) saturate(100%)' }}
                   />
-                  <p className="text-sm font-geist" style={{ color: '#E7E3FE' }}>
-                    Es totalmente gratis, sin cargo.
+                  <p className="text-xs font-geist font-medium text-center" style={{ color: '#04001B' }}>
+                    Contanos tu idea, sin cargo.
                   </p>
                 </div>
               </div>
@@ -300,10 +302,10 @@ export default function LandingPage() {
             </div>
             </div>
 
-            {/* Placeholder imagen hero - rectángulo, 30px redondeo, altura = contenido izquierda, borde derecho alineado al navbar */}
+            {/* Placeholder imagen hero - rectángulo, 83px redondeo, altura = contenido izquierda, borde derecho alineado al navbar */}
             <div className="hidden lg:flex flex-1 justify-end self-stretch min-w-0">
               <div
-                className="relative h-full aspect-[4/3] rounded-[30px] bg-neutral-300/80 overflow-hidden"
+                className="relative h-full aspect-[4/3] rounded-[83px] bg-neutral-300/80 overflow-hidden"
                 aria-hidden
               >
                 <Image
