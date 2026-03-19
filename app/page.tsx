@@ -188,7 +188,7 @@ export default function LandingPage() {
       {/* Hero Section */}
       <section
         id="hero-section"
-        className="relative bg-white overflow-hidden flex items-center -mt-16 min-h-[110vh] sm:min-h-[100vh] lg:min-h-[90vh]"
+        className="relative bg-white overflow-hidden flex items-center -mt-16 min-h-[90vh] sm:min-h-[100vh] lg:min-h-[90vh]"
         style={{ borderBottomLeftRadius: '24px', borderBottomRightRadius: '24px' }}
       >
         {/* Background Image - Behind everything */}
@@ -469,7 +469,7 @@ export default function LandingPage() {
                     src="/Dimaria-betano-nodo-alta.JPEG"
                     alt="Trofeo Crack Betano - Detalle en evento"
                     fill
-                    className="object-cover"
+                    className="object-cover object-top md:object-center"
                     priority
                   />
                 </div>

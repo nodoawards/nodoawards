@@ -180,7 +180,7 @@ export default function NosotrosPage() {
       {/* About Content */}
       <main className="pt-20 pb-40" style={{ backgroundColor: '#FAFAFA' }}>
         <div className="container px-4 md:px-6 lg:px-5">
-          <div className="max-w-5xl mx-auto space-y-28">
+          <div className="max-w-5xl mx-auto space-y-16 md:space-y-28">
             {/* Purpose */}
             <ScrollReveal>
               <div className="text-center space-y-3">
@@ -198,7 +198,7 @@ export default function NosotrosPage() {
 
             {/* Mission & Vision */}
             <ScrollReveal>
-              <div className="grid gap-6 md:grid-cols-2">
+              <div className="grid gap-4 md:gap-6 md:grid-cols-2">
               <div
                 className="relative pl-8 pr-6 py-14 md:px-10 md:py-10 flex flex-col justify-center"
                 style={{
