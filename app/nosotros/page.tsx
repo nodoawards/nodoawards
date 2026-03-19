@@ -198,7 +198,7 @@ export default function NosotrosPage() {
 
             {/* Mission & Vision */}
             <ScrollReveal>
-              <div className="grid gap-4 md:gap-6 md:grid-cols-2">
+              <div className="grid gap-2 md:gap-6 md:grid-cols-2">
               <div
                 className="relative pl-8 pr-6 py-14 md:px-10 md:py-10 flex flex-col justify-center"
                 style={{
@@ -223,7 +223,7 @@ export default function NosotrosPage() {
                       Misión
                     </h3>
                   </div>
-                  <p className="text-slate-600 font-geist leading-relaxed text-right pr-4 pb-8 text-xs md:text-sm">
+                  <p className="text-slate-600 font-geist leading-relaxed text-right pr-4 pb-8 text-xs md:text-sm line-clamp-3">
                     Diseñar y crear reconocimientos físicos y digitales que celebren a las personas, fortalezcan la cultura de las organizaciones y devuelvan sentido al acto de reconocer.
                   </p>
                 </div>
