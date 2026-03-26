@@ -205,11 +205,11 @@ export default function ServiciosPage() {
       <section className="relative py-12 md:py-24 bg-white overflow-hidden -mt-16" style={{ borderBottomLeftRadius: '24px', borderBottomRightRadius: '24px', minHeight: '70vh' }}>
         <div className="absolute inset-0 z-0">
           <Image
-            src="/render-nodo-frente.jpg"
+            src="/render-servicios.jpg"
             alt="Hero Background"
             fill
             className="object-cover"
-            style={{ objectPosition: 'center -70px' }}
+            style={{ objectPosition: 'center -220px' }}
           />
         </div>
         <div className="absolute inset-0 z-10" />

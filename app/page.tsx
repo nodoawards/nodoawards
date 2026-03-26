@@ -204,7 +204,7 @@ export default function LandingPage() {
 
         <div className="relative z-10 w-full flex items-center justify-start">
           <div className="container px-6 md:px-6 lg:px-5 max-w-6xl mx-auto flex flex-col lg:flex-row gap-6 lg:gap-10 items-stretch pt-16 sm:pt-14 lg:pt-8">
-            <div className="flex-1 min-w-0 text-left space-y-6">
+            <div className="flex-1 min-w-0 text-center lg:text-left space-y-6">
             {/* Overlay Badge */}
             <div className="flex justify-start mb-6">
               <div 
@@ -236,12 +236,12 @@ export default function LandingPage() {
                 <br />
                 <span style={{ color: '#04001B', fontWeight: 400 }}>reconocimiento</span>
               </h1>
-              <p className="text-sm md:text-base max-w-[560px] font-geist" style={{ color: '#04001B' }}>
+              <p className="text-sm md:text-base max-w-[560px] mx-auto lg:mx-0 font-geist" style={{ color: '#04001B' }}>
                 Tu organización necesita un sistema de reconocimientos, físicos y/o digitales, que ponga en valor el trabajo de sus miembros y refuerce el posicionamiento de tu marca.
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-start">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <div className="flex flex-col items-center gap-3">
                 <Link href="#contact">
                   <Button
@@ -450,9 +450,9 @@ export default function LandingPage() {
                </div>
 
               {/* Right Column - Text and Close-up Image */}
-              <div className="lg:col-span-1 space-y-8">
+              <div className="lg:col-span-1 flex flex-col gap-8">
                 {/* Text Content */}
-                <div className="flex justify-center h-96 lg:h-[420px]">
+                <div className="flex justify-center h-96 lg:h-[420px] order-2 lg:order-1">
                   <div
                     className="w-full h-full rounded-[64px] flex items-center justify-center text-center px-10 py-10 md:py-8"
                     style={{ border: '1.2px solid rgba(4, 0, 27, 0.2)' }}
@@ -464,7 +464,7 @@ export default function LandingPage() {
                 </div>
 
                 {/* Close-up Image */}
-                <div className="relative h-96 lg:h-[720px] overflow-hidden rounded-[64px] -mt-10">
+                <div className="relative h-96 lg:h-[720px] overflow-hidden rounded-[64px] mt-0 order-1 lg:order-2">
                   <Image
                     src="/Dimaria-betano-nodo-alta.JPEG"
                     alt="Trofeo Crack Betano - Detalle en evento"
