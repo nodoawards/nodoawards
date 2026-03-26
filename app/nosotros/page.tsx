@@ -224,7 +224,7 @@ export default function NosotrosPage() {
                     </h3>
                   </div>
                   <p className="text-slate-600 font-geist leading-relaxed text-right pr-4 pb-8 text-[11px] md:text-sm line-clamp-3 [text-overflow:clip]">
-                    Diseñar y crear reconocimientos físicos y digitales que celebren a las personas, fortalezcan la cultura de las organizaciones y devuelvan sentido al acto de reconocer.
+                    Crear reconocimientos físicos y/o digitales que celebren a las personas, fortalezcan la cultura de las organizaciones y devuelvan sentido al acto de reconocer.
                   </p>
                 </div>
               </div>
@@ -254,7 +254,7 @@ export default function NosotrosPage() {
                     </h3>
                   </div>
                   <p className="text-slate-600 font-geist leading-relaxed text-right pr-4 pb-8 text-[11px] md:text-sm">
-                    Ser la marca referente en reconocimiento empresarial en Latinoamérica, impulsando culturas de trabajo más humanas, conscientes y duraderas.
+                    Ser la marca referente en reconocimiento empresarial en Latinoamérica, impulsando entornos de trabajo más humanos, conscientes y duraderos.
                   </p>
                 </div>
               </div>
@@ -280,7 +280,7 @@ export default function NosotrosPage() {
             <ScrollReveal>
               <div className="text-center space-y-4">
               <p className="text-sm font-geist mb-4" style={{ fontSize: '15px', color: '#686868' }}>
-                Nosotros
+                Nuestra mentalidad
               </p>
               <h2 className="text-3xl md:text-4xl font-medium font-stack-sans-notch">
                 <span style={{ color: '#04001B' }}>La gente solo nota cuando ganás. Noddo ve </span>
