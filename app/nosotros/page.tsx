@@ -45,7 +45,7 @@ export default function NosotrosPage() {
           <div className="flex items-center space-x-2">
             <Link href="/">
               <Image 
-                src="/Logo PNG - texto negro.png" 
+                src="/logo-png-texto-negro.png" 
                 alt="NODO AWARDS" 
                 width={120} 
                 height={24} 
@@ -167,9 +167,10 @@ export default function NosotrosPage() {
         
         <div className="absolute inset-0 z-0">
           <Image
-            src="/Nosotros Final Web.jpg"
+            src="/nosotros-final-web.jpg"
             alt="Equipo Noddo"
             fill
+            priority
             className="object-cover"
           />
         </div>
@@ -298,7 +299,7 @@ export default function NosotrosPage() {
         {/* Logo positioned at right edge */}
         <div className="absolute right-0 top-0 h-full flex items-center" style={{ zIndex: 1, transform: 'scale(0.7)', transformOrigin: 'right center' }}>
           <Image
-            src="/medio logo contacto.png"
+            src="/medio-logo-contacto.png"
             alt="Noddo"
             width={300}
             height={600}
@@ -347,7 +348,7 @@ export default function NosotrosPage() {
                     
                     <div>
                       <label className="block text-sm font-medium font-geist mb-2" style={{ color: '#04001B' }}>
-                        Tu empresa
+                        Tu empresa u organización (opcional)
                       </label>
                       <input
                         type="text"
@@ -431,7 +432,7 @@ export default function NosotrosPage() {
           <div className="grid gap-8 md:grid-cols-2 items-start">
             <div className="space-y-4">
               <Image
-                src="/Logo PNG.png"
+                src="/logo-png.png"
                 alt="Noddo"
                 width={200}
                 height={48}

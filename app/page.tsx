@@ -69,7 +69,7 @@ export default function LandingPage() {
         <div className="container flex h-[52px] items-center justify-between px-4 md:px-6">
           <div className="flex items-center space-x-2">
             <Image 
-              src="/Logo PNG - texto negro.png" 
+              src="/logo-png-texto-negro.png" 
               alt="NODO AWARDS" 
               width={120} 
               height={24} 
@@ -194,9 +194,10 @@ export default function LandingPage() {
         {/* Background Image - Behind everything */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/Noddo - Hero image.jpg"
+            src="/noddo-hero-image.jpg"
             alt="Hero Background"
             fill
+            priority
             className="object-cover"
             style={{ objectPosition: 'center 10%' }}
           />
@@ -314,6 +315,7 @@ export default function LandingPage() {
                   src="/render-hero.jpg"
                   alt="Hero Noddo"
                   fill
+                  sizes="50vw"
                   className="object-cover"
                 />
               </div>
@@ -339,46 +341,51 @@ export default function LandingPage() {
               {/* Client Logos */}
               <div className="grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100">
                 <Image
-                  src="/Logos clientes web-01.jpg"
+                  src="/logos-clientes-web-01.jpg"
                   alt="Betano"
                   width={240}
                   height={120}
+                  sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 20vw"
                   className="h-24 w-auto object-contain"
                 />
               </div>
               <div className="grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100">
                 <Image
-                  src="/Logos clientes web-02.jpg"
+                  src="/logos-clientes-web-02.jpg"
                   alt="PICADOTV"
                   width={240}
                   height={120}
+                  sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 20vw"
                   className="h-24 w-auto object-contain"
                 />
               </div>
               <div className="grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100">
                 <Image
-                  src="/Logos clientes web-03.jpg"
+                  src="/logos-clientes-web-03.jpg"
                   alt="AFA"
                   width={240}
                   height={120}
+                  sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 20vw"
                   className="h-24 w-auto object-contain"
                 />
               </div>
               <div className="grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100">
                 <Image
-                  src="/Logos clientes web-04.jpg"
+                  src="/logos-clientes-web-04.jpg"
                   alt="Cueva"
                   width={240}
                   height={120}
+                  sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 20vw"
                   className="h-24 w-auto object-contain"
                 />
               </div>
               <div className="grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100 col-span-2 md:col-span-1">
                 <Image
-                  src="/Logos clientes web-05.jpg"
+                  src="/logos-clientes-web-05.jpg"
                   alt="MITO ESTUDIO"
                   width={240}
                   height={120}
+                  sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 20vw"
                   className="h-24 w-auto object-contain"
                 />
               </div>
@@ -487,7 +494,7 @@ export default function LandingPage() {
             <div className="max-w-4xl mx-auto">
             <div className="flex flex-col items-center">
               <Image
-                src="/Card Overlay Workflow.png"
+                src="/card-overlay-workflow.png"
                 alt="Workflow"
                 width={80}
                 height={40}
@@ -500,7 +507,7 @@ export default function LandingPage() {
               {/* Workflow Cards */}
               <div className="flex flex-col md:flex-row items-center justify-center gap-6">
                 <Image
-                  src="/Tarjeta discovery.png"
+                  src="/tarjeta-discovery.png"
                   alt="Discovery"
                   width={300}
                   height={200}
@@ -508,7 +515,7 @@ export default function LandingPage() {
                   style={{ transform: 'scale(1.10)', transformOrigin: 'center' }}
                 />
                 <Image
-                  src="/Tarjeta Fabricación.png"
+                  src="/tarjeta-fabricacion.png"
                   alt="Fabricación"
                   width={300}
                   height={200}
@@ -516,7 +523,7 @@ export default function LandingPage() {
                   style={{ transform: 'scale(1.10)', transformOrigin: 'center' }}
                 />
                 <Image
-                  src="/Tarjeta entrega.png"
+                  src="/tarjeta-entrega.png"
                   alt="Entrega"
                   width={300}
                   height={200}
@@ -528,6 +535,9 @@ export default function LandingPage() {
               <div className="mt-8 text-center">
                 <p className="font-geist text-base" style={{ color: '#848691' }}>
                   Duración aproximada por proyecto | 30-35 días
+                </p>
+                <p className="font-geist text-[11px] mt-1" style={{ color: '#848691' }}>
+                  Para pedidos chicos, consultanos por tiempos reducidos.
                 </p>
                 <p className="font-geist text-[11px] mt-1" style={{ color: '#AF89FF' }}>
                   *La duración del proyecto queda sujeta a la complejidad del mismo
@@ -662,7 +672,7 @@ export default function LandingPage() {
         {/* Logo positioned at right edge */}
         <div className="absolute right-0 top-0 h-full flex items-center" style={{ zIndex: 1, transform: 'scale(0.7)', transformOrigin: 'right center' }}>
           <Image
-            src="/medio logo contacto.png"
+            src="/medio-logo-contacto.png"
             alt="Noddo"
             width={300}
             height={600}
@@ -711,7 +721,7 @@ export default function LandingPage() {
                     
                     <div>
                       <label className="block text-sm font-medium font-geist mb-2" style={{ color: '#04001B' }}>
-                        Tu empresa
+                        Tu empresa u organización (opcional)
                       </label>
                       <input
                         type="text"
@@ -793,7 +803,7 @@ export default function LandingPage() {
                     
                     <div>
                       <label className="block text-sm font-medium font-geist mb-2" style={{ color: '#04001B' }}>
-                        Tu empresa
+                        Tu empresa u organización (opcional)
                       </label>
                       <input
                         type="text"
@@ -877,7 +887,7 @@ export default function LandingPage() {
           <div className="grid gap-8 md:grid-cols-2 items-start">
             <div className="space-y-4 pl-8 lg:pl-12">
               <Image
-                src="/Logo PNG.png"
+                src="/logo-png.png"
                 alt="Noddo"
                 width={200}
                 height={48}

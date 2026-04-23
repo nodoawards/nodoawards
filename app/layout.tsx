@@ -3,8 +3,8 @@ import type { Metadata } from "next"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Noddo - El valor del reconocimiento | Reconocimientos físicos y digitales",
-  description: "Diseñamos y creamos reconocimientos físicos y digitales que celebran a las personas, fortalezcan la cultura de las organizaciones y devuelvan sentido al acto de reconocer.",
+  title: "Noddo | Trofeos y premios personalizados en Buenos Aires",
+  description: "Diseñamos y fabricamos trofeos, medallas y premios personalizados para empresas, torneos y eventos en Buenos Aires.",
   keywords: "reconocimientos, premios, trofeos, medallas, reconocimiento empresarial, cultura organizacional, reconocimientos digitales, reconocimientos físicos, modelado 3D, trofeos futbol, equipo, medalla de futbol, medalla de deporte, trofeo particular, diseño, personalizado",
   authors: [{ name: "Noddo" }],
   creator: "Noddo",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     siteName: 'Noddo',
     images: [
       {
-        url: '/favicon - noddo.svg',
+        url: '/favicon-noddo.svg',
         width: 1200,
         height: 630,
         alt: 'Noddo - El valor del reconocimiento',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "Noddo - El valor del reconocimiento",
     description: "Diseñamos y creamos reconocimientos físicos y digitales que celebran a las personas, fortalezcan la cultura de las organizaciones y devuelvan sentido al acto de reconocer.",
-    images: ['/favicon - noddo.svg'],
+    images: ['/favicon-noddo.svg'],
   },
   robots: {
     index: true,
@@ -64,10 +64,10 @@ export default function RootLayout({
   return (
     <html lang="es">
       <head>
-        <link rel="icon" href="/favicon - noddo.svg" type="image/svg+xml" />
-        <link rel="icon" href="/favicon - noddo.svg" sizes="any" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/favicon - noddo.svg" />
-        <link rel="shortcut icon" href="/favicon - noddo.svg" />
+        <link rel="icon" href="/favicon-noddo.svg" type="image/svg+xml" />
+        <link rel="icon" href="/favicon-noddo.svg" sizes="any" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/favicon-noddo.svg" />
+        <link rel="shortcut icon" href="/favicon-noddo.svg" />
       </head>
       <body className="font-geist antialiased">{children}</body>
     </html>
