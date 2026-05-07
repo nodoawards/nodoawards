@@ -14,7 +14,7 @@ export default function ProductosPage() {
       alt: "Trofeo Crack Betano - Distinción al jugador del partido"
     },
     {
-      src: "/BETANO - FECHA 7 - CERUTTI.jpg",
+      src: "/betano-fecha-7-cerutti.jpg",
       alt: "Crack Betano - Fecha 7 Cerutti"
     },
     {
@@ -22,11 +22,11 @@ export default function ProductosPage() {
       alt: "Crack Betano - Fecha 5 Dilan Godoy"
     },
     {
-      src: "/FECHA 13 - EST VS GIM.jpg",
+      src: "/fecha-13-est-vs-gim.jpg",
       alt: "Crack Betano - Fecha 13 Estudiantes vs Gimnasia"
     },
     {
-      src: "/FOTO CRACK BETANO FECHA 4.png",
+      src: "/foto-crack-betano-fecha-4.png",
       alt: "Crack Betano - Fecha 4",
       objectPosition: "center calc(50% + 100px)"
     }
@@ -102,7 +102,7 @@ export default function ProductosPage() {
           <div className="flex items-center space-x-2">
             <Link href="/">
               <Image 
-                src="/Logo PNG - texto negro.png" 
+                src="/logo-png-texto-negro.png" 
                 alt="NODO AWARDS" 
                 width={120} 
                 height={24} 
@@ -227,6 +227,7 @@ export default function ProductosPage() {
             src="/render-detalle-betano.jpg"
             alt="Hero Background"
             fill
+            priority
             className="object-cover"
           />
         </div>
@@ -295,6 +296,7 @@ export default function ProductosPage() {
                       src={betanoSliderImages[betanoSlideIndex].src}
                       alt={betanoSliderImages[betanoSlideIndex].alt}
                       fill
+                      sizes="(max-width: 1024px) 100vw, 50vw"
                       className="object-cover transition-opacity duration-500"
                       style={{ objectPosition: betanoSliderImages[betanoSlideIndex].objectPosition ?? 'center' }}
                       priority
@@ -340,6 +342,7 @@ export default function ProductosPage() {
                       src="/render-medalla-cueva.jpg"
                       alt="Medalla Cueva"
                       fill
+                      sizes="(max-width: 1024px) 100vw, 50vw"
                       className="object-cover"
                     />
                   </div>
@@ -392,7 +395,7 @@ export default function ProductosPage() {
                         </p>
                         <div className="pt-4 mt-12">
                           <Image
-                            src="/Logo PNG - texto negro.png"
+                            src="/logo-png-texto-negro.png"
                             alt="Noddo Logo"
                             width={145}
                             height={48}
@@ -409,6 +412,7 @@ export default function ProductosPage() {
                       src="/Nodo-trofeo.jpg"
                       alt="Trofeo Nodo"
                       fill
+                      sizes="(max-width: 1024px) 100vw, 50vw"
                       className="object-cover"
                     />
                   </div>
@@ -476,7 +480,7 @@ export default function ProductosPage() {
         {/* Logo positioned at right edge */}
         <div className="absolute right-0 top-0 h-full flex items-center" style={{ zIndex: 1, transform: 'scale(0.7)', transformOrigin: 'right center' }}>
           <Image
-            src="/medio logo contacto.png"
+            src="/medio-logo-contacto.png"
             alt="Noddo"
             width={300}
             height={600}
@@ -525,7 +529,7 @@ export default function ProductosPage() {
                     
                     <div>
                       <label className="block text-sm font-medium font-geist mb-2" style={{ color: '#04001B' }}>
-                        Tu empresa
+                        Tu empresa u organización (opcional)
                       </label>
                       <input
                         type="text"
@@ -609,7 +613,7 @@ export default function ProductosPage() {
           <div className="grid gap-8 md:grid-cols-2 items-start">
             <div className="space-y-4">
               <Image
-                src="/Logo PNG.png"
+                src="/logo-png.png"
                 alt="Noddo"
                 width={200}
                 height={48}
